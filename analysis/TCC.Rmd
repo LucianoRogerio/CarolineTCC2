@@ -143,6 +143,6 @@ ClonesSel <- SelDARwin %>% filter(CCSel == "Kept") %>%
   select(Name)
 DataCarTCC2Pheno3 <- DataCarTC2[DataCarTC2$Acessos%in%ClonesSel$Name,]
 
-write.table(DataCarTCC2Pheno3, file= here::here("output", "TC1C", "DadosTC2Pheno3.csv"),
+write.table(DataCarTCC2Pheno3, file= here::here("output", "TC2C", "DadosTC2Pheno3.csv"),
             quote = F, sep = ";", dec = ".")
 ```
