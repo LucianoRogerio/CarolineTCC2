@@ -1,5 +1,6 @@
 ---
-title: "Home"
+title: "Coleções Nucleares Temáticas - 2° Capítulo Caroline"
+author: "LucianoRogerio; CarolineCardoso"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,4 +9,25 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+
+Introdução
+==========
+O termo coleção nuclear é utilizado para designar um conjunto de acessos, menor do que o número total que compõe um determinado Banco Ativo de Germoplasma (BAG), que representa a máxima diversidade genética potencial, com a menor redundância possível (FRANKEL, 1984).
+Devido ao seu tamanho reduzido, a coleção nuclear possibilita o estudo intensivo e a utilização de forma eficiente do germoplasma, formando uma base completa de informações (CORDEIRO, ABADIE, 2007). Ressaltando que as coleções nucleares devem ser menores que a coleção principal, entre as proporções de 5% a 20%, representando até 90% da diversidade de toda coleção (ARAUJO, 2008).
+
+Objetivos
+=========  
+  O objetivo deste trabalho é criar três coleções nucleares temáticas, para aumentar a acessibilidade e o uso eficiente dos recursos genéticos do banco ativo de germoplasma de mandioca da EMBRAPA.
+  
+  
+Material e métodos
+==================
+### [Dados Fenotípicos - Seleção](PhenoData.html)
+
+Primeiro iremos realizar uma seleção prévia das características quanto a variabilidade genética
+
+### [Coleções Nucleares Temáticas](TCC.html)
+
+### [Análises Discriminantes](AnDis.html)
+
+### [Estimativas de Diversidade genética](DivGen.html)
