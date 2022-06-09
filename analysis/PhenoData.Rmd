@@ -38,7 +38,7 @@ Traits
 ```{r Ajuste dos dados fenotipicos}
 suppressWarnings(suppressMessages(library(tidyverse)))
 library(reshape2); library(here)
-DadosPhen <- read.table(here::here("data", "Dados fenotípicos BAGSel.CSV"),
+DadosPhen <- read.table(here::here("data", "Dados fenotípicos BAGSel.csv"),
                         header = T, na.strings = "NA", sep = ",")
 
 colnames(DadosPhen)[c(1,9:35)] <- c("Ano","PCR","PTR","PPA","IC","AP","APsF",
@@ -87,7 +87,7 @@ DadosHCNFin <- DadosHCN %>% reshape2::melt(data = ., id.vars = c(1:8),
 saveRDS(DadosHCNFin, file = here::here("output", "DadosHCNCaroline.rds"))
 ```
 
-## Selecionar os ensaios utilizando Herdabilidade e R2 estimados funções de Modelos mistos
+### Selecionar os ensaios utilizando Herdabilidade e R2 estimados funções de Modelos mistos
 
 ```{r Modelos mistos Selecao de dados fenotipicos, warning = FALSE, message = FALSE}
 suppressWarnings(suppressMessages(library(tidyverse)))
@@ -126,7 +126,7 @@ for(i in Trials){
 
 ```
 
-## Seleção ensaios Dados Fenotipicos
+### Seleção ensaios Dados Fenotipicos
 
 ```{r Obtencao da Herdabilidade e Confiabilidade do modelo para cada ensaio, echo = FALSE}
 library(reactable)
@@ -185,7 +185,7 @@ for(i in Trials){
 ```
 
 
-## Seleção ensaios Dados HCN
+### Seleção ensaios Dados HCN
 
 ```{r Obtencao da Herdabilidade e Confiabilidade do modelo para cada ensaio HCN}
 library(reactable)
@@ -208,7 +208,7 @@ DataSelHCN <- DadosHCNFin %>%
 saveRDS(object = DataSelHCN, file = here::here("data", "DadosHCNCarSel.rds"))
 ```
 
-## Estimação BLUPS e obtenção de médias corrigidas
+### Estimação BLUPS e obtenção de médias corrigidas
 
 ```{r Obtendo BLUPs e médias corrigidas dos acessos, warning = FALSE, eval = F}
 library(here)
@@ -271,7 +271,7 @@ saveRDS(object = BlupsTraits,
         file = here::here("output", "BlupsFenCar.rds"))
 ```
 
-## Juntar as estimativas de caracteristicas quantitativos e qualitativos
+### Juntar as estimativas de caracteristicas quantitativos e qualitativos
 
 ```{r Agrupar as caracteristicas}
 library(tidyverse); library(data.table)
@@ -344,6 +344,46 @@ for(i in traits){
 saveRDS(AllDataInfo, file = here::here("output", "DataSelPreparedCar.rds"))
 ```
 
+## Estimação Blups Carotenóides de Predições NIR ASD
+
+```{r}
+library(sommer)
+DataCar <- read.table(file = here::here("data", "Preditos_TCC_ASD_PLS_18-20.txt"),
+                      header = T, sep = "\t", na.strings = "")
+head(DataCar)
+
+mod <- lmer(formula = TCC ~ Trial + (1|Clone),
+            data = DataCar)
+anova(mod)
+summary(mod)
+fixef(mod)
+ranef(mod)
+Blups <- tibble(clones = ranef(mod)$Clone %>% rownames,
+                TCC = ranef(mod)$Clone[,1] + fixef(mod)[[1]])
+
+```
+
+## New data
+
+```{r}
+Newdata <- read.table(file = here::here("data", "DataCarolineTC2.csv"), sep = ",",
+                      header = T, na.strings = "")
+NewData <- Newdata %>%
+  mutate(CookTime = ifelse(Cook15 == "Sim", yes = "15",
+                           no = ifelse(Cook20 == "Sim", yes = "20",
+                                       no = ifelse(Cook25 == "Sim", yes = "25",
+                                                   no = ifelse(Cook30 == "Sim", yes = "30",
+                                                               no = ifelse(Cook40 == "Sim", yes = "40",
+                                                                           no = ifelse(is.na(.), NA, ">40")))))),
+         .keep = "unused") %>% rename(Genotipos.BGM. = Genotipos.BGM)
+table(NewData$CookTime)
+colnames(NewData)
+colnames(DadosPhen)
+test <- DadosPhen %>% inner_join(NewData)
+
+test2 <- test %>% filter(!is.na(RetencaoFoliar))
+cbind(test2$Retencao.foliar....CO_334.0000048,test2$RetencaoFoliar)
+```
 
 Next - [Dados Moleculares - Seleção](GenoData.html)
 
