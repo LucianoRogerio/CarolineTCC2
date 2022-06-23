@@ -29,12 +29,12 @@ table(DataCarTC3$Use)
 TC1Traits <- c("IC", "PTR", "NR", "DRY", "DMC", "PPA")
 
 ## Temática 2 - Resistência a Doenças Foliares
-TC2Traits <- c("Anth", "BlLS", "BrLS", "WhLS", "Germinação 45DAP", "Couro de sapo", "Podridão", "Retencao foliar")
+TC2Traits <- c("Anth", "BlLS", "BrLS", "WhLS", "Germinação 45DAP", "Couro de sapo", "Podridao", "Retencao foliar")
 
 ## Temática 3 - Qualidade das raízes
 # Verificar conjunto de dados de deteorização Fisiológica com Eder e predições de Carotenóides e DMC com Massaine
 # Fazer uma coleção para Coloração Branca e uma para coloração amarela
-TC3Traits <- c("HCNPic", "DMC", "PPD", "TCC", "CorPolpa", "Podridao",
+TC3Traits <- c("HCNPic1-9", "DMC", "PPD", "TCC", "CorPolpa", "Podridao",
                "Cook15", "Cook20", "Cook25", "Cook30", "Cook40")
 ```
 

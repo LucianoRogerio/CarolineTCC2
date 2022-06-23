@@ -19,7 +19,6 @@ Traits
 | Produtividade de parte Aerea | PPA |
 | Indice de Colheita | IC |
 | Altura de Planta | AP |
-| Altura de Planta sem Folha | APsF |
 | Numero de manivas por haste | NMa |
 | Teor de Materia Seca Balanca Hidrostatica | DMCsg |
 | HCN Laboratorio | HCNLab |
@@ -30,22 +29,23 @@ Traits
 | Retencao Foliar | RF |
 | Numero de Raizes por planta | NR |
 | Peso de Raizes | PR |
-| Teor de amido Corrigido | TAC |
-| Teor de Materia Seca forno | DMCoven |
 |     |     |
 
 
 ```{r Ajuste dos dados fenotipicos}
 suppressWarnings(suppressMessages(library(tidyverse)))
 library(reshape2); library(here)
-DadosPhen <- read.table(here::here("data", "Dados fenotípicos BAGSel.csv"),
-                        header = T, na.strings = "NA", sep = ",")
-
-colnames(DadosPhen)[c(1,9:35)] <- c("Ano","PCR","PTR","PPA","IC","AP","APsF",
-                                  "NMa","DMCsg","HCNLab","DRY","PA",
-                                  "PRNC","Vigor","RF","NR","PR","TAC","DMCoven",
-                                  paste("HCN",1:9,sep=""))
-
+DadosPhen <- read.table(here::here("data", "DadosFen2Cap.csv"),
+                        header = T, sep = ",")
+unique(DadosPhen$Genotipos.BGM) %>% .[order(.)]
+colnames(DadosPhen)[c(8:26,32:49)] <- c("PRC", "PTR", "PPA", "IC", "AP",
+                                        "NMa", "DMCsg", "DRY", "PA", "PRNC",
+                                        "Vigor45D", "Vigor12M", "RF", "NR", "PPD",
+                                        "PRCas", "PRPol", "FrogSkin", "CorPol", "Friab",
+                                        "MoscBc", "MoscBr", "MurPA", "MosCm", "MosNv",
+                                        "AcSev", "BacSev", "FerSev",
+                                        paste0("HCN-",1:9))
+head(DadosPhen)
 DadosPar <- DadosPhen[,c(1:26)] %>% dplyr::select(-Genotipos)
 
 DadosParFin <- DadosPar %>% reshape2::melt(data = ., id.vars = c(1:8),
