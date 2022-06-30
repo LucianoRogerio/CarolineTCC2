@@ -38,53 +38,71 @@ library(reshape2); library(here)
 DadosPhen <- read.table(here::here("data", "DadosFen2Cap.csv"),
                         header = T, sep = ",")
 unique(DadosPhen$Genotipos.BGM) %>% .[order(.)]
-colnames(DadosPhen)[c(8:26,32:49)] <- c("PRC", "PTR", "PPA", "IC", "AP",
-                                        "NMa", "DMCsg", "DRY", "PA", "PRNC",
-                                        "Vigor45D", "Vigor12M", "RF", "NR", "PPD",
-                                        "PRCas", "PRPol", "FrogSkin", "CorPol", "Friab",
-                                        "MoscBc", "MoscBr", "MurPA", "MosCm", "MosNv",
-                                        "AcSev", "BacSev", "FerSev",
-                                        paste0("HCN-",1:9))
-head(DadosPhen)
-DadosPar <- DadosPhen[,c(1:26)] %>% dplyr::select(-Genotipos)
+colnames(DadosPhen)[c(9:40, 46:55)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
+                                         "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
+                                         "Vigor12M", "RF", "PRz", "NRz", "PPD", "Pod",
+                                         "PodRCas", "PodRPol", "FrogSkin", "CorPol",
+                                         "Friab", "MoscBc", "MoscBr", "MurPA", "MosCm",
+                                         "MosNv", "AcSev", "BacSev", "FerSev", "SupASev",
+                                         paste0("HCN-",1:9), "TCC")
 
-DadosParFin <- DadosPar %>% reshape2::melt(data = ., id.vars = c(1:8),
-                                           variable.name = "Trait", value.name = "Value") %>%
-  filter(!is.na(Value)) %>%
+DadosPhen <- DadosPhen %>% mutate(Cook = ifelse(Cook15 == 1,
+                                                yes = "15",
+                                                no = ifelse(Cook20 == 1,
+                                                            yes = "20",
+                                                            no = ifelse(Cook25,
+                                                                        yes = "25",
+                                                                        no = ifelse(Cook30 == 1,
+                                                                                    yes = "30",
+                                                                                    no = ifelse(Cook40 == 1,
+                                                                                                yes = "40",
+                                                                                                no = ifelse(Cook40 == 0,
+                                                                                                            yes = ">40",
+                                                                                                            no = NA))))))) %>% 
+  mutate(Cook = factor(Cook, levels = c("15", "20", "25", "30", "40", ">40"), ordered = T)) %>%
+  dplyr::select(-Cook15, -Cook20, -Cook25, -Cook30, -Cook40)
+
+colnames(DadosPhen)
+
+DadosPar <- DadosPhen[,c(1:40,50:51)]
+
+DadosParFin <- DadosPar %>% reshape2::melt(data = ., id.vars = c(1:9),
+                                           variable.name = "Trait", value.name = "y") %>%
+  filter(!is.na(y)) %>%
   dplyr::mutate(Ano = Ano,
                 Campo = Campo,
                 Local = Local,
                 trial = match(paste(Ano, Campo, Local, sep = "."),
                               unique(paste(Ano, Campo, Local, sep = "."))),
-                studyDesign = Delineamento,
-                clone = Genotipos.BGM.,
-                rep = Bloco,
-                check = ifelse(Controle == "1", clone, "999"),
-                check = ifelse(clone %in% unique(check), clone, "999"),
-                new = ifelse(check != "999", 0, 1),
-                y = Value, .keep = "unused")
+                clone = Genotipos.BGM, .keep = "unused")
 
 saveRDS(DadosParFin, file = here::here("output", "DadosParcelaCaroline.rds"))
 
-DadosHCN <- DadosPhen[,c(1:8,27:35)] %>% dplyr::select(-Genotipos)
+DadosHCN <- DadosPhen[,c(1:9, 41:49)]
 
-DadosHCNFin <- DadosHCN %>% reshape2::melt(data = ., id.vars = c(1:8),
-                                           variable.name = "HCN",  value.name = "Value") %>%
-  filter(!is.na(Value)) %>%
+DadosHCNFin <- DadosHCN %>% reshape2::melt(data = ., id.vars = c(1:9),
+                                           variable.name = "HCN",  value.name = "y") %>%
+  filter(!is.na(y)) %>%
   mutate(Ano = Ano,
          Campo = Campo,
          Local = Local,
          trial = match(paste(Ano, Campo, Local, sep = "."),
                        unique(paste(Ano, Campo, Local, sep = "."))),
-         studyDesign = Delineamento,
-         clone = Genotipos.BGM.,
-         rep = Bloco,
-         check = ifelse(Controle == "1", clone, "999"),
-         check = ifelse(clone %in% unique(check), clone, "999"),
-         new = ifelse(check != "999", 0, 1),
-         y = Value, .keep = "unused")
+         clone = Genotipos.BGM, .keep = "unused")
 
 saveRDS(DadosHCNFin, file = here::here("output", "DadosHCNCaroline.rds"))
+
+DataCar <- tibble(Traits = unique(DadosParFin$Trait),
+                  PhenData = NA)
+for(i in DataCar$Traits){
+DataCar$PhenData[DataCar$Traits == i] <- list(DadosParFin %>% filter(Trait == i))
+}
+
+DataCar <- DataCar %>% rbind(tibble(Traits = "HCN",
+                                    PhenData = list(DadosHCNFin)))
+
+saveRDS(object = DataCar, file = here::here("data", "DadosPhenCar.rds"))
+
 ```
 
 ### Selecionar os ensaios utilizando Herdabilidade e R2 estimados funções de Modelos mistos
