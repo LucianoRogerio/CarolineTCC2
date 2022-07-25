@@ -115,6 +115,7 @@ library(reshape2); library(here)
 suppressMessages(source(here::here("code", "MixedModelsFunctions.R")))
 
 DadosParFin <- readRDS(file = here::here("output", "DadosParcelaCaroline.RDS"))
+DadosParFin$studyDesign <- "DBC"
 
 Trials <- unique(DadosParFin$trial)
 Results <- tibble()
@@ -233,6 +234,7 @@ library(here)
 library(furrr)
 library(tidyverse)
 source(here::here("code", "MixedModelsFunctions.R"))
+library(elliptic)
 
 DataSelPar <- readRDS(here::here("data", "DadosFenCarSel.rds")) %>%
   mutate(trial = as.character(trial),
