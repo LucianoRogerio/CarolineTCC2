@@ -19,6 +19,8 @@ DataCarTC3 <- read.table(file = here::here("data", "Preditos_TCC_ASD_PLS_18-20.t
 colnames(DataCarTC1)
 table(DataCarTC3$Use)
 
+unique(DataCarTC3$Clone) %>% .[order(.)] %>% length
+table(DataCarTC3$Trial)
 
 ```
 

@@ -9,13 +9,8 @@ if (!all(c("sommer", "lme4")%in% installed.packages())) {
 #### Analise de modelos mistos para ensaio com delineamento de blocos aumentados
 #### e completos - lme4 package
 analyzeTrial.lme4 <- function(x){
-  if(any(x$studyDesign == "DBA")){
-    modfit <- lmer(y ~ check + rep + (1 | clone:new), data=x, REML = T)
-  return(modfit)
-  } else {
-    modfit <- lmer(y ~ rep + (1 | clone), data=x, REML = T)
+    modfit <- lmer(y ~ Bloco + (1 | clone), data=x, REML = T)
     return(modfit)
-  }
 }
 
 analyzeTrial.lme4HCN <- function(x){
@@ -101,7 +96,6 @@ analyzeTrial.sommerConj <- function(x){
   if(length(unique(x$trial)) > 1){
     modfit <- mmer(y ~ 1,
                    random = ~ repTrial + clone + LocYear:clone,
-                   rcov = ~vsr(trial, units),
                    data = x,
                    verbose = F,
                    getPEV = T)

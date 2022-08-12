@@ -36,7 +36,7 @@ Traits
 suppressWarnings(suppressMessages(library(tidyverse)))
 library(reshape2); library(here)
 DadosPhen <- read.table(here::here("data", "DadosFen2Cap.csv"),
-                        header = T, sep = ",")
+                        header = T, sep = ",", na.strings = "")
 unique(DadosPhen$Genotipos.BGM) %>% .[order(.)]
 colnames(DadosPhen)[c(9:40, 46:55)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
                                          "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
@@ -62,11 +62,13 @@ DadosPhen <- DadosPhen %>% mutate(Cook = ifelse(Cook15 == 1,
   mutate(Cook = factor(Cook, levels = c("15", "20", "25", "30", "40", ">40"), ordered = T)) %>%
   dplyr::select(-Cook15, -Cook20, -Cook25, -Cook30, -Cook40)
 
-colnames(DadosPhen)
+colnames(DadosPhen)[c(1:40,50:51)]
 
-DadosPar <- DadosPhen[,c(1:40,50:51)]
+DadosParQuant <- DadosPhen[,c(1:29,32:40,50)]
+DadosParQual <- DadosPhen[,c(1:9,30:31,51)]
 
-DadosParFin <- DadosPar %>% reshape2::melt(data = ., id.vars = c(1:9),
+
+DadosParQuantFin <- DadosParQuant %>% reshape2::melt(data = ., id.vars = c(1:9),
                                            variable.name = "Trait", value.name = "y") %>%
   filter(!is.na(y)) %>%
   dplyr::mutate(Ano = Ano,
@@ -74,9 +76,19 @@ DadosParFin <- DadosPar %>% reshape2::melt(data = ., id.vars = c(1:9),
                 Local = Local,
                 trial = match(paste(Ano, Campo, Local, sep = "."),
                               unique(paste(Ano, Campo, Local, sep = "."))),
-                clone = Genotipos.BGM, .keep = "unused")
+                clone = Genotipos.BGM,
+                y = as.numeric(y), .keep = "unused")
 
-saveRDS(DadosParFin, file = here::here("output", "DadosParcelaCaroline.rds"))
+
+DadosParQualFin <- DadosParQual %>% group_by(Genotipos.BGM) %>%
+  summarise(CorPol = table(CorPol) %>%
+              .[order(., decreasing = T)] %>% .[1] %>% names %>% as.integer(),
+            Friab = table(Friab) %>%
+              .[order(., decreasing = T)] %>% .[1] %>% names %>% as.character(),
+            Cook = table(Cook) %>%
+              .[order(., decreasing = T)] %>% .[1] %>% names %>% as.character())
+
+saveRDS(DadosParQualFin, file = here::here("output", "DadosQualCaroline.rds"))
 
 DadosHCN <- DadosPhen[,c(1:9, 41:49)]
 
@@ -90,19 +102,17 @@ DadosHCNFin <- DadosHCN %>% reshape2::melt(data = ., id.vars = c(1:9),
                        unique(paste(Ano, Campo, Local, sep = "."))),
          clone = Genotipos.BGM, .keep = "unused")
 
-saveRDS(DadosHCNFin, file = here::here("output", "DadosHCNCaroline.rds"))
-
-DataCar <- tibble(Traits = unique(DadosParFin$Trait),
+DataCar <- tibble(Traits = unique(DadosParQuantFin$Trait),
                   PhenData = NA)
+
 for(i in DataCar$Traits){
-DataCar$PhenData[DataCar$Traits == i] <- list(DadosParFin %>% filter(Trait == i))
+DataCar$PhenData[DataCar$Traits == i] <- list(DadosParQuantFin %>% filter(Trait == i))
 }
 
 DataCar <- DataCar %>% rbind(tibble(Traits = "HCN",
                                     PhenData = list(DadosHCNFin)))
 
 saveRDS(object = DataCar, file = here::here("data", "DadosPhenCar.rds"))
-
 ```
 
 ### Selecionar os ensaios utilizando Herdabilidade e R2 estimados funções de Modelos mistos
@@ -114,42 +124,38 @@ library(reshape2); library(here)
 
 suppressMessages(source(here::here("code", "MixedModelsFunctions.R")))
 
-DadosParFin <- readRDS(file = here::here("output", "DadosParcelaCaroline.RDS"))
-DadosParFin$studyDesign <- "DBC"
+DadosCar <- readRDS(file = here::here("data", "DadosPhenCar.rds"))
 
-Trials <- unique(DadosParFin$trial)
-Results <- tibble()
 
-for(i in Trials){
-  traits <- DadosParFin %>% filter(trial %in% i) %>% .$Trait %>% unique %>% as.character
+require(furrr); plan(multisession, workers = 3)
+DataCar <- DataCar %>% dplyr::mutate(TrialSel = future_map2(Traits, PhenData, function(Traits, PhenData,...){
+  Trials <- unique(PhenData$trial)
+  PhenData
   results <- tibble()
-
-  for(j in traits) {
-  try(MixedModels <- analyzeTrial.lme4(DadosParFin %>% filter(trial %in% i & Trait %in% j)))
+    for(i in Trials) {
+  try(MixedModels <- analyzeTrial.lme4(PhenData %>% filter(trial %in% i)))
   try(result <- tibble(Trial = i,
-                       Trait = j,
-                       NClones = nrow(unique(DadosParFin %>%
-                                                 filter(trial %in% i & Trait %in% j) %>% 
+                       Trait = Traits,
+                       NClones = nrow(unique(PhenData %>%
+                                                 filter(trial %in% i) %>% 
                                                  dplyr::select(clone))),
                        VarG = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[1,2],
                        VarE = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[2,2],
                        H2 = VarG/(VarG + VarE),
                        Real = suppressWarnings(MuMIn::r.squaredGLMM(MixedModels)[2])))
   try(results <- rbind(results, result))
-  rm(MixedModels); rm(result)
-  }
-  
-  Results <- rbind(Results, results)
-  rm(traits); rm(results)
-}
+    }
+  return(results = results)
+  }))
 
+Results <- DataCar %>% dplyr::select(TrialSel) %>% unnest_longer(TrialSel) %>% .[[1]]
 ```
 
 ### Seleção ensaios Dados Fenotipicos
 
 ```{r Obtencao da Herdabilidade e Confiabilidade do modelo para cada ensaio, echo = FALSE}
 library(reactable)
-TrialsList <- unique(DadosParFin[,c("Ano", "Campo", "Local", "trial")])
+TrialsList <- unique(DadosParQuantFin[,c("Ano", "Campo", "Local", "trial")])
 
 Results2 <- Results %>% right_join(TrialsList, by = c("Trial" = "trial")) %>%
   dplyr::select(Trial, Ano, Campo, Local, everything()) %>% mutate(Selecionado = ifelse(Real > 0.25 & H2 > 0.15, "Sim", "Nao"))
@@ -162,69 +168,31 @@ Results2 %>% reactable(groupBy = c("Trait"), columns = list(
 ```
 
 ```{r Filtrando dados fenotipicos}
-DataSelPar <- DadosParFin %>% mutate(Trait.Trial = paste(Trait, trial, sep = ".")) %>%
+DataSelPar <- DadosParQuantFin %>% mutate(Trait.Trial = paste(Trait, trial, sep = ".")) %>%
   .[.$Trait.Trial %in% (Results2 %>% mutate(Trait.Trial = paste(Trait, Trial, sep = ".")) %>%
                         filter(Selecionado == "Sim") %>% .$Trait.Trial),]
 
-saveRDS(object = DataSelPar, file = here::here("data", "DadosFenCarSel.rds"))
+
+DataCar <- tibble(Traits = unique(DataSelPar$Trait),
+                  PhenData = NA)
+
+for(i in DataCar$Traits){
+DataCar$PhenData[DataCar$Traits == i] <- list(DataSelPar %>% filter(Trait == i))
+}
 ```
 
 
 ## Selecao de ensaios de avaliacao de HCN
 
-```{r Modelos mistos Selecao de dados fenotipicos HCN, warning = FALSE}
-suppressWarnings(suppressMessages(library(tidyverse)))
-library(MuMIn)
-library(reshape2); library(here)
-
-source(here::here("code", "MixedModelsFunctions.R"))
-
-DadosHCNFin <- readRDS(file = here::here("output", "DadosHCNCaroline.RDS"))
-
-Trials <- which(table(DadosHCNFin$trial) > 30) %>% names %>% as.integer
-Results <- tibble()
-
-for(i in Trials){
-
-  try(MixedModels <- analyzeTrial.lme4HCN(DadosHCNFin %>% filter(trial %in% i)))
-  try(results <- tibble(Trial = i,
-                       Trait = "HCN",
-                       NClones = nrow(unique(DadosHCNFin %>%
-                                                 filter(trial %in% i) %>% 
-                                                 dplyr::select(clone))),
-                       VarG = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[1,2],
-                       VarE = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[2,2],
-                       H2 = VarG/(VarG + VarE),
-                       Real = suppressWarnings(MuMIn::r.squaredGLMM(MixedModels)[2])))
-
-  Results <- rbind(Results, results)
-  rm(MixedModels); rm(results)
-}
-
-```
-
-
-### Seleção ensaios Dados HCN
-
-```{r Obtencao da Herdabilidade e Confiabilidade do modelo para cada ensaio HCN}
-library(reactable)
-TrialsList <- unique(DadosHCNFin[,c("Ano", "Campo", "Local", "trial")])
-
-Results2 <- Results %>% right_join(TrialsList, by = c("Trial" = "trial")) %>%
-  dplyr::select(Trial, Ano, Campo, Local, everything()) %>% mutate(Selecionado = ifelse(Real > 0.25 & H2 > 0.15, "Sim", "Nao")) %>% arrange(Trial)
-
-Results2 %>% reactable(columns = list(
-  VarG = colDef(format = colFormat(digits = 2, locales = "en-US")),
-  VarE = colDef(format = colFormat(digits = 2, locales = "en-US")),
-  H2 = colDef(format = colFormat(digits = 3, locales = "en-US")),
-  Real = colDef(format = colFormat(digits = 3, locales = "en-US"))))
-```
-
 ```{r Filtrando dados HCN}
-DataSelHCN <- DadosHCNFin %>% 
-  .[.$trial %in% (Results2 %>% filter(Selecionado == "Sim") %>% .$Trial),]
+DataSelHCN <- DadosHCNFin %>% mutate(Trait.Trial = paste("HCN", trial, sep = ".")) %>% 
+  .[.$Trait.Trial %in% (Results2 %>% mutate(Trait.Trial = paste(Trait, Trial, sep = "."))
+                        %>% filter(Selecionado == "Sim", NClones >= 20) %>% .$Trait.Trial),]
 
-saveRDS(object = DataSelHCN, file = here::here("data", "DadosHCNCarSel.rds"))
+DataCar <- DataCar %>% rbind(tibble(Traits = "HCN",
+                                    PhenData = list(DataSelHCN)))
+
+saveRDS(object = DataCar, file = here::here("data", "DadosPhenSelCar.rds"))
 ```
 
 ### Estimação BLUPS e obtenção de médias corrigidas
@@ -236,51 +204,43 @@ library(tidyverse)
 source(here::here("code", "MixedModelsFunctions.R"))
 library(elliptic)
 
-DataSelPar <- readRDS(here::here("data", "DadosFenCarSel.rds")) %>%
-  mutate(trial = as.character(trial),
-         rep = as.character(rep),
-         repTrial = as.factor(paste(trial, rep, sep = ":")),
-         LocYear = as.factor(paste(Local, Ano, sep = ":")))
-DataSelHCN <- readRDS(here::here("data", "DadosHCNCarSel.rds")) %>%
-  mutate(trial = as.character(trial),
-         rep = as.character(rep),
-         repTrial = as.factor(paste(trial, rep, sep =":")),
-         LocYear = as.factor(paste(Local, Ano, sep = ":")))
+DataCar <- readRDS(here::here("data", "DadosPhenSelCar.rds"))
 
-NCT <- 4
+plan(multicore(workers = 3))
 
-plan(sequential)
-RhpcBLASctl::blas_set_num_threads(NCT)
-MM <- analyzeTrial.sommerConj(DataSelHCN %>% filter(trial != 16))
-blups <- ranef(MM)$clone + fixef(MM)[1]
-Blups <- tibble(id = rownames(blups),
-                blups = blups$`(Intercept)`)
-colnames(Blups)[2] <- "HCNPic"
-saveRDS(object = Blups, file = here::here("output", "MixedModels", "Blups_HCNPic.rds"))
+PhenData <- DataCar$PhenData[[27]]
 
-traits <- table(DataSelPar$Trait) %>% .[order(.)] %>% names
-
-for(i in traits){
-  print(paste("Trait", i, sep = " "))
-  DataMM <- DataSelPar%>% filter(Trait == i)
-  MM <- analyzeTrial.sommerConj(DataMM)
+DataCar %>% mutate(Blups = future_map2(Traits, PhenData, function(Traits, PhenData,...){
+  RhpcBLASctl::blas_set_num_threads(3)
+  print(paste("Trait", Traits, sep = " "))
+  PhenData <- PhenData %>%
+    mutate(trial = as.character(trial),
+           rep = as.character(Bloco),
+           repTrial = as.factor(paste(trial, Bloco, sep = ":")),
+           LocYear = as.factor(paste(Local, Ano, sep = ":")))
+  
+  MM <- analyzeTrial.sommerConj(PhenData)
   blups <- MM$U$clone$y + MM$Beta$Estimate
   Blups <- tibble(id = names(blups),
                   blups = blups) %>%
     dplyr::mutate(id = gsub(pattern = "clone", replacement = "",x = .$id))
-  colnames(Blups)[2] <- i
+  colnames(Blups)[2] <- Traits
   file <- here::here("output", "MixedModels",
-                     paste("Blups_", i, ".rds", sep = ""))
+                     paste("Blups_", Traits, ".rds", sep = ""))
   saveRDS(object = Blups, file = file)
-  rm(DataMM); rm(MM); rm(blups); rm(Blups); rm(file)
+  return(Blups)
+}))
+  
+
 }
 
 
 BlupsTraits <- readRDS(here::here("output", "MixedModels", "Blups_HCNPic.rds"))
 IDClones <- tibble(id = unique(c(DataSelPar$clone, DataSelHCN$clone)) %>% .[order(.)])
 BlupsTraits <- IDClones %>% left_join(BlupsTraits, by = "id")
+traits2 <- traits %>% .[-c(1,15:17)]
 
-for(i in traits){
+for(i in traits2){
   filename <- paste("Blups_", i, ".rds", sep = "")
   BlupsTraits <- BlupsTraits %>%
     left_join(readRDS(here::here("output", "MixedModels", filename)))
@@ -386,7 +346,7 @@ Blups <- tibble(clones = ranef(mod)$Clone %>% rownames,
 ## New data
 
 ```{r}
-Newdata <- read.table(file = here::here("data", "DataCarolineTC2.csv"), sep = ",",
+Newdata <- read.table(file = here::here("data", "DadosFen2Cap.csv"), sep = ",",
                       header = T, na.strings = "")
 NewData <- Newdata %>%
   mutate(CookTime = ifelse(Cook15 == "Sim", yes = "15",
@@ -404,6 +364,24 @@ test <- DadosPhen %>% inner_join(NewData)
 test2 <- test %>% filter(!is.na(RetencaoFoliar))
 cbind(test2$Retencao.foliar....CO_334.0000048,test2$RetencaoFoliar)
 ```
+
+```{r Joint all data per Thematic collection}
+
+## Temática 1 - Produtividade de Raízes
+TC1Traits <- c("IC", "PTR", "NR", "DRY", "DMCsg", "PPA")
+TC1Traits <- c("PTR", "NR", "DRY", "DMCsg") ## IC and PPA not finished their Mixed Models analysis
+
+## Temática 2 - Resistência a Doenças Foliares
+TC2Traits <- c("Anth", "BlLS", "BrLS", "WhLS", "Germinação 45DAP", "Couro de sapo", "Podridao", "Retencao foliar")
+
+## Temática 3 - Qualidade das raízes
+# Verificar conjunto de dados de deteorização Fisiológica com Eder e predições de Carotenóides e DMC com Massaine
+# Fazer uma coleção para Coloração Branca e uma para coloração amarela
+TC3Traits <- c("HCNPic", "DMCsg", "PPD", "TCC", "CorPolpa", "Podridao",
+               "Cook15", "Cook20", "Cook25", "Cook30", "Cook40")
+
+```
+
 
 Next - [Dados Moleculares - Seleção](GenoData.html)
 
