@@ -111,14 +111,8 @@ analyzeTrial.sommerConj <- function(x){
 
 analyzeTrial.lme4Conj <- function(x){
   #### Blocos Completos
-  if(length(unique(x$LocYear)) > 1){
-    modfit <- lmer(y ~ (1|repTrial) + (1|clone) + (1|LocYear:clone),
-                   data = x,
-                   REML = T)
-  } else {
     modfit <- lmer(y ~ (1|repTrial) + (1|clone),
                    data = x,
                    REML = T)
-  }
   return(modfit)
 }

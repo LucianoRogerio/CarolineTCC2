@@ -10,34 +10,20 @@ editor_options:
 ## Coleções Nucleares Fenotípicas Temáticas
 
 ```{r lendo dados fenotipicos, eval = FALSE}
-suppressMessages(library(tidyverse))
-source(here::here("code", "MixedModelsFunctions.R"))
-DataCarTC1 <- readRDS(file = here::here("output", "DataSelPreparedCar.rds"))
-DataCarTC2 <- readRDS(file = here::here("output", "BLUPsDisease.RDS"))
-DataCarTC3 <- read.table(file = here::here("data", "Preditos_TCC_ASD_PLS_18-20.txt"),
-                         header = T, sep = "\t", na.strings = "")
-colnames(DataCarTC1)
-table(DataCarTC3$Use)
-
-unique(DataCarTC3$Clone) %>% .[order(.)] %>% length
-table(DataCarTC3$Trial)
-
-```
-
-## Temas Coleções Nucleares
-
-```{r Temas Coleções Nucleares}
 ## Temática 1 - Produtividade de Raízes
-TC1Traits <- c("IC", "PTR", "NR", "DRY", "DMC", "PPA")
+TC1Data <- readRDS(file = here::here("output", "TCC1Data.rds")) %>% as.data.frame
 
 ## Temática 2 - Resistência a Doenças Foliares
-TC2Traits <- c("Anth", "BlLS", "BrLS", "WhLS", "Germinação 45DAP", "Couro de sapo", "Podridao", "Retencao foliar")
+TC2Data <- readRDS(file = here::here("output", "TCC2Data.rds")) %>% as.data.frame
 
 ## Temática 3 - Qualidade das raízes
 # Verificar conjunto de dados de deteorização Fisiológica com Eder e predições de Carotenóides e DMC com Massaine
 # Fazer uma coleção para Coloração Branca e uma para coloração amarela
-TC3Traits <- c("HCNPic1-9", "DMC", "PPD", "TCC", "CorPolpa", "Podridao",
-               "Cook15", "Cook20", "Cook25", "Cook30", "Cook40")
+TC3Data <- readRDS(file = here::here("output", "TCC3Data.rds")) %>% as.data.frame
+
+## Tamanho Coleção Nuclear temáticas
+CCSize <- round(max(c(nrow(TC1Data),nrow(TC2Data),nrow(TC3Data))) * 0.05, digits = 0)
+
 ```
 
 ## Coleção Nuclear Temática 1 - Produtividade de Raízes
@@ -46,17 +32,15 @@ TC3Traits <- c("HCNPic1-9", "DMC", "PPD", "TCC", "CorPolpa", "Podridao",
 
 ```{r TC1 Estimacacao da Primeira colecao nuclear fen, eval = FALSE}
 library(corehunter); library(StatMatch)
-DataCarTC1 <- DataCarTC1[,c("Acessos", TC1Traits)]
-rownames(DataCarTC1) <- DataCarTC1$Acessos
-DistCarTC1 <- gower.dist(data.x = DataCarTC1[,-1])
-row.names(DistCarTC1) <- colnames(DistCarTC1) <- DataCarTC1$Acessos
-DistCar2TC1 <- distances(DistCarTC1)
 
-CCSize <- round(nrow(DistCarTC1) * 0.05, digits = 0)
+rownames(TC1Data) <- TC1Data$id
+DistTC1Data <- gower.dist(data.x = TC1Data[,-1])
+row.names(DistTC1Data) <- colnames(DistTC1Data) <- TC1Data$id
+Dist2TC1Data <- distances(DistTC1Data)
 
-TC1C1 <- sampleCore(DistCar2TC1, objective(type = "EN", measure = "PD"), size = CCSize)
+TC1C1 <- sampleCore(Dist2TC1Data, objective(type = "EN", measure = "PD"), size = CCSize)
 
-DataCarTCC1Pheno1 <- DataCarTC1[DataCarTC1$Acessos%in%TC1C1$sel,]
+DataCarTCC1Pheno1 <- TC1Data[TC1Data$id%in%TC1C1$sel,]
 
 write.table(DataCarTCC1Pheno1, here::here("output", "TC1C", "DadosTC1Pheno1.csv"),
             quote = F, sep = ";", dec = ".")
@@ -65,10 +49,10 @@ write.table(DataCarTCC1Pheno1, here::here("output", "TC1C", "DadosTC1Pheno1.csv"
 ### Coleção Nuclear 2 - Algoritmo pacote CoreHunter
 
 ```{r TC1 Estimacacao da Segunda colecao nuclear fen, eval = FALSE}
-DataCarTC1P <- phenotypes(data = as.data.frame(DataCarTC1[,-1]))
+DataCarTC1P <- phenotypes(data = TC1Data[,-1])
 TC1C2 <- sampleCore(DataCarTC1P, objective(type = "EN", measure = "GD"), size = CCSize)
 
-DataCarTCC1Pheno2 <- DataCarTC1[rownames(DataCarTC1)%in%TC1C2$sel,]
+DataCarTCC1Pheno2 <- TC1Data[rownames(TC1Data)%in%TC1C2$sel,]
 
 write.table(DataCarTCC1Pheno2, file = here::here("output", "TC1C", "DadosTC1Pheno2.csv"),
             quote = F, sep = ";", dec = ".")
@@ -77,7 +61,7 @@ write.table(DataCarTCC1Pheno2, file = here::here("output", "TC1C", "DadosTC1Phen
 ### Coleção Nuclear 3 - Distância de Gower e Algoritmo MLST DARwin software
 
 ```{r TC1 Preparando a matriz de distancias de Gower para DARwin, eval = FALSE}
-DistCarTC1 <- as.dist(DistCarTC1)
+DistCarTC1 <- as.dist(DistTC1Data)
 cat(nrow(DistCarTC1), "\n", file = here::here("output", "MatrizGowerCarolineTC1.phy"))
 write.table(x = as.matrix(DistCarTC1), file = here::here("output", "MatrizGowerCarolineTC1.phy"),
           append = TRUE, quote = FALSE, sep = "\t", col.names = FALSE)
@@ -92,7 +76,7 @@ SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC1.DON"),
 table(SelDARwin$CCSel)
 ClonesSel <- SelDARwin %>% filter(CCSel == "Kept") %>%
   select(Name)
-DataCarTCC1Pheno3 <- DataCarTC1[DataCarTC1$Acessos%in%ClonesSel$Name,]
+DataCarTCC1Pheno3 <- TC1Data[TC1Data$id%in%ClonesSel$Name,]
 
 write.table(DataCarTCC1Pheno3, file= here::here("output", "TC1C", "DadosTC1Pheno3.csv"),
             quote = F, sep = ";", dec = ".")
@@ -106,15 +90,15 @@ write.table(DataCarTCC1Pheno3, file= here::here("output", "TC1C", "DadosTC1Pheno
 
 ```{r TC2 Estimacacao da Primeira colecao nuclear fen, eval = FALSE}
 library(corehunter); library(StatMatch)
-DataCarTC2 <- DataCarTC2[,c("CLONE", TC2Traits)]
-rownames(DataCarTC2) <- DataCarTC2$CLONE
-DistCarTC2 <- gower.dist(data.x = DataCarTC2[,-1])
-row.names(DistCarTC2) <- colnames(DistCarTC2) <- DataCarTC2$CLONE
-DistCar2TC2 <- distances(DistCarTC2)
 
-TC2C1 <- sampleCore(DistCar2TC2, objective(type = "EN", measure = "PD"), size = CCSize)
+rownames(TC2Data) <- TC2Data$id
+DistTC2Data <- gower.dist(data.x = TC2Data[,-1])
+row.names(DistTC2Data) <- colnames(DistTC2Data) <- TC2Data$id
+Dist2TC2Data <- distances(DistTC2Data)
 
-DataCarTCC2Pheno1 <- DataCarTC2[DataCarTC2$Acessos%in%TC2C1$sel,]
+TC2C1 <- sampleCore(Dist2TC2Data, objective(type = "EN", measure = "PD"), size = CCSize)
+
+DataCarTCC2Pheno1 <- TC2Data[TC2Data$id%in%TC2C1$sel,]
 
 write.table(DataCarTCC2Pheno1, here::here("output", "TC2C", "DadosTC2Pheno1.csv"),
             quote = F, sep = ";", dec = ".")
@@ -123,10 +107,10 @@ write.table(DataCarTCC2Pheno1, here::here("output", "TC2C", "DadosTC2Pheno1.csv"
 ### Coleção Nuclear 2 - Algoritmo pacote CoreHunter
 
 ```{r TC2 Estimacacao da Segunda colecao nuclear fen, eval = FALSE}
-DataCarTC2P <- phenotypes(data = as.data.frame(DataCarTC2[,-1]))
+DataCarTC2P <- phenotypes(data = TC2Data[,-1])
 TC2C2 <- sampleCore(DataCarTC2P, objective(type = "EN", measure = "GD"), size = CCSize)
 
-DataCarTCC2Pheno2 <- DataCarTC2[rownames(DataCarTC2)%in%TC2C2$sel,]
+DataCarTCC2Pheno2 <- TC2Data[rownames(TC2Data)%in%TC2C2$sel,]
 
 write.table(DataCarTCC2Pheno2, file = here::here("output", "TC2C", "DadosTC2Pheno2.csv"),
             quote = F, sep = ";", dec = ".")
@@ -135,7 +119,7 @@ write.table(DataCarTCC2Pheno2, file = here::here("output", "TC2C", "DadosTC2Phen
 ### Coleção Nuclear 3 - Distância de Gower e Algoritmo MLST DARwin software
 
 ```{r TC2 Preparando a matriz de distancias de Gower para DARwin, eval = FALSE}
-DistCarTC2 <- as.dist(DistCarTC2)
+DistCarTC2 <- as.dist(DistTC2Data)
 cat(nrow(DistCarTC2), "\n", file = here::here("output", "MatrizGowerCarolineTC2.phy"))
 write.table(x = as.matrix(DistCarTC2), file = here::here("output", "MatrizGowerCarolineTC2.phy"),
           append = TRUE, quote = FALSE, sep = "\t", col.names = FALSE)
@@ -150,8 +134,66 @@ SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC2.DON"),
 table(SelDARwin$CCSel)
 ClonesSel <- SelDARwin %>% filter(CCSel == "Kept") %>%
   select(Name)
-DataCarTCC2Pheno3 <- DataCarTC2[DataCarTC2$Acessos%in%ClonesSel$Name,]
+DataCarTCC2Pheno3 <- TC2Data[TC2Data$id%in%ClonesSel$Name,]
 
 write.table(DataCarTCC2Pheno3, file= here::here("output", "TC2C", "DadosTC2Pheno3.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+
+
+## Coleção Nuclear Temática 3 - Qualidade de Raizes
+
+### Coleção Nuclear 1 - Distância de Gower e pacote CoreHunter
+
+```{r TC3 Estimacacao da Primeira colecao nuclear fen, eval = FALSE}
+library(corehunter); library(StatMatch)
+
+rownames(TC3Data) <- TC3Data$id
+DistTC3Data <- gower.dist(data.x = TC3Data[,-1])
+row.names(DistTC3Data) <- colnames(DistTC3Data) <- TC3Data$id
+Dist2TC3Data <- distances(DistTC3Data)
+
+TC3C1 <- sampleCore(Dist2TC3Data, objective(type = "EN", measure = "PD"), size = CCSize)
+
+DataCarTCC3Pheno1 <- TC3Data[TC3Data$id%in%TC3C1$sel,]
+
+write.table(DataCarTCC3Pheno1, here::here("output", "TC3C", "DadosTC3Pheno1.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+### Coleção Nuclear 2 - Algoritmo pacote CoreHunter
+
+```{r TC3 Estimacacao da Segunda colecao nuclear fen, eval = FALSE}
+DataCarTC3P <- phenotypes(data = TC3Data[,-1])
+TC3C2 <- sampleCore(DataCarTC3P, objective(type = "EN", measure = "GD"), size = CCSize)
+
+DataCarTCC3Pheno2 <- TC3Data[rownames(TC3Data)%in%TC3C2$sel,]
+
+write.table(DataCarTCC3Pheno2, file = here::here("output", "TC3C", "DadosTC3Pheno2.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+### Coleção Nuclear 3 - Distância de Gower e Algoritmo MLST DARwin software
+
+```{r TC3 Preparando a matriz de distancias de Gower para DARwin, eval = FALSE}
+DistCarTC3 <- as.dist(DistTC3Data)
+cat(nrow(DistCarTC3), "\n", file = here::here("output", "MatrizGowerCarolineTC3.phy"))
+write.table(x = as.matrix(DistCarTC3), file = here::here("output", "MatrizGowerCarolineTC3.phy"),
+          append = TRUE, quote = FALSE, sep = "\t", col.names = FALSE)
+
+CCSize
+```
+
+```{r TC3 Obtendo os resultados de DARwin e separando os resultados, eval = FALSE}
+SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC3.DON"),
+                             sep = "\t", header = T, skip = 2,
+                             nrows = 809)
+table(SelDARwin$CCSel)
+ClonesSel <- SelDARwin %>% filter(CCSel == "Kept") %>%
+  select(Name)
+DataCarTCC3Pheno3 <- TC3Data[TC3Data$id%in%ClonesSel$Name,]
+
+write.table(DataCarTCC3Pheno3, file= here::here("output", "TC3C", "DadosTC3Pheno3.csv"),
             quote = F, sep = ";", dec = ".")
 ```

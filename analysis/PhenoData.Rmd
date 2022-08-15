@@ -210,7 +210,7 @@ plan(multicore(workers = 3))
 
 PhenData <- DataCar$PhenData[[27]]
 
-DataCar %>% mutate(Blups = future_map2(Traits, PhenData, function(Traits, PhenData,...){
+DataCar <- DataCar %>% mutate(Blups = future_map2(Traits, PhenData, function(Traits, PhenData,...){
   RhpcBLASctl::blas_set_num_threads(3)
   print(paste("Trait", Traits, sep = " "))
   PhenData <- PhenData %>%
@@ -219,32 +219,27 @@ DataCar %>% mutate(Blups = future_map2(Traits, PhenData, function(Traits, PhenDa
            repTrial = as.factor(paste(trial, Bloco, sep = ":")),
            LocYear = as.factor(paste(Local, Ano, sep = ":")))
   
-  MM <- analyzeTrial.sommerConj(PhenData)
-  blups <- MM$U$clone$y + MM$Beta$Estimate
-  Blups <- tibble(id = names(blups),
-                  blups = blups) %>%
-    dplyr::mutate(id = gsub(pattern = "clone", replacement = "",x = .$id))
+  MM <- analyzeTrial.lme4Conj(PhenData)
+  blups <- ranef(MM)$clone + fixef(MM)[[1]]
+  Blups <- tibble(id = rownames(blups),
+                  blups = blups$`(Intercept)`)
   colnames(Blups)[2] <- Traits
   file <- here::here("output", "MixedModels",
                      paste("Blups_", Traits, ".rds", sep = ""))
   saveRDS(object = Blups, file = file)
   return(Blups)
 }))
-  
-
-}
 
 
-BlupsTraits <- readRDS(here::here("output", "MixedModels", "Blups_HCNPic.rds"))
-IDClones <- tibble(id = unique(c(DataSelPar$clone, DataSelHCN$clone)) %>% .[order(.)])
-BlupsTraits <- IDClones %>% left_join(BlupsTraits, by = "id")
-traits2 <- traits %>% .[-c(1,15:17)]
+BlupsTraits <- readRDS(here::here("output", "MixedModels", "Blups_HCN.rds")) %>% 
+  rename(HCN = `31`)
+traits2 <- DataCar$Traits %>% as.character() %>% .[. != "HCN"]
 
 for(i in traits2){
   filename <- paste("Blups_", i, ".rds", sep = "")
   BlupsTraits <- BlupsTraits %>%
-    left_join(readRDS(here::here("output", "MixedModels", filename)))
-  colnames(BlupsTraits)[colnames(BlupsTraits) == "blups"] <- i
+    full_join(., readRDS(here::here("output", "MixedModels", filename)), by = "id")
+  colnames(BlupsTraits)[ncol(BlupsTraits)] <- i
 }
 
 saveRDS(object = BlupsTraits,
@@ -256,133 +251,134 @@ saveRDS(object = BlupsTraits,
 ```{r Agrupar as caracteristicas}
 library(tidyverse); library(data.table)
 Blups <- readRDS(here::here("output", "BlupsFenCar.rds"))
-DataPhen <- read.table(here::here("data", "DadosCarolineNBlups.csv"),
-                       sep = ",", header = TRUE)
 
-# Removendo caracteres duplicados
+BlupsDis <- readRDS(file = here::here("output", "BLUPsDisease.RDS"))
 
-Blups <- Blups %>% dplyr::select(-HCNLab, -DMCoven, -APsF, -PR, -TAC, -PRNC)
+DataPhen <- readRDS(file = here::here("output", "DadosQualCaroline.rds")) %>% 
+  full_join(., read.table(file = here::here("data", "DadosCarolineNBlups.csv"),
+                        sep = ",", header = T) %>%
+  dplyr::select(Acessos, CorPolpaRzs) %>% filter(!is.na(CorPolpaRzs)), by = c("Genotipos.BGM" = "Acessos"))
 
-# Conferindo nomes dos clones em ambos os objetos
-DataPhen$Acessos[!DataPhen$Acessos %in% Blups$id]
-Blups$id[!Blups$id %in% DataPhen$Acessos]
+DataPhen1 <- DataPhen[1:459,-5]
+DataPhen2 <- DataPhen[460:nrow(DataPhen), -2] %>% rename(CorPol = CorPolpaRzs) %>% 
+  dplyr::select(Genotipos.BGM, CorPol, Friab, Cook)
 
-sum(DataPhen$Acessos %in% Blups$id)
-sum(Blups$id %in% DataPhen$Acessos)
-# Juntando os objetos em um unico
+DataPhen <- rbind(DataPhen1, DataPhen2) %>% mutate(CorPol = as.character(CorPol))
 
-AllDataInfo <- inner_join(DataPhen, Blups, by = c("Acessos" = "id"))  %>%
-  mutate(CorFolhaApical = as.character(CorFolhaApical),
-         CorPeciolo = as.character(CorPeciolo),
-         CorFolhaDesenv = as.character(CorFolhaDesenv),
-         CorNerv = as.character(CorNerv),
-         CorCortexCaule = as.character(CorCortexCaule),
-         CorExternaCaule = as.character(CorExternaCaule),
-         CorEpidCaule = as.character(CorEpidCaule),
-         CorRamosTerm = as.character(CorRamosTerm),
-         CorExternaRzs = as.character(CorExternaRzs),
-         CorCortexRzs = as.character(CorCortexRzs),
-         CorPolpaRzs = as.character(CorPolpaRzs),
-         Pubescencia = as.character(Pubescencia),
-         FormaLobuloCentral = as.character(FormaLobuloCentral),
-         PosicaoPeciolo = as.character(PosicaoPeciolo),
-         Sinuosidade = as.character(Sinuosidade),
-         HabCrescCaule = as.character(HabCrescCaule),
-         TipoPlan = as.character(TipoPlan),
-         MargEstip = as.character(MargEstip),
-         HabRamif = as.character(HabRamif),
-         NiveisRam = as.character(NiveisRam),
-         ProemCicatrizesFolhas = as.character(ProemCicatrizesFolhas),
-         FormaRzs = as.character(FormaRzs),
-         TxtEpidermeRzs = as.character(TxtEpidermeRzs),
-         PresPedunculoRzs = as.character(PresPedunculoRzs),
-         PosicaoRzs = as.character(PosicaoRzs),
-         Flowering = as.character(Flowering),
-         DestqPelicRz = as.character(DestqPelicRz),
-         DestqCortexRz = as.character(DestqCortexRz),
-         ConstrRzs = as.character(ConstrRzs))
+DataTCC <- Blups %>% full_join(DataPhen, by = c("id" = "Genotipos.BGM")) %>%
+  full_join(BlupsDis, by = c("id" = "CLONE"))
 
 # Conferindo o número de dados perdidos por característica
 
-TraitsSel <- names(colSums(is.na(AllDataInfo)))[colSums(is.na(AllDataInfo))/nrow(AllDataInfo) < 0.30]
-
-# Imputando dados perdidos
-AllDataInfo <- AllDataInfo[,TraitsSel]
-traits <- colnames(AllDataInfo)[-1]
-sum(is.na(AllDataInfo))
-for(i in traits){
-  if(class(AllDataInfo[,i]) == "character"){
-  # Imputando a moda para dados qualitativos
-        AllDataInfo[,i][is.na(AllDataInfo[,i])] <- table(AllDataInfo[,i]) %>%
-      .[order(., decreasing = T)] %>% .[1] %>% names %>% as.integer
-  } else {
-  # Imputando a media para dados quantitativos
-    AllDataInfo[,i][is.na(AllDataInfo[,i])] <- mean(AllDataInfo[,i], na.rm = TRUE)
-  }
-}
-
-saveRDS(AllDataInfo, file = here::here("output", "DataSelPreparedCar.rds"))
+TraitsSel <- names(colSums(is.na(DataTCC)))[colSums(is.na(DataTCC))/nrow(DataTCC) < 0.80]
 ```
 
-## Estimação Blups Carotenóides de Predições NIR ASD
-
-```{r}
-library(sommer)
-DataCar <- read.table(file = here::here("data", "Preditos_TCC_ASD_PLS_18-20.txt"),
-                      header = T, sep = "\t", na.strings = "")
-head(DataCar)
-
-mod <- lmer(formula = TCC ~ Trial + (1|Clone),
-            data = DataCar)
-anova(mod)
-summary(mod)
-fixef(mod)
-ranef(mod)
-Blups <- tibble(clones = ranef(mod)$Clone %>% rownames,
-                TCC = ranef(mod)$Clone[,1] + fixef(mod)[[1]])
-
-```
-
-## New data
-
-```{r}
-Newdata <- read.table(file = here::here("data", "DadosFen2Cap.csv"), sep = ",",
-                      header = T, na.strings = "")
-NewData <- Newdata %>%
-  mutate(CookTime = ifelse(Cook15 == "Sim", yes = "15",
-                           no = ifelse(Cook20 == "Sim", yes = "20",
-                                       no = ifelse(Cook25 == "Sim", yes = "25",
-                                                   no = ifelse(Cook30 == "Sim", yes = "30",
-                                                               no = ifelse(Cook40 == "Sim", yes = "40",
-                                                                           no = ifelse(is.na(.), NA, ">40")))))),
-         .keep = "unused") %>% rename(Genotipos.BGM. = Genotipos.BGM)
-table(NewData$CookTime)
-colnames(NewData)
-colnames(DadosPhen)
-test <- DadosPhen %>% inner_join(NewData)
-
-test2 <- test %>% filter(!is.na(RetencaoFoliar))
-cbind(test2$Retencao.foliar....CO_334.0000048,test2$RetencaoFoliar)
-```
 
 ```{r Joint all data per Thematic collection}
 
 ## Temática 1 - Produtividade de Raízes
-TC1Traits <- c("IC", "PTR", "NR", "DRY", "DMCsg", "PPA")
-TC1Traits <- c("PTR", "NR", "DRY", "DMCsg") ## IC and PPA not finished their Mixed Models analysis
+TC1Traits <- c("id", "IC", "PTR", "NRz", "DRY", "DMCsg", "PPA", "PA", "PRz")
+
+TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
 
 ## Temática 2 - Resistência a Doenças Foliares
-TC2Traits <- c("Anth", "BlLS", "BrLS", "WhLS", "Germinação 45DAP", "Couro de sapo", "Podridao", "Retencao foliar")
+TC2Traits <- c("id", "Anth", "BlLS", "BrLS", "WhLS", "Vigor45D", "FrogSkin",
+               "Pod", "FerSev", "MosCm", "MosNv", "RF", "AcSev")
+TC2Data <- DataTCC[, TC2Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
 
 ## Temática 3 - Qualidade das raízes
 # Verificar conjunto de dados de deteorização Fisiológica com Eder e predições de Carotenóides e DMC com Massaine
 # Fazer uma coleção para Coloração Branca e uma para coloração amarela
-TC3Traits <- c("HCNPic", "DMCsg", "PPD", "TCC", "CorPolpa", "Podridao",
-               "Cook15", "Cook20", "Cook25", "Cook30", "Cook40")
+TC3Traits <- c("id", "HCN", "DMCsg", "TCC", "CorPol")
+TC3Data <- DataTCC[, TC3Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
+```
 
+### Table 1. Missing data per DataSet for each Thematic Nuclear Collection
+
+```{r Table 1, echo = F}
+library(reactable)
+
+NaData1 <- tibble(NuclearCol = "RootYield",
+                  Trait = colnames(TC1Data)[-1],
+                  MissingData = colSums(is.na(TC1Data[,-1]))/nrow(TC1Data[,-1]) %>% as.vector)
+NaData2 <- tibble(NuclearCol = "Disease",
+                  Trait = colnames(TC2Data)[-1],
+                  MissingData = colSums(is.na(TC2Data[,-1]))/nrow(TC2Data[,-1]) %>% as.vector)
+NaData3 <- tibble(NuclearCol = "QualityRoot",
+                  Trait = colnames(TC3Data)[-1],
+                  MissingData = colSums(is.na(TC3Data[,-1]))/nrow(TC3Data[,-1]) %>% as.vector)
+
+reactable::reactable(rbind(NaData1, NaData2, NaData3), columns = list(
+  MissingData = colDef(format = colFormat(digits = 2, locales = "en-US", percent = T))))
 ```
 
 
-Next - [Dados Moleculares - Seleção](GenoData.html)
+
+
+```{r Imputing Missing data}
+# Imputando dados perdidos
+
+# inputation Function
+InpDataFunc <- function(data){
+  traits <- colnames(data)[-1]
+  data <- as.data.frame(data)
+  
+  for(i in traits){
+    if(class(data[,i]) == "character"){
+      # Imputando a moda para dados qualitativos
+      data[,i][is.na(data[,i])] <- table(data[,i]) %>%
+        .[order(., decreasing = T)] %>% .[1] %>% names %>% as.character
+      } else {
+        # Imputando a media para dados quantitativos
+        data[,i][is.na(data[,i])] <- mean(data[,i], na.rm = TRUE)
+      }
+  }
+  return(tibble(data))
+  }
+
+## TC1Data
+
+TC1DataImp <- InpDataFunc(TC1Data)
+
+saveRDS(TC1DataImp, file = here::here("output", "TCC1Data.rds"))
+
+## TC2Data
+
+TC2DataImp <- InpDataFunc(TC2Data)
+
+saveRDS(TC2DataImp, file = here::here("output", "TCC2Data.rds"))
+
+## TC3Data - Due to the difficult measure of the TCC, we applied a NIRS prediction
+## for TCC to increase the number of clones evaluated for TCC, however the number
+## of clones predicted by NIRS is also small compared to the BAG size.
+## As TCC is close related to pulp color we will use this trait as a priori to
+## impute the remaing clones.
+
+TCCImputMeans <- TC3Data %>% group_by(CorPol) %>%
+  summarise(TCCMeans = mean(TCC, na.rm = T)) %>% filter(!is.na(CorPol))
+TCCImputMeans[4, 2] <- TCCImputMeans[c(3,5),]$TCCMeans %>% mean
+
+TC3DataImp <- TC3Data %>%
+  mutate(TCC = ifelse(test = !is.na(TCC),
+                      yes = TCC,
+                      no = ifelse(CorPol == 1,
+                                  yes = TCCImputMeans[1,]$TCCMeans,
+                                  no = ifelse(CorPol == 2,
+                                              yes = TCCImputMeans[2,]$TCCMeans,
+                                              no = ifelse(CorPol == 3,
+                                                          yes = TCCImputMeans[3,]$TCCMeans,
+                                                          no = ifelse(CorPol == 4,
+                                                                      yes = TCCImputMeans[4,]$TCCMeans,
+                                                                      no = TCCImputMeans[5,]$TCCMeans))))),
+         CorPol = as.character(CorPol))
+
+TC3DataImp <- InpDataFunc(TC3DataImp)
+
+saveRDS(TC3DataImp, file = here::here("output", "TCC3Data.rds"))
+```
+
+
+
+Next - [Coleções Nucleares Temáticas](TCC.html)
 
 [Home](index.html)
