@@ -1,0 +1,525 @@
+---
+title: "Análises Discriminantes"
+author: "LucianoRogerio"
+date: "2022-08-15"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Preparando os dados fenotípicos
+
+```{r Preparing data}
+suppressMessages(library(tidyverse)); suppressMessages(library(here)); suppressMessages(library(reshape2))
+suppressMessages(library(reactable))
+
+## TCC 1
+
+CC1Method1 <- read.table(here::here("output", "TC1C", "DadosTC1Pheno1.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/CH")
+
+
+CC1Method2 <- read.table(here::here("output", "TC1C", "DadosTC1Pheno2.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "CH")
+
+
+CC1Method3 <- read.table(here::here("output", "TC1C", "DadosTC1Pheno3.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/MLST")
+
+AllBAG <- readRDS(file = here::here("output", "TCC1Data.rds")) %>% mutate(Method = "BAG")
+
+CC1AllData <- rbind(AllBAG, CC1Method1, CC1Method2, CC1Method3)
+
+saveRDS(object = CC1AllData, file = here::here("output", "AllDataCC1.rds"))
+
+## TCC 2
+
+CC2Method1 <- read.table(here::here("output", "TC2C", "DadosTC2Pheno1.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/CH")
+
+
+CC2Method2 <- read.table(here::here("output", "TC2C", "DadosTC2Pheno2.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "CH")
+
+
+CC2Method3 <- read.table(here::here("output", "TC2C", "DadosTC2Pheno3.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/MLST")
+
+AllBAG <- readRDS(file = here::here("output", "TCC2Data.rds")) %>% mutate(Method = "BAG")
+
+CC2AllData <- rbind(AllBAG, CC2Method1, CC2Method2, CC2Method3)
+
+saveRDS(object = CC2AllData, file = here::here("output", "AllDataCC2.rds"))
+
+## TCC 3
+
+CC3Method1 <- read.table(here::here("output", "TC3C", "DadosTC3Pheno1.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/CH")
+
+
+CC3Method2 <- read.table(here::here("output", "TC3C", "DadosTC3Pheno2.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "CH")
+
+
+CC3Method3 <- read.table(here::here("output", "TC3C", "DadosTC3Pheno3.csv"), header = T,
+                      sep = ";", dec = ".") %>% mutate(Method = "GW/MLST")
+
+AllBAG <- readRDS(file = here::here("output", "TCC3Data.rds")) %>% mutate(Method = "BAG")
+
+CC3AllData <- rbind(AllBAG, CC3Method1, CC3Method2, CC3Method3)
+
+saveRDS(object = CC3AllData, file = here::here("output", "AllDataCC3.rds"))
+```
+
+## Grouping of Nuclear Collection methods by Kappa index
+
+```{r kappa Index estimation}
+KappaIndex <- function(data, pop = "BAG"){
+  BAGClones <- data$id[data$Method == pop]
+  
+  CCMethods <- unique(data$Method) %>% setdiff(pop)
+  SelCC <- tibble(Clones = BAGClones)
+  
+  for(i in CCMethods){
+    Common <- BAGClones %in% data$id[data$Method == i] %>%
+      as.numeric %>% as.data.frame
+    colnames(Common) <- i
+    SelCC <- cbind(SelCC, Common)
+    }
+  row.names(SelCC) <- SelCC$Clones
+  SelCC$Clones <- NULL
+  
+  CoincObs <- matrix(data = NA, nrow = ncol(SelCC), ncol = ncol(SelCC))
+  colnames(CoincObs) <- rownames(CoincObs) <- colnames(SelCC)
+  
+  for(i in colnames(SelCC)){
+    for(j in colnames(SelCC)){
+      if(i == j){ CoincObs[i, j] <- 1} else {
+        CoincObs[i, j] <- sum(SelCC[, i] == SelCC[, j])/nrow(SelCC)
+      }
+    }
+    }
+  
+  CoincEsp <- matrix(data = (sum(SelCC[,1])/nrow(SelCC))**2 + (1-(sum(SelCC[,1])/nrow(SelCC)))**2,
+                     nrow = ncol(SelCC), ncol = ncol(SelCC))
+  colnames(CoincEsp) <- rownames(CoincEsp) <- colnames(SelCC)
+  
+  Kappa <- round((CoincObs - CoincEsp)/(1 - CoincEsp), digits = 4)
+  return(Kappa)
+}
+
+KappaCC1 <- KappaIndex(CC1AllData) %>% as.data.frame %>%
+  mutate(Method = rownames(.),
+         TCC = "RootYield") %>% select(TCC, Method, everything())
+KappaCC2 <- KappaIndex(CC2AllData) %>% as.data.frame %>%
+  mutate(Method = rownames(.),
+         TCC = "Disease") %>% select(TCC, Method, everything())
+KappaCC3 <- KappaIndex(CC3AllData) %>% as.data.frame %>%
+  mutate(Method = rownames(.),
+         TCC = "QualityRoot") %>% select(TCC, Method, everything())
+
+KappaIndex <- rbind(KappaCC1, KappaCC2, KappaCC3) %>% as_tibble
+
+write.table(KappaIndex, file = here::here("output", "KappaIndex.csv"), sep = ",",
+            quote = F)
+```
+
+### Table 1. Kappa index between the Methods for the three Thematic Core Collections
+
+```{r Table 1, echo = F}
+library(reactable)
+
+reactable::reactable(KappaIndex, columns = list(
+  `GW/CH` = colDef(format = colFormat(digits = 3, locales = "en-US")),
+  `CH` =  colDef(format = colFormat(digits = 3, locales = "en-US")),
+  `GW/MLST` = colDef(format = colFormat(digits = 3, locales = "en-US"))),
+  groupBy = "TCC")
+```
+
+
+```{r Fig 1, echo = F}
+library(corrplot); library(magick)
+
+tiff(filename = here::here("output", "CorPlotYield.tiff"), res = 400, units = "cm",
+     width = 10, height = 10, compression = "lzw")
+corrplot::corrplot(KappaCC1[,-c(1:2)] %>% as.matrix, cl.pos = "n",
+                   tl.col = "black")
+dev.off()
+
+tiff(filename = here::here("output", "CorPlotDisease.tiff"), res = 400, units = "cm",
+     width = 10, height = 10, compression = "lzw")
+corrplot::corrplot(KappaCC2[,-c(1:2)] %>% as.matrix, cl.pos = "n",
+                   tl.col = "black")
+dev.off()
+
+tiff(filename = here::here("output", "CorPlotQuality.tiff"), res = 400, units = "cm",
+     width = 10, height = 10, compression = "lzw")
+corrplot::corrplot(KappaCC3[,-c(1:2)] %>% as.matrix, cl.pos = "n",
+                   tl.col = "black")
+dev.off()
+
+CorPlotYield <- image_read(path = here::here("output", "CorPlotYield.tiff"))
+CorPlotDisease <- image_read(path = here::here("output", "CorPlotDisease.tiff"))
+CorPlotQuality <- image_read(path = here::here("output", "CorPlotQuality.tiff"))
+
+CorPlot <- image_append(c(image_annotate(CorPlotYield, text = "Root Yield", size = 100,
+                              color = "black", gravity = "north", location = "+170"),
+               image_annotate(CorPlotDisease, text = "Diseases", size = 100,
+                              color = "black", gravity = "north", location = "+170")))
+CorPlots <- image_append(c(CorPlot, image_annotate(CorPlotQuality, text = "Quality Root",
+                                                   size = 100, color = "black", gravity = "north",
+                                                   location = "+170")), stack = T)
+
+image_write(CorPlots, path = here::here("output", "CorPlots.jpeg"),format = "jpeg", quality = 100)
+image_write(CorPlots, path = here::here("output", "CorPlots.png"),format = "png", quality = 100)
+```
+
+#### **Fig 1.** Kappa index plot of the coincidence of selected clones by the three methods for the Thematic nuclear collection.
+
+![](/Users/lbd54/Documents/GitHub/CarolineTCC2/output/CorPlots.jpeg)
+
+
+```{r Venn Diagram per Thematic Core Collection}
+library(ggvenn); library(ggpubr)
+
+CloneCoin <- function(data, pop = "BAG"){
+  BAGClones <- data$id[data$Method == pop]
+  
+  CCMethods <- unique(data$Method) %>% setdiff(pop)
+  SelCC <- tibble(Clones = BAGClones)
+  
+  for(i in CCMethods){
+    Common <- BAGClones %in% data$id[data$Method == i] %>%
+      as.numeric %>% as.data.frame
+    colnames(Common) <- i
+    SelCC <- cbind(SelCC, Common)
+    }
+  row.names(SelCC) <- SelCC$Clones
+  SelCC$Clones <- NULL
+  return(SelCC)
+}
+
+SelCC1 <- CloneCoin(data = CC1AllData)
+SelCC2 <- CloneCoin(data = CC2AllData)
+SelCC3 <- CloneCoin(data = CC3AllData)
+
+vennCC1 <- list(
+  `GW/CH` = rownames(SelCC1)[SelCC1$`GW/CH` == 1],
+  CH = rownames(SelCC1)[SelCC1$CH == 1],
+  `GW/MLST` = rownames(SelCC1)[SelCC1$`GW/MLST` == 1])
+
+VD1 <- ggvenn(vennCC1, fill_color = c("red", "blue", "green"),
+              fill_alpha = 0.6, set_name_size = 5)
+
+vennCC2 <- list(
+  `GW/CH` = rownames(SelCC2)[SelCC2$`GW/CH` == 1],
+  CH = rownames(SelCC2)[SelCC2$CH == 1],
+  `GW/MLST` = rownames(SelCC2)[SelCC2$`GW/MLST` == 1])
+
+VD2 <- ggvenn(vennCC2, fill_color = c("red", "blue", "green"),
+              fill_alpha = 0.6, set_name_size = 5)
+
+vennCC3 <- list(
+  `GW/CH` = rownames(SelCC3)[SelCC3$`GW/CH` == 1],
+  CH = rownames(SelCC3)[SelCC3$CH == 1],
+  `GW/MLST` = rownames(SelCC3)[SelCC3$`GW/MLST` == 1])
+
+VD3 <- ggvenn(vennCC3, fill_color = c("red", "blue", "green"),
+              fill_alpha = 0.6, set_name_size = 5)
+
+### Venn Diagrams DivGen Rmd
+tiff(filename = "output/VennDiagramTCCs.tiff", res = 400, units = "cm",
+     compression = "lzw", width = 20, height = 25)
+ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO")
+dev.off()
+```
+
+#### **Fig 2.** Venn diagram for the three groups of Nuclear Collections
+```{r Fig 2, fig.height = 12, echo = FALSE}
+library(ggpubr)
+ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO")
+```
+
+A - Venn diagram for the Thematic core collection for Cassava Root yield;
+B - Venn diagram for the Thematic core collection for Cassava Diseases;
+C - Venn diagram for the Thematic core collection for Cassava Quality Root.
+
+## Estimating Shannon-Weaver Index for all the Thematic Core Collection
+
+```{r Select the clones for the Core Collection}
+
+## Quantatity traits
+suppressMessages(library(tidyverse)); suppressMessages(library(data.table)); suppressMessages(library(reactable))
+source(here::here("code", "Shannon-Weaver.R"))
+
+CC1AllData <- readRDS(file = here::here("output", "AllDataCC1.rds")) %>% as.data.frame
+CC2AllData <- readRDS(file = here::here("output", "AllDataCC2.rds")) %>% as.data.frame
+CC3AllData <- readRDS(file = here::here("output", "AllDataCC3.rds")) %>% as.data.frame
+
+
+SelCC1 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC1
+SelCC2 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC2
+SelCC3 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC3
+
+CC1AllData %>% rbind(CC1AllData %>% filter(id %in% CloneSelCC1, Method == "BAG") %>% 
+  mutate(Method = "CC")) -> CC1AllData2
+CC2AllData %>% rbind(CC2AllData %>% filter(id %in% CloneSelCC2, Method == "BAG") %>% 
+  mutate(Method = "CC")) -> CC2AllData2
+CC3AllData %>% rbind(CC3AllData %>%filter(id %in% CloneSelCC3, Method == "BAG") %>% 
+  mutate(Method = "CC")) -> CC3AllData2
+
+
+CC1Traits <- data.frame(Trait = colnames(CC1AllData2)[2:9],
+                        Min = apply(CC1AllData2[2:9], FUN = min, na.rm = TRUE, MARGIN = 2),
+                        Max = apply(CC1AllData2[2:9], FUN = max, na.rm = TRUE, MARGIN = 2))
+CC2Traits <- data.frame(Trait = colnames(CC2AllData2)[2:13],
+                        Min = apply(CC2AllData2[2:13], FUN = min, na.rm = TRUE, MARGIN = 2),
+                        Max = apply(CC2AllData2[2:13], FUN = max, na.rm = TRUE, MARGIN = 2))
+CC3Traits <- data.frame(Trait = colnames(CC3AllData2)[2:4],
+                        Min = apply(CC3AllData2[2:4], FUN = min, na.rm = TRUE, MARGIN = 2),
+                        Max = apply(CC3AllData2[2:4], FUN = max, na.rm = TRUE, MARGIN = 2))
+
+Methods <- unique(CC1AllData2$Method)
+
+
+CC1SHs <- NULL
+for(i in 1:length(Methods)){
+  for(trait in CC1Traits$Trait){
+    CC1SH <- data.frame(Method = Methods[i],
+                          Trait = trait,
+                          SH = Shannon.Weaver.QT(CC1AllData2[(CC1AllData2$Method%in%Methods[i]),trait],
+                                                 Min = CC1Traits[CC1Traits$Trait == trait, "Min"],
+                                                 Max = CC1Traits[CC1Traits$Trait == trait, "Max"],
+                                                 formula = 2))
+    CC1SHs <- rbind(CC1SHs, CC1SH)
+  }
+}
+
+TableCC1SH <- matrix(CC1SHs$SH, byrow = F, ncol = 5)
+colnames(TableCC1SH) <- unique(CC1SHs$Method)
+TableCC1SH <- TableCC1SH %>% as.data.frame %>% dplyr::mutate(TCC = "RootYield",
+                                                             Trait = unique(CC1SHs$Trait)) %>% 
+  select(TCC, Trait, everything())
+
+CC2SHs <- NULL
+for(i in 1:length(Methods)){
+  for(trait in CC2Traits$Trait){
+    CC2SH <- data.frame(Method = Methods[i],
+                          Trait = trait,
+                          SH = Shannon.Weaver.QT(CC2AllData2[(CC2AllData2$Method%in%Methods[i]),trait],
+                                                 Min = CC2Traits[CC2Traits$Trait == trait, "Min"],
+                                                 Max = CC2Traits[CC2Traits$Trait == trait, "Max"],
+                                                 formula = 2))
+    CC2SHs <- rbind(CC2SHs, CC2SH)
+  }
+}
+
+TableCC2SH <- matrix(CC2SHs$SH, byrow = F, ncol = 5)
+colnames(TableCC2SH) <- unique(CC2SHs$Method)
+TableCC2SH <- TableCC2SH %>% as.data.frame %>% dplyr::mutate(TCC = "Diseases",
+                                                             Trait = unique(CC2SHs$Trait)) %>% 
+  select(TCC, Trait, everything())
+
+
+CC3SHs <- NULL
+for(i in 1:length(Methods)){
+  for(trait in CC3Traits$Trait[-4]){
+    CC3SH <- data.frame(Method = Methods[i],
+                          Trait = trait,
+                          SH = Shannon.Weaver.QT(CC3AllData2[(CC3AllData2$Method%in%Methods[i]),trait],
+                                                 Min = CC3Traits[CC3Traits$Trait == trait, "Min"],
+                                                 Max = CC3Traits[CC3Traits$Trait == trait, "Max"],
+                                                 formula = 2))
+    CC3SHs <- rbind(CC3SHs, CC3SH)
+  }
+}
+
+## Quality traits
+
+QualCC3Trait <- data.frame(Trait = "CorPol",
+                           NClas = 5,
+                           row.names = NULL)
+
+QualCC3SHs <- NULL
+for(i in 1:length(Methods)){
+    Data <- CC3AllData2[(CC3AllData2$Method%in%Methods[i]), "CorPol"]
+    ShannonWeaver <- Shannon.Weaver.QL(Data,
+                                       nclass = QualCC3Trait$NClas)
+    QualCC3SH <- data.frame(Method = Methods[i],
+                         Trait = "CorPol",
+                         SH = ShannonWeaver)
+    QualCC3SHs <- rbind(QualCC3SHs, QualCC3SH)
+}
+
+QualTableCC3SH <- QualCC3SHs[,-2]
+row.names(QualTableCC3SH) <- QualTableCC3SH$Method
+QualTableCC3SH$Method <- NULL
+QualTableCC3SH <- t(QualTableCC3SH) %>% as.data.frame %>%
+  mutate(TCC = "QualityRoot",
+         Trait = "CorPol") %>% select(TCC, Trait, everything())
+rownames(QualTableCC3SH) <- NULL
+
+TableCC3SH <- matrix(CC3SHs$SH, byrow = F, ncol = 5)
+colnames(TableCC3SH) <- unique(CC3SHs$Method)
+TableCC3SH <- TableCC3SH %>% as.data.frame %>% dplyr::mutate(TCC = "QualityRoot",
+                                                             Trait = unique(CC3SHs$Trait)) %>% 
+  select(TCC, Trait, everything()) %>%
+  rbind(QualTableCC3SH)
+
+TableSH <- rbind(TableCC1SH, TableCC2SH, TableCC3SH)
+write.table(TableSH, file = here::here("output", "Shannon-WeaverIndex.csv"),
+            quote = F, sep = ";", row.names = F)
+```
+
+## **Table 2.** Shannon-Weaver index for all the traits applied to create each Thematic core collection.
+
+```{r Table 2, echo = F}
+library(reactable)
+reactable::reactable(TableSH, groupBy = "TCC", columns = list(
+  BAG = colDef(format = colFormat(digits = 4, locales = "en-US")),
+  `GW/CH` = colDef(format = colFormat(digits = 4, locales = "en-US")),
+  CH = colDef(format = colFormat(digits = 4, locales = "en-US")),
+  `GW/MLST` = colDef(format = colFormat(digits = 4, locales = "en-US")),
+  CC = colDef(format = colFormat(digits = 4, locales = "en-US"))))
+```
+
+
+```{r}
+SHBAG <- TableSH[ , "BAG"]
+SHs <- TableSH %>% select(-TCC, -Trait, -BAG)
+
+SHRel <- ((SHs - SHBAG)*100/SHBAG) %>% cbind(TableSH %>% select(TCC, Trait)) %>% 
+  select(TCC, Trait, everything())
+
+SHRel %>% group_by(TCC) %>% summarize(`GW/CH` = mean(`GW/CH`),
+                                      CH = mean(`CH`),
+                                      `GW/MLST` = mean(`GW/MLST`),
+                                      CC = mean(CC)) %>%
+  mutate(Trait = "Mean") %>% select(TCC, Trait, everything()) -> SHMean
+
+SHRel %>% group_by(TCC) %>% summarize(`GW/CH` = stats::sd(`GW/CH`),
+                                      CH = stats::sd(CH),
+                                      `GW/MLST` = stats::sd(`GW/MLST`),
+                                      CC = stats::sd(CC)) %>%
+  mutate(Trait = "sd") %>% select(TCC, Trait, everything()) -> SHsd
+
+SHRel2 <- SHRel %>% rbind(SHMean, SHsd) %>% arrange(TCC)
+
+write.table(SHRel2, file = here::here("output", "GanhoRelativoShannonWeaver.csv"),
+            quote = F, row.names = F, sep = ";")
+```
+
+
+## Thematic Core Collection Results
+
+```{r}
+CC1AllData3 <- reshape2::melt(CC1AllData2, id.vars = c("id", "Method"),
+       variable.name = "Trait", value.name = "Value") %>%
+  mutate(Method = factor(Method, levels = c("BAG", "GW/CH", "CH", "GW/MLST", "CC")))
+CC2AllData3 <- reshape2::melt(CC2AllData2, id.vars = c("id", "Method"),
+       variable.name = "Trait", value.name = "Value") %>%
+  mutate(Method = factor(Method, levels = c("BAG", "GW/CH", "CH", "GW/MLST", "CC")))
+CC3AllData3 <- reshape2::melt(CC3AllData2 %>% select(-CorPol), id.vars = c("id", "Method"),
+       variable.name = "Trait", value.name = "Value") %>%
+  mutate(Method = factor(Method, levels = c("BAG", "GW/CH", "CH", "GW/MLST", "CC")))
+
+CC1Graph <- CC1AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
+  geom_boxplot(fill = "blue") + facet_wrap(~Trait, scales = "free_y", ncol = 2)
+
+tiff(filename = here::here("output", "BoxPlotCC1.tiff"), compression = "lzw", units = "cm",
+     height = 15, width = 14, res = 400)
+CC1Graph
+dev.off()
+
+CC2Graph <- CC2AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
+  geom_boxplot(fill = "green") + facet_wrap(~Trait, scales = "free_y", ncol = 3)
+
+tiff(filename = here::here("output", "BoxPlotCC2.tiff"), compression = "lzw", units = "cm",
+     height = 15, width = 19, res = 400)
+CC2Graph
+dev.off()
+
+CC3Graph <- CC3AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
+  geom_boxplot(fill = "red") + facet_wrap(~Trait, scales = "free_y", nrow = 3)
+
+tiff(filename = here::here("output", "BoxPlotCC3.tiff"), compression = "lzw", units = "cm",
+     height = 12, width = 7, res = 400)
+CC3Graph
+dev.off()
+
+CC3CorPol <- CC3AllData2 %>% select(Method, CorPol) %>% group_by(Method) %>% 
+  summarize(N = table(CorPol, useNA = "no"),
+            Score = names(N)) %>%
+  mutate(N = as.numeric(N),
+         Method = factor(Method, levels = c("BAG", "GW/CH", "CH", "GW/MLST", "CC")))
+
+CC3Bar <- CC3CorPol %>% ggplot(aes(y = N, x = Method, fill = Score)) + theme_bw() +
+  geom_bar(stat = "identity", position = "fill") + facet_grid(~"CorPol") +
+  scale_fill_viridis_d() + ylab(NULL) + xlab(NULL)
+
+tiff(filename = here::here("output", "BarPlotCC3.tiff"), compression = "lzw", units = "cm",
+     height = 6, width = 10, res = 400)
+CC3Bar
+dev.off()
+```
+
+#### **Fig 3.** Boxplots for the traits used to estimate the thematic core collection for Root yield.
+
+```{r Fig 3, echo = F, warning = F}
+CC1Graph
+```
+
+#### **Fig 4.** Boxplots for the traits used to estimate the thematic core collection for Diseases resistance.
+
+```{r Fig 4, echo = F, warning = F}
+CC2Graph
+```
+
+
+#### **Fig 5.** Boxplots for the traits used to estimate the thematic core collection for Quality root.
+
+```{r Fig 5, echo = F, warning = F}
+CC3Graph
+```
+
+#### **Fig 6.** Barplot for Root Pulp Color used to estimate the thematic core collection for Quality root.
+
+```{r Fig 6, echo = F, warning = F}
+CC3Bar
+```
+
+
+## Common clones selected between Thematic core Collections.
+
+```{r}
+AllDataTCC <- CC1AllData2 %>% select(Method, id) %>% filter(Method %in% c("BAG", "CC")) %>% 
+  mutate(Method = ifelse(Method == "BAG", "BAG", "RootYield")) %>%
+  bind_rows(CC2AllData2 %>% select(Method, id) %>% filter(Method %in% c("BAG", "CC")) %>%
+  mutate(Method = ifelse(Method == "BAG", "BAG", "Diseases")) ) %>% 
+  bind_rows(CC3AllData2 %>% select(Method, id) %>% filter(Method %in% c("BAG", "CC")) %>%
+  mutate(Method = ifelse(Method == "BAG", "BAG", "QualityRoot"))) %>% unique
+SelTCC <- CloneCoin(data = AllDataTCC)
+
+VennTCC <- list(
+  RootYield = rownames(SelTCC)[SelTCC$RootYield == 1],
+  Diseases = rownames(SelTCC)[SelTCC$Diseases == 1],
+  QualityRoot = rownames(SelTCC)[SelTCC$QualityRoot == 1])
+VD1 <- ggvenn(VennTCC, fill_color = c("blue", "green", "red"),
+              fill_alpha = 0.6, set_name_size = 5)
+
+#sink(file = here::here("output", "TCCClones.txt"))
+#VennTCC
+#sink()
+#tiff(filename = here::here("output", "VennDiagram.tiff"), units = "cm", res = 400,
+#     compression = "lzw", width = 11, height = 11)
+#VD1
+#dev.off()
+```
+
+
+#### **Fig 7.** Venn Diagram of the three Thematic core collection.
+
+```{r Fig 7, echo = F}
+VD1
+```
+
