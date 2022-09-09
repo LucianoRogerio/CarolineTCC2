@@ -73,9 +73,9 @@ CCSize
 ```{r TC1 Obtendo os resultados de DARwin e separando os resultados, eval = FALSE}
 SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC1.DON"),
                              sep = "\t", header = T, skip = 2,
-                             nrows = 1825)
-table(SelDARwin$Tree.Sample_93)
-ClonesSel <- SelDARwin %>% filter(Tree.Sample_93 == "Kept") %>%
+                             nrows = 1804)
+table(SelDARwin$Tree.Sample_90)
+ClonesSel <- SelDARwin %>% filter(Tree.Sample_90 == "Kept") %>%
   select(Name)
 DataCarTCC1Pheno3 <- TC1Data[TC1Data$id%in%ClonesSel$Name,]
 
@@ -131,9 +131,9 @@ CCSize
 ```{r TC2 Obtendo os resultados de DARwin e separando os resultados, eval = FALSE}
 SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC2.DON"),
                              sep = "\t", header = T, skip = 2,
-                             nrows = 1712)
-table(SelDARwin$Tree.Sample_93)
-ClonesSel <- SelDARwin %>% filter(Tree.Sample_93 == "Kept") %>%
+                             nrows = 1246)
+table(SelDARwin$Tree.Sample_90)
+ClonesSel <- SelDARwin %>% filter(Tree.Sample_90 == "Kept") %>%
   select(Name)
 DataCarTCC2Pheno3 <- TC2Data[TC2Data$id%in%ClonesSel$Name,]
 
@@ -189,9 +189,9 @@ CCSize
 ```{r TC3 Obtendo os resultados de DARwin e separando os resultados, eval = FALSE}
 SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC3.DON"),
                              sep = "\t", header = T, skip = 2,
-                             nrows = 1864)
-table(SelDARwin$Tree.Sample_93)
-ClonesSel <- SelDARwin %>% filter(Tree.Sample_93 == "Kept") %>%
+                             nrows = 1436)
+table(SelDARwin$Tree.Sample_90)
+ClonesSel <- SelDARwin %>% filter(Tree.Sample_90 == "Kept") %>%
   select(Name)
 DataCarTCC3Pheno3 <- TC3Data[TC3Data$id%in%ClonesSel$Name,]
 
