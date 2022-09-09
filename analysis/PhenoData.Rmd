@@ -283,7 +283,7 @@ TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/
 
 ## Temática 2 - Resistência a Doenças Foliares
 TC2Traits <- c("id", "Anth", "BlLS", "BrLS", "WhLS", "Vigor45D", "FrogSkin",
-               "Pod", "FerSev", "MosCm", "MosNv", "RF", "AcSev")
+               "MosNv", "RF", "AcSev")
 TC2Data <- DataTCC[, TC2Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
 
 ## Temática 3 - Qualidade das raízes

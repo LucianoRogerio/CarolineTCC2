@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree0daa45914eafba1091f1b29f9a2ae751ab12c02dtargetblank0daa459a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/0daa45914eafba1091f1b29f9a2ae751ab12c02d" target="_blank">0daa459</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2treec5804b3a20ea0cc901e3bc5aa4a62a15e677daaftargetblankc5804b3a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/c5804b3a20ea0cc901e3bc5aa4a62a15e677daaf" target="_blank">c5804b3</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree0daa45914eafba1091f1b29f9a2ae751ab12c02dtargetblank0daa459a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2treec5804b3a20ea0cc901e3bc5aa4a62a15e677daaftargetblankc5804b3a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/0daa45914eafba1091f1b29f9a2ae751ab12c02d" target="_blank">0daa459</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/c5804b3a20ea0cc901e3bc5aa4a62a15e677daaf" target="_blank">c5804b3</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -496,20 +496,29 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    output/MatrizGowerCarolineTC3.phy
 
 Untracked files:
-    Untracked:  output/.DS_Store
+    Untracked:  output/MeansVarCC1.csv
+    Untracked:  output/MeansVarCC2.csv
+    Untracked:  output/MeansVarCC3.csv
 
 Unstaged changes:
-    Modified:   .DS_Store
+    Modified:   analysis/AnDis.Rmd
     Modified:   analysis/PhenoData.Rmd
+    Modified:   output/AllDataCC1.rds
+    Modified:   output/AllDataCC2.rds
+    Modified:   output/AllDataCC3.rds
+    Modified:   output/BoxPlotCC1.tiff
+    Modified:   output/BoxPlotCC2.tiff
+    Modified:   output/CorPlotDisease.tiff
+    Modified:   output/CorPlotQuality.tiff
+    Modified:   output/CorPlotYield.tiff
+    Modified:   output/CorPlots.jpeg
     Modified:   output/CorPlots.png
-    Modified:   output/MatrizGowerCarolineTC1.phy
-    Modified:   output/MatrizGowerCarolineTC2.phy
-    Modified:   output/TCC1Data.rds
-    Modified:   output/TCC2Data.rds
-    Modified:   output/TCC3Data.rds
+    Modified:   output/GanhoRelativoShannonWeaver.csv
+    Modified:   output/KappaIndex.csv
+    Modified:   output/Shannon-WeaverIndex.csv
+    Modified:   output/VennDiagramTCCs.tiff
 
 </code></pre>
 <p>
@@ -548,6 +557,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/cc569b6a12c8aa367df5fa81f28c056b93ee371d/analysis/PhenoData.Rmd" target="_blank">cc569b6</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-09-09
+</td>
+<td>
+Use a harder filter for missing data for each Core Collection
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/LucianoRogerio/CarolineTCC2/cc569b6a12c8aa367df5fa81f28c056b93ee371d/docs/PhenoData.html" target="_blank">cc569b6</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-09-09
+</td>
+<td>
+Use a harder filter for missing data for each Core Collection
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -999,7 +1042,7 @@ TC1Data &lt;- DataTCC[, TC1Traits] %&gt;% .[!(rowSums(is.na(.)) &gt;= floor(ncol
 
 ## Temática 2 - Resistência a Doenças Foliares
 TC2Traits &lt;- c(&quot;id&quot;, &quot;Anth&quot;, &quot;BlLS&quot;, &quot;BrLS&quot;, &quot;WhLS&quot;, &quot;Vigor45D&quot;, &quot;FrogSkin&quot;,
-               &quot;Pod&quot;, &quot;FerSev&quot;, &quot;MosCm&quot;, &quot;MosNv&quot;, &quot;RF&quot;, &quot;AcSev&quot;)
+               &quot;MosNv&quot;, &quot;RF&quot;, &quot;AcSev&quot;)
 TC2Data &lt;- DataTCC[, TC2Traits] %&gt;% .[!(rowSums(is.na(.)) &gt;= floor(ncol(.) - 1)/2),]
 
 ## Temática 3 - Qualidade das raízes
@@ -1011,7 +1054,7 @@ TC3Data &lt;- DataTCC[, TC3Traits] %&gt;% .[!(rowSums(is.na(.)) &gt;= floor(ncol
 <div id="table-1.-missing-data-per-dataset-for-each-thematic-nuclear-collection" class="section level3">
 <h3>Table 1. Missing data per DataSet for each Thematic Nuclear Collection</h3>
 <div id="htmlwidget-9cdbe62b6a6df499d6d2" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9cdbe62b6a6df499d6d2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"NuclearCol":["RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","QualityRoot","QualityRoot","QualityRoot","QualityRoot"],"Trait":["IC","PTR","NRz","DRY","DMCsg","PPA","PA","PRz","Anth","BlLS","BrLS","WhLS","Vigor45D","FrogSkin","Pod","FerSev","MosCm","MosNv","RF","AcSev","HCN","DMCsg","TCC","CorPol"],"MissingData":[0,0,0.139689578713969,0.00720620842572062,0.00665188470066519,0,0.00942350332594235,0.210088691796009,0.357945425361156,0.374799357945425,0.374799357945425,0.374799357945425,0.00802568218298555,0,0.0642054574638844,0.050561797752809,0.050561797752809,0.050561797752809,0,0.0272873194221509,0,0.0020891364902507,0.770194986072423,0.00278551532033426]},"columns":[{"accessor":"NuclearCol","name":"NuclearCol","type":"character"},{"accessor":"Trait","name":"Trait","type":"character"},{"accessor":"MissingData","name":"MissingData","type":"numeric","format":{"cell":{"digits":2,"percent":true,"locales":"en-US"},"aggregated":{"digits":2,"percent":true,"locales":"en-US"}}}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"0f2dcd2bc0f7b5dc1c2e22acd46e5b29"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-9cdbe62b6a6df499d6d2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"NuclearCol":["RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","Disease","QualityRoot","QualityRoot","QualityRoot","QualityRoot"],"Trait":["IC","PTR","NRz","DRY","DMCsg","PPA","PA","PRz","Anth","BlLS","BrLS","WhLS","Vigor45D","FrogSkin","MosNv","RF","AcSev","HCN","DMCsg","TCC","CorPol"],"MissingData":[0,0,0.139689578713969,0.00720620842572062,0.00665188470066519,0,0.00942350332594235,0.210088691796009,0.341803278688525,0.360655737704918,0.360655737704918,0.360655737704918,0.00491803278688525,0,0.0540983606557377,0,0.00901639344262295,0,0.0020891364902507,0.770194986072423,0.00278551532033426]},"columns":[{"accessor":"NuclearCol","name":"NuclearCol","type":"character"},{"accessor":"Trait","name":"Trait","type":"character"},{"accessor":"MissingData","name":"MissingData","type":"numeric","format":{"cell":{"digits":2,"percent":true,"locales":"en-US"},"aggregated":{"digits":2,"percent":true,"locales":"en-US"}}}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"d4871c197fe3cf4ea8673aca3ebce30a"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <pre class="r"><code># Imputando dados perdidos
 
 # inputation Function
