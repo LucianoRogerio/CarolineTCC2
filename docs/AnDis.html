@@ -387,7 +387,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-08-19
+<strong>Last updated:</strong> 2022-09-09
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
@@ -411,7 +411,7 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 </div>
 <div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree475435293c7a4a88184e770759ebd5e543bff34ftargetblank4754352a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/475435293c7a4a88184e770759ebd5e543bff34f" target="_blank">4754352</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree890d84f472b284d87a0347d60cf673a0af7489catargetblank890d84fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/890d84f472b284d87a0347d60cf673a0af7489ca" target="_blank">890d84f</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree475435293c7a4a88184e770759ebd5e543bff34ftargetblank4754352a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineTCC2tree890d84f472b284d87a0347d60cf673a0af7489catargetblank890d84fa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/475435293c7a4a88184e770759ebd5e543bff34f" target="_blank">4754352</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineTCC2/tree/890d84f472b284d87a0347d60cf673a0af7489ca" target="_blank">890d84f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -496,36 +496,24 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    output/MatrizGowerCarolineTC3.phy
-
-Untracked files:
-    Untracked:  analysis/AnDis.Rmd
-    Untracked:  output/AllDataCC1.rds
-    Untracked:  output/AllDataCC2.rds
-    Untracked:  output/AllDataCC3.rds
-    Untracked:  output/BarPlotCC3.tiff
-    Untracked:  output/BoxPlotCC1.tiff
-    Untracked:  output/BoxPlotCC2.tiff
-    Untracked:  output/BoxPlotCC3.tiff
-    Untracked:  output/CorPlotDisease.tiff
-    Untracked:  output/CorPlotQuality.tiff
-    Untracked:  output/CorPlotYield.tiff
-    Untracked:  output/CorPlots.jpeg
-    Untracked:  output/CorPlots.png
-    Untracked:  output/GanhoRelativoShannonWeaver.csv
-    Untracked:  output/KappaIndex.csv
-    Untracked:  output/Shannon-WeaverIndex.csv
-    Untracked:  output/TCCClones.txt
-    Untracked:  output/VennDiagram.tiff
-    Untracked:  output/VennDiagramTCCs.tiff
 
 Unstaged changes:
-    Modified:   .DS_Store
-    Modified:   analysis/TCC.Rmd
-    Modified:   output/MatrizGowerCarolineTC1.phy
-    Modified:   output/MatrizGowerCarolineTC2.phy
-    Modified:   output/TC2C/DadosTC2Pheno3.csv
-    Modified:   output/TC3C/DadosTC3Pheno3.csv
+    Modified:   analysis/AnDis.Rmd
+    Modified:   output/AllDataCC2.rds
+    Modified:   output/BarPlotCC3.tiff
+    Modified:   output/BoxPlotCC1.tiff
+    Modified:   output/BoxPlotCC2.tiff
+    Modified:   output/BoxPlotCC3.tiff
+    Modified:   output/CorPlotDisease.tiff
+    Modified:   output/CorPlots.jpeg
+    Modified:   output/CorPlots.png
+    Modified:   output/GanhoRelativoShannonWeaver.csv
+    Modified:   output/KappaIndex.csv
+    Modified:   output/MeansVarCC2.csv
+    Modified:   output/Shannon-WeaverIndex.csv
+    Modified:   output/TCCClones.txt
+    Modified:   output/VennDiagram.tiff
+    Modified:   output/VennDiagramTCCs.tiff
 
 </code></pre>
 <p>
@@ -538,9 +526,103 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/AnDis.Rmd</code>) and HTML (<code>docs/AnDis.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/5c0e9748ae6351b052b1ba500d361113b109de63/analysis/AnDis.Rmd" target="_blank">5c0e974</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-09-09
+</td>
+<td>
+Removing some Disease traits Pod FerSev and CosCm2
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/cf9027f913bd212c7a26784bbfb8e2596ba8cd01/analysis/AnDis.Rmd" target="_blank">cf9027f</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-09-09
+</td>
+<td>
+Removing some Disease traits Pod FerSev and CosCm
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/analysis/AnDis.Rmd" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+<td>
+Final results 2˚Capitulo Caroline
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/LucianoRogerio/CarolineTCC2/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/AnDis.html" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+<td>
+Final results 2˚Capitulo Caroline
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -660,7 +742,7 @@ write.table(KappaIndex, file = here::here(&quot;output&quot;, &quot;KappaIndex.c
 <div id="table-1.-kappa-index-between-the-methods-for-the-three-thematic-core-collections" class="section level3">
 <h3>Table 1. Kappa index between the Methods for the three Thematic Core Collections</h3>
 <div id="htmlwidget-08afe3d0283770153cd3" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-08afe3d0283770153cd3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"TCC":["RootYield","RootYield","RootYield","Disease","Disease","Disease","QualityRoot","QualityRoot","QualityRoot"],"Method":["GW/CH","CH","GW/MLST","GW/CH","CH","GW/MLST","GW/CH","CH","GW/MLST"],"GW/CH":[1,0.6488,0.3995,1,0.784,0.5907,1,0.6152,0.5247],"CH":[0.6488,1,0.3882,0.784,1,0.5907,0.6152,1,0.4681],"GW/MLST":[0.3995,0.3882,1,0.5907,0.5907,1,0.5247,0.4681,1]},"columns":[{"accessor":"TCC","name":"TCC","type":"character"},{"accessor":"Method","name":"Method","type":"character"},{"accessor":"GW/CH","name":"GW/CH","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"CH","name":"CH","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"GW/MLST","name":"GW/MLST","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}}],"pivotBy":["TCC"],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"27f0411da80ee6eabff982973195e1e4"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-08afe3d0283770153cd3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"TCC":["RootYield","RootYield","RootYield","Disease","Disease","Disease","QualityRoot","QualityRoot","QualityRoot"],"Method":["GW/CH","CH","GW/MLST","GW/CH","CH","GW/MLST","GW/CH","CH","GW/MLST"],"GW/CH":[1,0.7895,0.3802,1,0.6881,0.6281,1,0.6325,0.431],"CH":[0.7895,1,0.4504,0.6881,1,0.5202,0.6325,1,0.4666],"GW/MLST":[0.3802,0.4504,1,0.6281,0.5202,1,0.431,0.4666,1]},"columns":[{"accessor":"TCC","name":"TCC","type":"character"},{"accessor":"Method","name":"Method","type":"character"},{"accessor":"GW/CH","name":"GW/CH","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"CH","name":"CH","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"GW/MLST","name":"GW/MLST","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}}],"pivotBy":["TCC"],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"c5723b1020db5693658afe9b9affb959"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <pre><code>corrplot 0.92 loaded</code></pre>
 <pre><code>Linking to ImageMagick 6.9.12.3
 Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
@@ -732,6 +814,43 @@ dev.off()</code></pre>
 <div id="fig-2.-venn-diagram-for-the-three-groups-of-nuclear-collections" class="section level4">
 <h4><strong>Fig 2.</strong> Venn diagram for the three groups of Nuclear Collections</h4>
 <p><img src="figure/AnDis.Rmd/Fig%202-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-2-1">
+Past versions of "Fig 2-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 2-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>A - Venn diagram for the Thematic core collection for Cassava Root yield; B - Venn diagram for the Thematic core collection for Cassava Diseases; C - Venn diagram for the Thematic core collection for Cassava Quality Root.</p>
 </div>
 </div>
@@ -751,20 +870,20 @@ SelCC1 %&gt;% rowSums %&gt;% .[. &gt;= 2] %&gt;% names -&gt; CloneSelCC1
 SelCC2 %&gt;% rowSums %&gt;% .[. &gt;= 2] %&gt;% names -&gt; CloneSelCC2
 SelCC3 %&gt;% rowSums %&gt;% .[. &gt;= 2] %&gt;% names -&gt; CloneSelCC3
 
-CC1AllData %&gt;% rbind(CC1AllData %&gt;% filter(id %in% CloneSelCC1, Method == &quot;BAG&quot;) %&gt;% 
+CC1AllData %&gt;% bind_rows(CC1AllData %&gt;% filter(id %in% CloneSelCC1, Method == &quot;BAG&quot;) %&gt;% 
   mutate(Method = &quot;CC&quot;)) -&gt; CC1AllData2
-CC2AllData %&gt;% rbind(CC2AllData %&gt;% filter(id %in% CloneSelCC2, Method == &quot;BAG&quot;) %&gt;% 
+CC2AllData %&gt;% bind_rows(CC2AllData %&gt;% filter(id %in% CloneSelCC2, Method == &quot;BAG&quot;) %&gt;% 
   mutate(Method = &quot;CC&quot;)) -&gt; CC2AllData2
-CC3AllData %&gt;% rbind(CC3AllData %&gt;%filter(id %in% CloneSelCC3, Method == &quot;BAG&quot;) %&gt;% 
+CC3AllData %&gt;% bind_rows(CC3AllData %&gt;%filter(id %in% CloneSelCC3, Method == &quot;BAG&quot;) %&gt;% 
   mutate(Method = &quot;CC&quot;)) -&gt; CC3AllData2
 
 
 CC1Traits &lt;- data.frame(Trait = colnames(CC1AllData2)[2:9],
                         Min = apply(CC1AllData2[2:9], FUN = min, na.rm = TRUE, MARGIN = 2),
                         Max = apply(CC1AllData2[2:9], FUN = max, na.rm = TRUE, MARGIN = 2))
-CC2Traits &lt;- data.frame(Trait = colnames(CC2AllData2)[2:13],
-                        Min = apply(CC2AllData2[2:13], FUN = min, na.rm = TRUE, MARGIN = 2),
-                        Max = apply(CC2AllData2[2:13], FUN = max, na.rm = TRUE, MARGIN = 2))
+CC2Traits &lt;- data.frame(Trait = colnames(CC2AllData2)[2:10],
+                        Min = apply(CC2AllData2[2:10], FUN = min, na.rm = TRUE, MARGIN = 2),
+                        Max = apply(CC2AllData2[2:10], FUN = max, na.rm = TRUE, MARGIN = 2))
 CC3Traits &lt;- data.frame(Trait = colnames(CC3AllData2)[2:4],
                         Min = apply(CC3AllData2[2:4], FUN = min, na.rm = TRUE, MARGIN = 2),
                         Max = apply(CC3AllData2[2:4], FUN = max, na.rm = TRUE, MARGIN = 2))
@@ -863,7 +982,7 @@ write.table(TableSH, file = here::here(&quot;output&quot;, &quot;Shannon-WeaverI
 <div id="table-2.-shannon-weaver-index-for-all-the-traits-applied-to-create-each-thematic-core-collection." class="section level2">
 <h2><strong>Table 2.</strong> Shannon-Weaver index for all the traits applied to create each Thematic core collection.</h2>
 <div id="htmlwidget-9cdbe62b6a6df499d6d2" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9cdbe62b6a6df499d6d2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"TCC":["RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","QualityRoot","QualityRoot","QualityRoot","QualityRoot"],"Trait":["IC","PTR","NRz","DRY","DMCsg","PPA","PA","PRz","Anth","BlLS","BrLS","WhLS","Vigor45D","FrogSkin","Pod","FerSev","MosCm","MosNv","RF","AcSev","HCN","DMCsg","TCC","CorPol"],"BAG":[0.752145036729559,0.76500867974741,0.538032857482598,0.758715285361966,0.652292424394911,0.762443166335613,0.7776306605544,0.579041141194781,0.506307655955266,0.516515729524488,0.524368784384427,0.373112558599656,0.526023972387149,0.344455063817182,0.0976503168350056,0.0878821624722949,0.10745813784696,0.206561974333147,0.636668917759825,0.711103526607651,0.894518647483283,0.64630128340908,0.211781585362549,0.39560913076914],"GW/CH":[0.922421840218576,0.95131952714521,0.780565179075468,0.921231504738335,0.834593251814432,0.946163561833306,0.901399727428705,0.778478623045379,0.813959794789312,0.809732922413945,0.819542943326089,0.690752506421977,0.743074451047243,0.583258565142076,0.356175119008932,0.280795744195216,0.457622037060696,0.558645187952712,0.807968828511204,0.843722184087431,0.951109667007169,0.860252096532205,0.688215056740797,0.734362639893774],"CH":[0.927153927487657,0.945723971921301,0.728562131789309,0.929540746664122,0.839560655930597,0.945912351469526,0.894037873903385,0.774126073168395,0.826806053490266,0.794748133624088,0.814076557076314,0.677716329250097,0.761678639891629,0.520114768815822,0.356175119008932,0.320730694959978,0.459138366857076,0.591608728663814,0.846445443428804,0.864035028681366,0.933496977388859,0.862884251817815,0.671135206413759,0.736487334913085],"GW/MLST":[0.934629940420352,0.964069200907651,0.786658700208907,0.962371300637748,0.849065532901295,0.94304403062241,0.922888293320997,0.787944256924427,0.84320147584584,0.849706384245253,0.855958550971011,0.698648157388587,0.791073519119309,0.478524820192629,0.343575974063826,0.312411279750633,0.3520498453566,0.517354926971026,0.855910425582084,0.871077042721844,0.935692045483119,0.882557882137693,0.6556252044241,0.727462299451976],"CC":[0.955793049818692,0.958862964485997,0.769945015008811,0.936100293506456,0.861006188130275,0.942253462079366,0.897209681917864,0.787156939821114,0.821814282687575,0.794724825094378,0.810256136374414,0.690189397186529,0.775694543105821,0.53351405059778,0.388811056380591,0.307051037593148,0.459981332125435,0.591302104209529,0.855287811489533,0.849765993297261,0.944321595072667,0.898446756574957,0.721748961308573,0.748858482401539]},"columns":[{"accessor":"TCC","name":"TCC","type":"character"},{"accessor":"Trait","name":"Trait","type":"character"},{"accessor":"BAG","name":"BAG","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"GW/CH","name":"GW/CH","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"CH","name":"CH","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"GW/MLST","name":"GW/MLST","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"CC","name":"CC","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}}],"pivotBy":["TCC"],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"cbf1f75388b35c5ecab7c61a46737967"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-9cdbe62b6a6df499d6d2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"TCC":["RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","RootYield","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","Diseases","QualityRoot","QualityRoot","QualityRoot","QualityRoot"],"Trait":["IC","PTR","NRz","DRY","DMCsg","PPA","PA","PRz","Anth","BlLS","BrLS","WhLS","Vigor45D","FrogSkin","MosNv","RF","AcSev","HCN","DMCsg","TCC","CorPol"],"BAG":[0.750941384004174,0.76626476743584,0.541497619624127,0.761079220481,0.654690659805629,0.762430723211668,0.780353756824352,0.581848651952777,0.619391934062494,0.634132449299673,0.645360692115937,0.464048736241033,0.579928676523494,0.227369307591817,0.249603998787574,0.668979863369346,0.752955434995314,0.923078403928138,0.741333766956568,0.243766406660406,0.436196987307476],"GW/CH":[0.911593572186638,0.954087015243193,0.756794997494814,0.935473029111304,0.837996675959699,0.942675639098446,0.92598423834565,0.806619632861933,0.870991914714484,0.880078444875135,0.898252912311617,0.719424887614053,0.792261331353918,0.458058543189209,0.525763985397316,0.87462997816932,0.870077542414158,0.945972377695953,0.940383589735619,0.69067093069131,0.710059418662747],"CH":[0.906588885330287,0.944997637174155,0.765385487455797,0.933706994040601,0.846583400587834,0.948598048271951,0.933579948218962,0.814421712069655,0.84635778128264,0.881567767879936,0.895799368296322,0.722800536693988,0.759145747292197,0.479215520564764,0.528939939791469,0.835756046880795,0.894572748343089,0.943231618952848,0.941418442411635,0.679662294130979,0.71240619997193],"GW/MLST":[0.935315236676898,0.959806000524897,0.783542123961933,0.958550077844761,0.840427025596573,0.944663457990635,0.911102940700532,0.783636776598226,0.900643514304396,0.866664694627307,0.882773610701924,0.711251652043476,0.826920111472984,0.418509626237969,0.496669167236984,0.875144309334934,0.876001023530505,0.930835351424156,0.940751534897877,0.640803340868655,0.703888860114662],"CC":[0.915328965334701,0.945256829747303,0.768770739229676,0.930634986744828,0.854818505454063,0.947920365299888,0.9405426740852,0.822085542916514,0.881049312728786,0.893448884030893,0.911932789153324,0.72083813799397,0.813820483574807,0.485998271077662,0.549524763314929,0.870835359113926,0.880164776566633,0.936664274534234,0.952547258551959,0.746913279885483,0.714818818369551]},"columns":[{"accessor":"TCC","name":"TCC","type":"character"},{"accessor":"Trait","name":"Trait","type":"character"},{"accessor":"BAG","name":"BAG","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"GW/CH","name":"GW/CH","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"CH","name":"CH","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"GW/MLST","name":"GW/MLST","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}},{"accessor":"CC","name":"CC","type":"numeric","format":{"cell":{"digits":4,"locales":"en-US"},"aggregated":{"digits":4,"locales":"en-US"}}}],"pivotBy":["TCC"],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"ca76180ea72b20f4906991b8279b4073"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <pre class="r"><code>SHBAG &lt;- TableSH[ , &quot;BAG&quot;]
 SHs &lt;- TableSH %&gt;% select(-TCC, -Trait, -BAG)
 
@@ -887,6 +1006,60 @@ SHRel2 &lt;- SHRel %&gt;% rbind(SHMean, SHsd) %&gt;% arrange(TCC)
 write.table(SHRel2, file = here::here(&quot;output&quot;, &quot;GanhoRelativoShannonWeaver.csv&quot;),
             quote = F, row.names = F, sep = &quot;;&quot;)</code></pre>
 </div>
+<div id="mean-and-variance-of-each-nuclear-collection" class="section level2">
+<h2>Mean and variance of each Nuclear Collection</h2>
+<pre class="r"><code>CC1AllData2 %&gt;% group_by(Method) %&gt;% 
+  summarise(ICMean = mean(IC, na.rm = T),
+            ICVar = var(IC, na.rm = T),
+            PTRMean = mean(PTR, na.rm = T),
+            PTRVar = var(PTR, na.rm = T),
+            NRzMean = mean(NRz, na.rm = T),
+            NRzVar = var(NRz, na.rm = T),
+            DRYMean = mean(DRY, na.rm = T),
+            DRYVar = var(DRY, na.rm = T),
+            DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            PPAMean = mean(PPA, na.rm = T),
+            PPAVar = var(PPA, na.rm = T),
+            PAMean = mean(PA, na.rm = T),
+            PAVar = var(PA, na.rm = T),
+            PRzMean = mean(PRz, na.rm = T),
+            PRzVar = var(PRz, na.rm = T)) -&gt; CC1MeanVar
+write.table(CC1MeanVar, file = here::here(&quot;output&quot;, &quot;MeansVarCC1.csv&quot;),
+            quote = F, row.names = F, sep = &quot;,&quot;)
+
+CC2AllData2 %&gt;% group_by(Method) %&gt;% 
+  summarise(AnthMean = mean(Anth, na.rm = T),
+            AnthVar = var(Anth, na.rm = T),
+            BlLSMean = mean(BlLS, na.rm = T),
+            BlLSVar = var(BlLS, na.rm = T),
+            BrLSMean = mean(BrLS, na.rm = T),
+            BrLSVar = var(BrLS, na.rm = T),
+            WhLSMean = mean(WhLS, na.rm = T),
+            WhLSVar = var(WhLS, na.rm = T),
+            Vigor45DMean = mean(Vigor45D, na.rm = T),
+            Vigor45DVar = var(Vigor45D, na.rm = T),
+            FrogSkinMean = mean(FrogSkin, na.rm = T),
+            FrogSkinVar = var(FrogSkin, na.rm = T),
+            MosNvMean = mean(MosNv, na.rm = T),
+            MosNvVar = var(MosNv, na.rm = T),
+            RFMean = mean(RF, na.rm = T),
+            RFVar = var(RF, na.rm = T),
+            AcSevMean = mean(AcSev, na.rm = T),
+            AcSevVar = var(AcSev, na.rm = T)) -&gt; CC2MeanVar
+write.table(CC2MeanVar, file = here::here(&quot;output&quot;, &quot;MeansVarCC2.csv&quot;),
+            quote = F, row.names = F, sep = &quot;,&quot;)
+
+CC3AllData2 %&gt;% group_by(Method) %&gt;% 
+  summarise(DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            TCCMean = mean(TCC, na.rm = T),
+            TCCVar = var(TCC, na.rm = T),
+            HCNMean = mean(HCN, na.rm = T),
+            HCNVar = var(HCN, na.rm = T)) -&gt; CC3MeanVar
+write.table(CC3MeanVar, file = here::here(&quot;output&quot;, &quot;MeansVarCC3.csv&quot;),
+            quote = F, row.names = F, sep = &quot;,&quot;)</code></pre>
+</div>
 <div id="thematic-core-collection-results" class="section level2">
 <h2>Thematic Core Collection Results</h2>
 <pre class="r"><code>CC1AllData3 &lt;- reshape2::melt(CC1AllData2, id.vars = c(&quot;id&quot;, &quot;Method&quot;),
@@ -900,7 +1073,7 @@ CC3AllData3 &lt;- reshape2::melt(CC3AllData2 %&gt;% select(-CorPol), id.vars = c
   mutate(Method = factor(Method, levels = c(&quot;BAG&quot;, &quot;GW/CH&quot;, &quot;CH&quot;, &quot;GW/MLST&quot;, &quot;CC&quot;)))
 
 CC1Graph &lt;- CC1AllData3 %&gt;% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = &quot;blue&quot;) + facet_wrap(~Trait, scales = &quot;free_y&quot;, ncol = 2)
+  geom_boxplot(fill = &quot;blue&quot;, outlier.shape = NA) + facet_wrap(~Trait, scales = &quot;free_y&quot;, ncol = 2)
 
 tiff(filename = here::here(&quot;output&quot;, &quot;BoxPlotCC1.tiff&quot;), compression = &quot;lzw&quot;, units = &quot;cm&quot;,
      height = 15, width = 14, res = 400)
@@ -909,7 +1082,7 @@ dev.off()</code></pre>
 <pre><code>quartz_off_screen 
                 2 </code></pre>
 <pre class="r"><code>CC2Graph &lt;- CC2AllData3 %&gt;% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = &quot;green&quot;) + facet_wrap(~Trait, scales = &quot;free_y&quot;, ncol = 3)
+  geom_boxplot(fill = &quot;green&quot;, outlier.shape = NA) + facet_wrap(~Trait, scales = &quot;free_y&quot;, ncol = 3)
 
 tiff(filename = here::here(&quot;output&quot;, &quot;BoxPlotCC2.tiff&quot;), compression = &quot;lzw&quot;, units = &quot;cm&quot;,
      height = 15, width = 19, res = 400)
@@ -918,7 +1091,7 @@ dev.off()</code></pre>
 <pre><code>quartz_off_screen 
                 2 </code></pre>
 <pre class="r"><code>CC3Graph &lt;- CC3AllData3 %&gt;% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = &quot;red&quot;) + facet_wrap(~Trait, scales = &quot;free_y&quot;, nrow = 3)
+  geom_boxplot(fill = &quot;red&quot;, outlier.shape = NA) + facet_wrap(~Trait, scales = &quot;free_y&quot;, nrow = 3)
 
 tiff(filename = here::here(&quot;output&quot;, &quot;BoxPlotCC3.tiff&quot;), compression = &quot;lzw&quot;, units = &quot;cm&quot;,
      height = 12, width = 7, res = 400)
@@ -946,18 +1119,166 @@ dev.off()</code></pre>
 <div id="fig-3.-boxplots-for-the-traits-used-to-estimate-the-thematic-core-collection-for-root-yield." class="section level4">
 <h4><strong>Fig 3.</strong> Boxplots for the traits used to estimate the thematic core collection for Root yield.</h4>
 <p><img src="figure/AnDis.Rmd/Fig%203-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-3-1">
+Past versions of "Fig 3-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 3-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="fig-4.-boxplots-for-the-traits-used-to-estimate-the-thematic-core-collection-for-diseases-resistance." class="section level4">
 <h4><strong>Fig 4.</strong> Boxplots for the traits used to estimate the thematic core collection for Diseases resistance.</h4>
 <p><img src="figure/AnDis.Rmd/Fig%204-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-4-1">
+Past versions of "Fig 4-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-4-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 4-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="fig-5.-boxplots-for-the-traits-used-to-estimate-the-thematic-core-collection-for-quality-root." class="section level4">
 <h4><strong>Fig 5.</strong> Boxplots for the traits used to estimate the thematic core collection for Quality root.</h4>
 <p><img src="figure/AnDis.Rmd/Fig%205-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-5-1">
+Past versions of "Fig 5-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-5-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 5-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="fig-6.-barplot-for-root-pulp-color-used-to-estimate-the-thematic-core-collection-for-quality-root." class="section level4">
 <h4><strong>Fig 6.</strong> Barplot for Root Pulp Color used to estimate the thematic core collection for Quality root.</h4>
 <p><img src="figure/AnDis.Rmd/Fig%206-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-6-1">
+Past versions of "Fig 6-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-6-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 6-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="common-clones-selected-between-thematic-core-collections." class="section level2">
@@ -987,6 +1308,43 @@ VD1 &lt;- ggvenn(VennTCC, fill_color = c(&quot;blue&quot;, &quot;green&quot;, &q
 <div id="fig-7.-venn-diagram-of-the-three-thematic-core-collection." class="section level4">
 <h4><strong>Fig 7.</strong> Venn Diagram of the three Thematic core collection.</h4>
 <p><img src="figure/AnDis.Rmd/Fig%207-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-7-1">
+Past versions of "Fig 7-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-Fig-7-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineTCC2/blob/0daa45914eafba1091f1b29f9a2ae751ab12c02d/docs/figure/AnDis.Rmd/Fig 7-1.png" target="_blank">0daa459</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1024,19 +1382,19 @@ loaded via a namespace (and not attached):
 [13] tidyselect_1.1.2  compiler_4.1.3    git2r_0.30.1      cli_3.3.0        
 [17] rvest_1.0.2       xml2_1.3.3        labeling_0.4.2    sass_0.4.1       
 [21] scales_1.2.0      digest_0.6.29     rmarkdown_2.14    pkgconfig_2.0.3  
-[25] htmltools_0.5.2   dbplyr_2.2.1      fastmap_1.1.0     highr_0.9        
+[25] htmltools_0.5.2   highr_0.9         dbplyr_2.2.1      fastmap_1.1.0    
 [29] htmlwidgets_1.5.4 rlang_1.0.3       readxl_1.4.0      rstudioapi_0.13  
 [33] jquerylib_0.1.4   generics_0.1.2    farver_2.1.0      jsonlite_1.8.0   
 [37] crosstalk_1.2.0   car_3.1-0         magrittr_2.0.3    Rcpp_1.0.8.3     
 [41] munsell_0.5.0     fansi_1.0.3       abind_1.4-5       lifecycle_1.0.1  
-[45] stringi_1.7.6     yaml_2.3.5        carData_3.0-5     plyr_1.8.7       
-[49] promises_1.2.0.1  crayon_1.5.1      haven_2.5.0       cowplot_1.1.1    
-[53] hms_1.1.1         knitr_1.39        pillar_1.7.0      ggsignif_0.6.3   
-[57] reprex_2.0.1      glue_1.6.2        evaluate_0.15     modelr_0.1.8     
-[61] vctrs_0.4.1       tzdb_0.3.0        httpuv_1.6.5      cellranger_1.1.0 
-[65] gtable_0.3.0      reactR_0.4.4      assertthat_0.2.1  xfun_0.31        
-[69] broom_0.8.0       rstatix_0.7.0     later_1.3.0       viridisLite_0.4.0
-[73] workflowr_1.7.0   ellipsis_0.3.2   </code></pre>
+[45] stringi_1.7.6     whisker_0.4       yaml_2.3.5        carData_3.0-5    
+[49] plyr_1.8.7        promises_1.2.0.1  crayon_1.5.1      haven_2.5.0      
+[53] cowplot_1.1.1     hms_1.1.1         knitr_1.39        pillar_1.7.0     
+[57] ggsignif_0.6.3    reprex_2.0.1      glue_1.6.2        evaluate_0.15    
+[61] modelr_0.1.8      vctrs_0.4.1       tzdb_0.3.0        httpuv_1.6.5     
+[65] cellranger_1.1.0  gtable_0.3.0      reactR_0.4.4      assertthat_0.2.1 
+[69] xfun_0.31         broom_0.8.0       rstatix_0.7.0     later_1.3.0      
+[73] viridisLite_0.4.0 workflowr_1.7.0   ellipsis_0.3.2   </code></pre>
 </div>
 </div>
 </div>

@@ -272,9 +272,9 @@ CC3AllData %>% bind_rows(CC3AllData %>%filter(id %in% CloneSelCC3, Method == "BA
 CC1Traits <- data.frame(Trait = colnames(CC1AllData2)[2:9],
                         Min = apply(CC1AllData2[2:9], FUN = min, na.rm = TRUE, MARGIN = 2),
                         Max = apply(CC1AllData2[2:9], FUN = max, na.rm = TRUE, MARGIN = 2))
-CC2Traits <- data.frame(Trait = colnames(CC2AllData2)[2:13],
-                        Min = apply(CC2AllData2[2:13], FUN = min, na.rm = TRUE, MARGIN = 2),
-                        Max = apply(CC2AllData2[2:13], FUN = max, na.rm = TRUE, MARGIN = 2))
+CC2Traits <- data.frame(Trait = colnames(CC2AllData2)[2:10],
+                        Min = apply(CC2AllData2[2:10], FUN = min, na.rm = TRUE, MARGIN = 2),
+                        Max = apply(CC2AllData2[2:10], FUN = max, na.rm = TRUE, MARGIN = 2))
 CC3Traits <- data.frame(Trait = colnames(CC3AllData2)[2:4],
                         Min = apply(CC3AllData2[2:4], FUN = min, na.rm = TRUE, MARGIN = 2),
                         Max = apply(CC3AllData2[2:4], FUN = max, na.rm = TRUE, MARGIN = 2))
@@ -445,12 +445,6 @@ CC2AllData2 %>% group_by(Method) %>%
             Vigor45DVar = var(Vigor45D, na.rm = T),
             FrogSkinMean = mean(FrogSkin, na.rm = T),
             FrogSkinVar = var(FrogSkin, na.rm = T),
-            PodMean = mean(Pod, na.rm = T),
-            PodVar = var(Pod, na.rm = T),
-            FerSevMean = mean(FerSev, na.rm = T),
-            FerSevVar = var(FerSev, na.rm = T),
-            MosCmMean = mean(MosCm, na.rm = T),
-            MosCmVar = var(MosCm, na.rm = T),
             MosNvMean = mean(MosNv, na.rm = T),
             MosNvVar = var(MosNv, na.rm = T),
             RFMean = mean(RF, na.rm = T),
@@ -486,7 +480,7 @@ CC3AllData3 <- reshape2::melt(CC3AllData2 %>% select(-CorPol), id.vars = c("id",
   mutate(Method = factor(Method, levels = c("BAG", "GW/CH", "CH", "GW/MLST", "CC")))
 
 CC1Graph <- CC1AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = "blue") + facet_wrap(~Trait, scales = "free_y", ncol = 2)
+  geom_boxplot(fill = "blue", outlier.shape = NA) + facet_wrap(~Trait, scales = "free_y", ncol = 2)
 
 tiff(filename = here::here("output", "BoxPlotCC1.tiff"), compression = "lzw", units = "cm",
      height = 15, width = 14, res = 400)
@@ -494,7 +488,7 @@ CC1Graph
 dev.off()
 
 CC2Graph <- CC2AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = "green") + facet_wrap(~Trait, scales = "free_y", ncol = 3)
+  geom_boxplot(fill = "green", outlier.shape = NA) + facet_wrap(~Trait, scales = "free_y", ncol = 3)
 
 tiff(filename = here::here("output", "BoxPlotCC2.tiff"), compression = "lzw", units = "cm",
      height = 15, width = 19, res = 400)
@@ -502,7 +496,7 @@ CC2Graph
 dev.off()
 
 CC3Graph <- CC3AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = "red") + facet_wrap(~Trait, scales = "free_y", nrow = 3)
+  geom_boxplot(fill = "red", outlier.shape = NA) + facet_wrap(~Trait, scales = "free_y", nrow = 3)
 
 tiff(filename = here::here("output", "BoxPlotCC3.tiff"), compression = "lzw", units = "cm",
      height = 12, width = 7, res = 400)
