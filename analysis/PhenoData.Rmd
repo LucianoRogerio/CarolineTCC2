@@ -37,7 +37,7 @@ suppressWarnings(suppressMessages(library(tidyverse)))
 library(reshape2); library(here)
 DadosPhen <- read.table(here::here("data", "DadosFen2Cap.csv"),
                         header = T, sep = ",", na.strings = "")
-unique(DadosPhen$Genotipos.BGM) %>% .[order(.)]
+
 colnames(DadosPhen)[c(9:40, 46:55)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
                                          "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
                                          "Vigor12M", "RF", "PRz", "NRz", "PPD", "Pod",
@@ -279,18 +279,18 @@ TraitsSel <- names(colSums(is.na(DataTCC)))[colSums(is.na(DataTCC))/nrow(DataTCC
 ## Temática 1 - Produtividade de Raízes
 TC1Traits <- c("id", "IC", "PTR", "NRz", "DRY", "DMCsg", "PPA", "PA", "PRz")
 
-TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
+TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
 
 ## Temática 2 - Resistência a Doenças Foliares
 TC2Traits <- c("id", "Anth", "BlLS", "BrLS", "WhLS", "Vigor45D", "FrogSkin",
                "Pod", "FerSev", "MosCm", "MosNv", "RF", "AcSev")
-TC2Data <- DataTCC[, TC2Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
+TC2Data <- DataTCC[, TC2Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
 
 ## Temática 3 - Qualidade das raízes
 # Verificar conjunto de dados de deteorização Fisiológica com Eder e predições de Carotenóides e DMC com Massaine
 # Fazer uma coleção para Coloração Branca e uma para coloração amarela
 TC3Traits <- c("id", "HCN", "DMCsg", "TCC", "CorPol")
-TC3Data <- DataTCC[, TC3Traits] %>% .[!(rowSums(is.na(.)) == ncol(.) - 1),]
+TC3Data <- DataTCC[, TC3Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
 ```
 
 ### Table 1. Missing data per DataSet for each Thematic Nuclear Collection
