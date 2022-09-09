@@ -131,7 +131,7 @@ CCSize
 ```{r TC2 Obtendo os resultados de DARwin e separando os resultados, eval = FALSE}
 SelDARwin <- read.table(here::here("output","MatrizGowerCarolineTC2.DON"),
                              sep = "\t", header = T, skip = 2,
-                             nrows = 1246)
+                             nrows = 1220)
 table(SelDARwin$Tree.Sample_90)
 ClonesSel <- SelDARwin %>% filter(Tree.Sample_90 == "Kept") %>%
   select(Name)

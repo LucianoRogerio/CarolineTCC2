@@ -261,11 +261,11 @@ SelCC1 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC1
 SelCC2 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC2
 SelCC3 %>% rowSums %>% .[. >= 2] %>% names -> CloneSelCC3
 
-CC1AllData %>% rbind(CC1AllData %>% filter(id %in% CloneSelCC1, Method == "BAG") %>% 
+CC1AllData %>% bind_rows(CC1AllData %>% filter(id %in% CloneSelCC1, Method == "BAG") %>% 
   mutate(Method = "CC")) -> CC1AllData2
-CC2AllData %>% rbind(CC2AllData %>% filter(id %in% CloneSelCC2, Method == "BAG") %>% 
+CC2AllData %>% bind_rows(CC2AllData %>% filter(id %in% CloneSelCC2, Method == "BAG") %>% 
   mutate(Method = "CC")) -> CC2AllData2
-CC3AllData %>% rbind(CC3AllData %>%filter(id %in% CloneSelCC3, Method == "BAG") %>% 
+CC3AllData %>% bind_rows(CC3AllData %>%filter(id %in% CloneSelCC3, Method == "BAG") %>% 
   mutate(Method = "CC")) -> CC3AllData2
 
 
@@ -407,6 +407,68 @@ SHRel2 <- SHRel %>% rbind(SHMean, SHsd) %>% arrange(TCC)
 
 write.table(SHRel2, file = here::here("output", "GanhoRelativoShannonWeaver.csv"),
             quote = F, row.names = F, sep = ";")
+```
+
+## Mean and variance of each Nuclear Collection
+
+```{r}
+CC1AllData2 %>% group_by(Method) %>% 
+  summarise(ICMean = mean(IC, na.rm = T),
+            ICVar = var(IC, na.rm = T),
+            PTRMean = mean(PTR, na.rm = T),
+            PTRVar = var(PTR, na.rm = T),
+            NRzMean = mean(NRz, na.rm = T),
+            NRzVar = var(NRz, na.rm = T),
+            DRYMean = mean(DRY, na.rm = T),
+            DRYVar = var(DRY, na.rm = T),
+            DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            PPAMean = mean(PPA, na.rm = T),
+            PPAVar = var(PPA, na.rm = T),
+            PAMean = mean(PA, na.rm = T),
+            PAVar = var(PA, na.rm = T),
+            PRzMean = mean(PRz, na.rm = T),
+            PRzVar = var(PRz, na.rm = T)) -> CC1MeanVar
+write.table(CC1MeanVar, file = here::here("output", "MeansVarCC1.csv"),
+            quote = F, row.names = F, sep = ",")
+
+CC2AllData2 %>% group_by(Method) %>% 
+  summarise(AnthMean = mean(Anth, na.rm = T),
+            AnthVar = var(Anth, na.rm = T),
+            BlLSMean = mean(BlLS, na.rm = T),
+            BlLSVar = var(BlLS, na.rm = T),
+            BrLSMean = mean(BrLS, na.rm = T),
+            BrLSVar = var(BrLS, na.rm = T),
+            WhLSMean = mean(WhLS, na.rm = T),
+            WhLSVar = var(WhLS, na.rm = T),
+            Vigor45DMean = mean(Vigor45D, na.rm = T),
+            Vigor45DVar = var(Vigor45D, na.rm = T),
+            FrogSkinMean = mean(FrogSkin, na.rm = T),
+            FrogSkinVar = var(FrogSkin, na.rm = T),
+            PodMean = mean(Pod, na.rm = T),
+            PodVar = var(Pod, na.rm = T),
+            FerSevMean = mean(FerSev, na.rm = T),
+            FerSevVar = var(FerSev, na.rm = T),
+            MosCmMean = mean(MosCm, na.rm = T),
+            MosCmVar = var(MosCm, na.rm = T),
+            MosNvMean = mean(MosNv, na.rm = T),
+            MosNvVar = var(MosNv, na.rm = T),
+            RFMean = mean(RF, na.rm = T),
+            RFVar = var(RF, na.rm = T),
+            AcSevMean = mean(AcSev, na.rm = T),
+            AcSevVar = var(AcSev, na.rm = T)) -> CC2MeanVar
+write.table(CC2MeanVar, file = here::here("output", "MeansVarCC2.csv"),
+            quote = F, row.names = F, sep = ",")
+
+CC3AllData2 %>% group_by(Method) %>% 
+  summarise(DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            TCCMean = mean(TCC, na.rm = T),
+            TCCVar = var(TCC, na.rm = T),
+            HCNMean = mean(HCN, na.rm = T),
+            HCNVar = var(HCN, na.rm = T)) -> CC3MeanVar
+write.table(CC3MeanVar, file = here::here("output", "MeansVarCC3.csv"),
+            quote = F, row.names = F, sep = ",")
 ```
 
 
