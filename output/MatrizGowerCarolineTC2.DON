@@ -1,1718 +1,1252 @@
 @DARwin 5.0 - DON
-1712	7
-Unit	Name	Tree Remove Order	Tree Sample_93	Tree Sample_131	Tree Sample_148	Tree Sample_153	Tree Sample_157
-0001	11-Conquista-2	277	Removed	Removed	Removed	Removed	Removed
-0002	2018g-06-01	357	Removed	Removed	Removed	Removed	Removed
-0003	2018g-06-02	401	Removed	Removed	Removed	Removed	Removed
-0004	2018g-06-03	514	Removed	Removed	Removed	Removed	Removed
-0005	2018g-07-01	479	Removed	Removed	Removed	Removed	Removed
-0006	2019g-08-02	10	Removed	Removed	Removed	Removed	Removed
-0007	2019g-08-03	16	Removed	Removed	Removed	Removed	Removed
-0008	2019g-08-04	2	Removed	Removed	Removed	Removed	Removed
-0009	2019g-08-06	3	Removed	Removed	Removed	Removed	Removed
-0010	2019g-08-07	8	Removed	Removed	Removed	Removed	Removed
-0011	2019g-08-08	1	Removed	Removed	Removed	Removed	Removed
-0012	2019g-08-09	24	Removed	Removed	Removed	Removed	Removed
-0013	2019g-08-10	125	Removed	Removed	Removed	Removed	Removed
-0014	2019g-08-11	4	Removed	Removed	Removed	Removed	Removed
-0015	2019g-08-13	21	Removed	Removed	Removed	Removed	Removed
-0016	2019g-08-14	7	Removed	Removed	Removed	Removed	Removed
-0017	2019g-08-15	355	Removed	Removed	Removed	Removed	Removed
-0018	2019g-08-16	6	Removed	Removed	Removed	Removed	Removed
-0019	2019g-08-17	29	Removed	Removed	Removed	Removed	Removed
-0020	2019g-08-18	241	Removed	Removed	Removed	Removed	Removed
-0021	2019g-08-19	13	Removed	Removed	Removed	Removed	Removed
-0022	2019g-08-20	256	Removed	Removed	Removed	Removed	Removed
-0023	2019g-08-21	382	Removed	Removed	Removed	Removed	Removed
-0024	2019g-08-22	5	Removed	Removed	Removed	Removed	Removed
-0025	2019g-08-23	126	Removed	Removed	Removed	Removed	Removed
-0026	2019g-08-24	312	Removed	Removed	Removed	Removed	Removed
-0027	2019g-08-25	297	Removed	Removed	Removed	Removed	Removed
-0028	2019g-08-26	9	Removed	Removed	Removed	Removed	Removed
-0029	2019g-08-27	178	Removed	Removed	Removed	Removed	Removed
-0030	2019g-08-28	216	Removed	Removed	Removed	Removed	Removed
-0031	2019g-08-29	187	Removed	Removed	Removed	Removed	Removed
-0032	2019g-08-30	228	Removed	Removed	Removed	Removed	Removed
-0033	2019g-08-31	19	Removed	Removed	Removed	Removed	Removed
-0034	2019g-08-32	237	Removed	Removed	Removed	Removed	Removed
-0035	2019g-08-33	11	Removed	Removed	Removed	Removed	Removed
-0036	2019g-08-34	12	Removed	Removed	Removed	Removed	Removed
-0037	2019g-08-35	563	Removed	Removed	Removed	Removed	Removed
-0038	2019g-08-36	628	Removed	Removed	Removed	Removed	Removed
-0039	2019g-08-37	14	Removed	Removed	Removed	Removed	Removed
-0040	2019g-08-38	268	Removed	Removed	Removed	Removed	Removed
-0041	2019g-08-39	127	Removed	Removed	Removed	Removed	Removed
-0042	2019g-08-40	15	Removed	Removed	Removed	Removed	Removed
-0043	2019g-08-41	163	Removed	Removed	Removed	Removed	Removed
-0044	2019g-08-42	17	Removed	Removed	Removed	Removed	Removed
-0045	2019g-08-43	18	Removed	Removed	Removed	Removed	Removed
-0046	2019g-08-44	451	Removed	Removed	Removed	Removed	Removed
-0047	2019g-08-45	26	Removed	Removed	Removed	Removed	Removed
-0048	2019g-08-46	20	Removed	Removed	Removed	Removed	Removed
-0049	2019g-08-47	149	Removed	Removed	Removed	Removed	Removed
-0050	2019g-08-48	22	Removed	Removed	Removed	Removed	Removed
-0051	2019g-08-49	354	Removed	Removed	Removed	Removed	Removed
-0052	2019g-08-50	211	Removed	Removed	Removed	Removed	Removed
-0053	2019g-08-51	23	Removed	Removed	Removed	Removed	Removed
-0054	2019g-08-52	33	Removed	Removed	Removed	Removed	Removed
-0055	2019g-08-53	595	Removed	Removed	Removed	Removed	Removed
-0056	2019g-08-54	128	Removed	Removed	Removed	Removed	Removed
-0057	2019g-08-55	25	Removed	Removed	Removed	Removed	Removed
-0058	2019g-08-56	177	Removed	Removed	Removed	Removed	Removed
-0059	2019g-08-57	142	Removed	Removed	Removed	Removed	Removed
-0060	2019g-08-58	27	Removed	Removed	Removed	Removed	Removed
-0061	2019g-08-59	28	Removed	Removed	Removed	Removed	Removed
-0062	2019g-08-60	592	Removed	Removed	Removed	Removed	Removed
-0063	2019g-08-63	227	Removed	Removed	Removed	Removed	Removed
-0064	2019g-08-64	930	Removed	Removed	Removed	Removed	Removed
-0065	2019g-08-65	261	Removed	Removed	Removed	Removed	Removed
-0066	2019g-08-66	388	Removed	Removed	Removed	Removed	Removed
-0067	2019g-08-67	30	Removed	Removed	Removed	Removed	Removed
-0068	2019g-08-68	267	Removed	Removed	Removed	Removed	Removed
-0069	2019g-08-69	31	Removed	Removed	Removed	Removed	Removed
-0070	2019g-08-70	32	Removed	Removed	Removed	Removed	Removed
-0071	2019g-08-71	290	Removed	Removed	Removed	Removed	Removed
-0072	2019g-08-72	173	Removed	Removed	Removed	Removed	Removed
-0073	2019g-08-73	269	Removed	Removed	Removed	Removed	Removed
-0074	2019g-09-01	34	Removed	Removed	Removed	Removed	Removed
-0075	2019g-09-02	183	Removed	Removed	Removed	Removed	Removed
-0076	2019g-09-03	35	Removed	Removed	Removed	Removed	Removed
-0077	2019g-09-04	164	Removed	Removed	Removed	Removed	Removed
-0078	2019g-09-05	909	Removed	Removed	Removed	Removed	Removed
-0079	2019g-09-06	182	Removed	Removed	Removed	Removed	Removed
-0080	98103-08	251	Removed	Removed	Removed	Removed	Removed
-0081	Aciolina	907	Removed	Removed	Removed	Removed	Removed
-0082	Aipim-Abacate	979	Removed	Removed	Removed	Removed	Removed
-0083	Aipim-Brasilia	1290	Removed	Removed	Removed	Removed	Removed
-0084	Aipim-Guanambi	581	Removed	Removed	Removed	Removed	Removed
-0085	Aipim-Manteiga	728	Removed	Removed	Removed	Removed	Removed
-0086	Aipim-PretoJoselito	279	Removed	Removed	Removed	Removed	Removed
-0087	AM-Jaeve-RN	214	Removed	Removed	Removed	Removed	Removed
-0088	Baianinha	562	Removed	Removed	Removed	Removed	Removed
-0089	BGM-0004	1357	Removed	Removed	Removed	Removed	Removed
-0090	BGM-0005	1636	Kept	Kept	Kept	Kept	Kept
-0091	BGM-0006	760	Removed	Removed	Removed	Removed	Removed
-0092	BGM-0011	394	Removed	Removed	Removed	Removed	Removed
-0093	BGM-0014	1184	Removed	Removed	Removed	Removed	Removed
-0094	BGM-0017	1095	Removed	Removed	Removed	Removed	Removed
-0095	BGM-0018	1447	Removed	Removed	Removed	Removed	Removed
-0096	BGM-0019	1246	Removed	Removed	Removed	Removed	Removed
-0097	BGM-0020	1001	Removed	Removed	Removed	Removed	Removed
-0098	BGM-0021	641	Removed	Removed	Removed	Removed	Removed
-0099	BGM-0022	1048	Removed	Removed	Removed	Removed	Removed
-0100	BGM-0022-TB	262	Removed	Removed	Removed	Removed	Removed
-0101	BGM-0022-TR	790	Removed	Removed	Removed	Removed	Removed
-0102	BGM-0023	1682	Kept	Kept	Kept	Kept	Kept
-0103	BGM-0024	1410	Removed	Removed	Removed	Removed	Removed
-0104	BGM-0025	1396	Removed	Removed	Removed	Removed	Removed
-0105	BGM-0027	1379	Removed	Removed	Removed	Removed	Removed
-0106	BGM-0028	951	Removed	Removed	Removed	Removed	Removed
-0107	BGM-0029	1608	Removed	Kept	Kept	Kept	Kept
-0108	BGM-0030	1650	Kept	Kept	Kept	Kept	Kept
-0109	BGM-0031	1212	Removed	Removed	Removed	Removed	Removed
-0110	BGM-0032	1677	Kept	Kept	Kept	Kept	Kept
-0111	BGM-0035	1211	Removed	Removed	Removed	Removed	Removed
-0112	BGM-0036	1129	Removed	Removed	Removed	Removed	Removed
-0113	BGM-0037	1071	Removed	Removed	Removed	Removed	Removed
-0114	BGM-0039	1507	Removed	Removed	Removed	Removed	Removed
-0115	BGM-0040	1117	Removed	Removed	Removed	Removed	Removed
-0116	BGM-0042	775	Removed	Removed	Removed	Removed	Removed
-0117	BGM-0043	400	Removed	Removed	Removed	Removed	Removed
-0118	BGM-0044	1543	Removed	Removed	Removed	Removed	Removed
-0119	BGM-0046	988	Removed	Removed	Removed	Removed	Removed
-0120	BGM-0047	957	Removed	Removed	Removed	Removed	Removed
-0121	BGM-0048	1209	Removed	Removed	Removed	Removed	Removed
-0122	BGM-0049	516	Removed	Removed	Removed	Removed	Removed
-0123	BGM-0050	1056	Removed	Removed	Removed	Removed	Removed
-0124	BGM-0052	700	Removed	Removed	Removed	Removed	Removed
-0125	BGM-0054	1567	Removed	Removed	Kept	Kept	Kept
-0126	BGM-0056	1614	Removed	Kept	Kept	Kept	Kept
-0127	BGM-0058	868	Removed	Removed	Removed	Removed	Removed
-0128	BGM-0060	939	Removed	Removed	Removed	Removed	Removed
-0129	BGM-0061	1656	Kept	Kept	Kept	Kept	Kept
-0130	BGM-0062	1651	Kept	Kept	Kept	Kept	Kept
-0131	BGM-0063	1042	Removed	Removed	Removed	Removed	Removed
-0132	BGM-0065	1588	Removed	Kept	Kept	Kept	Kept
-0133	BGM-0066	952	Removed	Removed	Removed	Removed	Removed
-0134	BGM-0067	833	Removed	Removed	Removed	Removed	Removed
-0135	BGM-0069	857	Removed	Removed	Removed	Removed	Removed
-0136	BGM-0070	1430	Removed	Removed	Removed	Removed	Removed
-0137	BGM-0073	1072	Removed	Removed	Removed	Removed	Removed
-0138	BGM-0074	687	Removed	Removed	Removed	Removed	Removed
-0139	BGM-0075	317	Removed	Removed	Removed	Removed	Removed
-0140	BGM-0076	1273	Removed	Removed	Removed	Removed	Removed
-0141	BGM-0077	197	Removed	Removed	Removed	Removed	Removed
-0142	BGM-0080	1274	Removed	Removed	Removed	Removed	Removed
-0143	BGM-0082	349	Removed	Removed	Removed	Removed	Removed
-0144	BGM-0083	1108	Removed	Removed	Removed	Removed	Removed
-0145	BGM-0084	1613	Removed	Kept	Kept	Kept	Kept
-0146	BGM-0085	1628	Kept	Kept	Kept	Kept	Kept
-0147	BGM-0087	1678	Kept	Kept	Kept	Kept	Kept
-0148	BGM-0088	538	Removed	Removed	Removed	Removed	Removed
-0149	BGM-0089	1258	Removed	Removed	Removed	Removed	Removed
-0150	BGM-0090	1556	Removed	Removed	Removed	Removed	Kept
-0151	BGM-0091	1450	Removed	Removed	Removed	Removed	Removed
-0152	BGM-0093	1587	Removed	Kept	Kept	Kept	Kept
-0153	BGM-0094	1034	Removed	Removed	Removed	Removed	Removed
-0154	BGM-0096	1106	Removed	Removed	Removed	Removed	Removed
-0155	BGM-0097	1066	Removed	Removed	Removed	Removed	Removed
-0156	BGM-0100	1239	Removed	Removed	Removed	Removed	Removed
-0157	BGM-0106	1173	Removed	Removed	Removed	Removed	Removed
-0158	BGM-0113-RcxCr	786	Removed	Removed	Removed	Removed	Removed
-0159	BGM-0115	1238	Removed	Removed	Removed	Removed	Removed
-0160	BGM-0115-TB	385	Removed	Removed	Removed	Removed	Removed
-0161	BGM-0115-TR	622	Removed	Removed	Removed	Removed	Removed
-0162	BGM-0116	1519	Removed	Removed	Removed	Removed	Removed
-0163	BGM-0117	862	Removed	Removed	Removed	Removed	Removed
-0164	BGM-0119	1395	Removed	Removed	Removed	Removed	Removed
-0165	BGM-0120	1021	Removed	Removed	Removed	Removed	Removed
-0166	BGM-0121	409	Removed	Removed	Removed	Removed	Removed
-0167	BGM-0122	446	Removed	Removed	Removed	Removed	Removed
-0168	BGM-0123	887	Removed	Removed	Removed	Removed	Removed
-0169	BGM-0124	1038	Removed	Removed	Removed	Removed	Removed
-0170	BGM-0126	1119	Removed	Removed	Removed	Removed	Removed
-0171	BGM-0128	1130	Removed	Removed	Removed	Removed	Removed
-0172	BGM-0130	1681	Kept	Kept	Kept	Kept	Kept
-0173	BGM-0131	701	Removed	Removed	Removed	Removed	Removed
-0174	BGM-0132	1557	Removed	Removed	Removed	Removed	Kept
-0175	BGM-0133	1442	Removed	Removed	Removed	Removed	Removed
-0176	BGM-0134	1427	Removed	Removed	Removed	Removed	Removed
-0177	BGM-0135	1142	Removed	Removed	Removed	Removed	Removed
-0178	BGM-0136	1070	Removed	Removed	Removed	Removed	Removed
-0179	BGM-0137	1448	Removed	Removed	Removed	Removed	Removed
-0180	BGM-0138	1627	Kept	Kept	Kept	Kept	Kept
-0181	BGM-0140	1288	Removed	Removed	Removed	Removed	Removed
-0182	BGM-0143	669	Removed	Removed	Removed	Removed	Removed
-0183	BGM-0144	1103	Removed	Removed	Removed	Removed	Removed
-0184	BGM-0145	1667	Kept	Kept	Kept	Kept	Kept
-0185	BGM-0148	732	Removed	Removed	Removed	Removed	Removed
-0186	BGM-0150	1629	Kept	Kept	Kept	Kept	Kept
-0187	BGM-0150-A	218	Removed	Removed	Removed	Removed	Removed
-0188	BGM-0150-B	1600	Removed	Kept	Kept	Kept	Kept
-0189	BGM-0151	1577	Removed	Removed	Kept	Kept	Kept
-0190	BGM-0152	796	Removed	Removed	Removed	Removed	Removed
-0191	BGM-0152-A	134	Removed	Removed	Removed	Removed	Removed
-0192	BGM-0152-B	36	Removed	Removed	Removed	Removed	Removed
-0193	BGM-0155	918	Removed	Removed	Removed	Removed	Removed
-0194	BGM-0156	947	Removed	Removed	Removed	Removed	Removed
-0195	BGM-0157	1647	Kept	Kept	Kept	Kept	Kept
-0196	BGM-0158	483	Removed	Removed	Removed	Removed	Removed
-0197	BGM-0160	788	Removed	Removed	Removed	Removed	Removed
-0198	BGM-0161	950	Removed	Removed	Removed	Removed	Removed
-0199	BGM-0162	953	Removed	Removed	Removed	Removed	Removed
-0200	BGM-0162-A	461	Removed	Removed	Removed	Removed	Removed
-0201	BGM-0162-B	739	Removed	Removed	Removed	Removed	Removed
-0202	BGM-0163	1672	Kept	Kept	Kept	Kept	Kept
-0203	BGM-0164	978	Removed	Removed	Removed	Removed	Removed
-0204	BGM-0165	616	Removed	Removed	Removed	Removed	Removed
-0205	BGM-0166	1220	Removed	Removed	Removed	Removed	Removed
-0206	BGM-0167	1255	Removed	Removed	Removed	Removed	Removed
-0207	BGM-0168	1398	Removed	Removed	Removed	Removed	Removed
-0208	BGM-0169	1500	Removed	Removed	Removed	Removed	Removed
-0209	BGM-0170	917	Removed	Removed	Removed	Removed	Removed
-0210	BGM-0171	963	Removed	Removed	Removed	Removed	Removed
-0211	BGM-0174	1421	Removed	Removed	Removed	Removed	Removed
-0212	BGM-0177	390	Removed	Removed	Removed	Removed	Removed
-0213	BGM-0178	1530	Removed	Removed	Removed	Removed	Removed
-0214	BGM-0179	1217	Removed	Removed	Removed	Removed	Removed
-0215	BGM-0182	437	Removed	Removed	Removed	Removed	Removed
-0216	BGM-0183	338	Removed	Removed	Removed	Removed	Removed
-0217	BGM-0184	1325	Removed	Removed	Removed	Removed	Removed
-0218	BGM-0185	1461	Removed	Removed	Removed	Removed	Removed
-0219	BGM-0186	584	Removed	Removed	Removed	Removed	Removed
-0220	BGM-0187	1431	Removed	Removed	Removed	Removed	Removed
-0221	BGM-0188	1223	Removed	Removed	Removed	Removed	Removed
-0222	BGM-0189	999	Removed	Removed	Removed	Removed	Removed
-0223	BGM-0190	1528	Removed	Removed	Removed	Removed	Removed
-0224	BGM-0195	1323	Removed	Removed	Removed	Removed	Removed
-0225	BGM-0199	1708	Kept	Kept	Kept	Kept	Kept
-0226	BGM-0201	1459	Removed	Removed	Removed	Removed	Removed
-0227	BGM-0202	1302	Removed	Removed	Removed	Removed	Removed
-0228	BGM-0204	1460	Removed	Removed	Removed	Removed	Removed
-0229	BGM-0205	493	Removed	Removed	Removed	Removed	Removed
-0230	BGM-0206	141	Removed	Removed	Removed	Removed	Removed
-0231	BGM-0207	1118	Removed	Removed	Removed	Removed	Removed
-0232	BGM-0208	1675	Kept	Kept	Kept	Kept	Kept
-0233	BGM-0209	731	Removed	Removed	Removed	Removed	Removed
-0234	BGM-0210	1558	Removed	Removed	Removed	Removed	Kept
-0235	BGM-0211	1084	Removed	Removed	Removed	Removed	Removed
-0236	BGM-0212	1394	Removed	Removed	Removed	Removed	Removed
-0237	BGM-0213	916	Removed	Removed	Removed	Removed	Removed
-0238	BGM-0214	1432	Removed	Removed	Removed	Removed	Removed
-0239	BGM-0215	1016	Removed	Removed	Removed	Removed	Removed
-0240	BGM-0216	1504	Removed	Removed	Removed	Removed	Removed
-0241	BGM-0220	1168	Removed	Removed	Removed	Removed	Removed
-0242	BGM-0222	1635	Kept	Kept	Kept	Kept	Kept
-0243	BGM-0226	522	Removed	Removed	Removed	Removed	Removed
-0244	BGM-0235	1055	Removed	Removed	Removed	Removed	Removed
-0245	BGM-0236	1487	Removed	Removed	Removed	Removed	Removed
-0246	BGM-0237	870	Removed	Removed	Removed	Removed	Removed
-0247	BGM-0238	1513	Removed	Removed	Removed	Removed	Removed
-0248	BGM-0239	1483	Removed	Removed	Removed	Removed	Removed
-0249	BGM-0240	1623	Kept	Kept	Kept	Kept	Kept
-0250	BGM-0241	586	Removed	Removed	Removed	Removed	Removed
-0251	BGM-0242	415	Removed	Removed	Removed	Removed	Removed
-0252	BGM-0246	652	Removed	Removed	Removed	Removed	Removed
-0253	BGM-0247	1006	Removed	Removed	Removed	Removed	Removed
-0254	BGM-0248	1691	Kept	Kept	Kept	Kept	Kept
-0255	BGM-0249	1426	Removed	Removed	Removed	Removed	Removed
-0256	BGM-0250	1216	Removed	Removed	Removed	Removed	Removed
-0257	BGM-0252	977	Removed	Removed	Removed	Removed	Removed
-0258	BGM-0254	1358	Removed	Removed	Removed	Removed	Removed
-0259	BGM-0257	1485	Removed	Removed	Removed	Removed	Removed
-0260	BGM-0260	765	Removed	Removed	Removed	Removed	Removed
-0261	BGM-0261	1481	Removed	Removed	Removed	Removed	Removed
-0262	BGM-0264	1710	Kept	Kept	Kept	Kept	Kept
-0263	BGM-0266	1219	Removed	Removed	Removed	Removed	Removed
-0264	BGM-0267	331	Removed	Removed	Removed	Removed	Removed
-0265	BGM-0268	1632	Kept	Kept	Kept	Kept	Kept
-0266	BGM-0269	1576	Removed	Removed	Kept	Kept	Kept
-0267	BGM-0270	980	Removed	Removed	Removed	Removed	Removed
-0268	BGM-0271	619	Removed	Removed	Removed	Removed	Removed
-0269	BGM-0276	752	Removed	Removed	Removed	Removed	Removed
-0270	BGM-0277	1422	Removed	Removed	Removed	Removed	Removed
-0271	BGM-0279	1193	Removed	Removed	Removed	Removed	Removed
-0272	BGM-0280	366	Removed	Removed	Removed	Removed	Removed
-0273	BGM-0281	1158	Removed	Removed	Removed	Removed	Removed
-0274	BGM-0282	1310	Removed	Removed	Removed	Removed	Removed
-0275	BGM-0283	783	Removed	Removed	Removed	Removed	Removed
-0276	BGM-0284	1172	Removed	Removed	Removed	Removed	Removed
-0277	BGM-0285	1094	Removed	Removed	Removed	Removed	Removed
-0278	BGM-0286	1346	Removed	Removed	Removed	Removed	Removed
-0279	BGM-0287	1552	Removed	Removed	Removed	Removed	Removed
-0280	BGM-0288	1550	Removed	Removed	Removed	Removed	Removed
-0281	BGM-0289	1494	Removed	Removed	Removed	Removed	Removed
-0282	BGM-0290	1154	Removed	Removed	Removed	Removed	Removed
-0283	BGM-0294	1339	Removed	Removed	Removed	Removed	Removed
-0284	BGM-0297	1409	Removed	Removed	Removed	Removed	Removed
-0285	BGM-0298	1155	Removed	Removed	Removed	Removed	Removed
-0286	BGM-0303	1505	Removed	Removed	Removed	Removed	Removed
-0287	BGM-0304	1183	Removed	Removed	Removed	Removed	Removed
-0288	BGM-0306	810	Removed	Removed	Removed	Removed	Removed
-0289	BGM-0307	1199	Removed	Removed	Removed	Removed	Removed
-0290	BGM-0308	1571	Removed	Removed	Kept	Kept	Kept
-0291	BGM-0310	448	Removed	Removed	Removed	Removed	Removed
-0292	BGM-0314	1637	Kept	Kept	Kept	Kept	Kept
-0293	BGM-0315	540	Removed	Removed	Removed	Removed	Removed
-0294	BGM-0318	1123	Removed	Removed	Removed	Removed	Removed
-0295	BGM-0319	298	Removed	Removed	Removed	Removed	Removed
-0296	BGM-0323	1092	Removed	Removed	Removed	Removed	Removed
-0297	BGM-0324	234	Removed	Removed	Removed	Removed	Removed
-0298	BGM-0327	1356	Removed	Removed	Removed	Removed	Removed
-0299	BGM-0330	838	Removed	Removed	Removed	Removed	Removed
-0300	BGM-0336	1281	Removed	Removed	Removed	Removed	Removed
-0301	BGM-0337	744	Removed	Removed	Removed	Removed	Removed
-0302	BGM-0338	245	Removed	Removed	Removed	Removed	Removed
-0303	BGM-0340	322	Removed	Removed	Removed	Removed	Removed
-0304	BGM-0341	921	Removed	Removed	Removed	Removed	Removed
-0305	BGM-0342	1087	Removed	Removed	Removed	Removed	Removed
-0306	BGM-0345	1292	Removed	Removed	Removed	Removed	Removed
-0307	BGM-0349	1438	Removed	Removed	Removed	Removed	Removed
-0308	BGM-0352	1620	Kept	Kept	Kept	Kept	Kept
-0309	BGM-0356	537	Removed	Removed	Removed	Removed	Removed
-0310	BGM-0357	1360	Removed	Removed	Removed	Removed	Removed
-0311	BGM-0358	901	Removed	Removed	Removed	Removed	Removed
-0312	BGM-0359	1320	Removed	Removed	Removed	Removed	Removed
-0313	BGM-0360	1553	Removed	Removed	Removed	Removed	Removed
-0314	BGM-0361	383	Removed	Removed	Removed	Removed	Removed
-0315	BGM-0362	920	Removed	Removed	Removed	Removed	Removed
-0316	BGM-0364	1391	Removed	Removed	Removed	Removed	Removed
-0317	BGM-0365	353	Removed	Removed	Removed	Removed	Removed
-0318	BGM-0366	1482	Removed	Removed	Removed	Removed	Removed
-0319	BGM-0368	914	Removed	Removed	Removed	Removed	Removed
-0320	BGM-0369	1477	Removed	Removed	Removed	Removed	Removed
-0321	BGM-0374	1237	Removed	Removed	Removed	Removed	Removed
-0322	BGM-0375	412	Removed	Removed	Removed	Removed	Removed
-0323	BGM-0378	543	Removed	Removed	Removed	Removed	Removed
-0324	BGM-0380	937	Removed	Removed	Removed	Removed	Removed
-0325	BGM-0382	811	Removed	Removed	Removed	Removed	Removed
-0326	BGM-0383	625	Removed	Removed	Removed	Removed	Removed
-0327	BGM-0384	414	Removed	Removed	Removed	Removed	Removed
-0328	BGM-0386	1354	Removed	Removed	Removed	Removed	Removed
-0329	BGM-0388	1057	Removed	Removed	Removed	Removed	Removed
-0330	BGM-0389	1120	Removed	Removed	Removed	Removed	Removed
-0331	BGM-0390	1282	Removed	Removed	Removed	Removed	Removed
-0332	BGM-0393	818	Removed	Removed	Removed	Removed	Removed
-0333	BGM-0394	1307	Removed	Removed	Removed	Removed	Removed
-0334	BGM-0395	1316	Removed	Removed	Removed	Removed	Removed
-0335	BGM-0396	896	Removed	Removed	Removed	Removed	Removed
-0336	BGM-0398	1470	Removed	Removed	Removed	Removed	Removed
-0337	BGM-0399	1136	Removed	Removed	Removed	Removed	Removed
-0338	BGM-0400	541	Removed	Removed	Removed	Removed	Removed
-0339	BGM-0406	691	Removed	Removed	Removed	Removed	Removed
-0340	BGM-0407	969	Removed	Removed	Removed	Removed	Removed
-0341	BGM-0408	853	Removed	Removed	Removed	Removed	Removed
-0342	BGM-0410	983	Removed	Removed	Removed	Removed	Removed
-0343	BGM-0411	889	Removed	Removed	Removed	Removed	Removed
-0344	BGM-0413	976	Removed	Removed	Removed	Removed	Removed
-0345	BGM-0414	984	Removed	Removed	Removed	Removed	Removed
-0346	BGM-0418	286	Removed	Removed	Removed	Removed	Removed
-0347	BGM-0420	1326	Removed	Removed	Removed	Removed	Removed
-0348	BGM-0421	1164	Removed	Removed	Removed	Removed	Removed
-0349	BGM-0422	1434	Removed	Removed	Removed	Removed	Removed
-0350	BGM-0423	362	Removed	Removed	Removed	Removed	Removed
-0351	BGM-0424	813	Removed	Removed	Removed	Removed	Removed
-0352	BGM-0425	1610	Removed	Kept	Kept	Kept	Kept
-0353	BGM-0426	1484	Removed	Removed	Removed	Removed	Removed
-0354	BGM-0427	1100	Removed	Removed	Removed	Removed	Removed
-0355	BGM-0428	1617	Removed	Kept	Kept	Kept	Kept
-0356	BGM-0432	1445	Removed	Removed	Removed	Removed	Removed
-0357	BGM-0434	632	Removed	Removed	Removed	Removed	Removed
-0358	BGM-0435	1234	Removed	Removed	Removed	Removed	Removed
-0359	BGM-0436	1585	Removed	Kept	Kept	Kept	Kept
-0360	BGM-0437	926	Removed	Removed	Removed	Removed	Removed
-0361	BGM-0438	1634	Kept	Kept	Kept	Kept	Kept
-0362	BGM-0439	524	Removed	Removed	Removed	Removed	Removed
-0363	BGM-0440	1444	Removed	Removed	Removed	Removed	Removed
-0364	BGM-0441	478	Removed	Removed	Removed	Removed	Removed
-0365	BGM-0442	1706	Kept	Kept	Kept	Kept	Kept
-0366	BGM-0443	1350	Removed	Removed	Removed	Removed	Removed
-0367	BGM-0444	1032	Removed	Removed	Removed	Removed	Removed
-0368	BGM-0447	1516	Removed	Removed	Removed	Removed	Removed
-0369	BGM-0448	678	Removed	Removed	Removed	Removed	Removed
-0370	BGM-0449	1243	Removed	Removed	Removed	Removed	Removed
-0371	BGM-0451	750	Removed	Removed	Removed	Removed	Removed
-0372	BGM-0452	1599	Removed	Kept	Kept	Kept	Kept
-0373	BGM-0454	998	Removed	Removed	Removed	Removed	Removed
-0374	BGM-0456	1695	Kept	Kept	Kept	Kept	Kept
-0375	BGM-0460	849	Removed	Removed	Removed	Removed	Removed
-0376	BGM-0461	1533	Removed	Removed	Removed	Removed	Removed
-0377	BGM-0462	841	Removed	Removed	Removed	Removed	Removed
-0378	BGM-0463	1352	Removed	Removed	Removed	Removed	Removed
-0379	BGM-0465	1144	Removed	Removed	Removed	Removed	Removed
-0380	BGM-0467	1511	Removed	Removed	Removed	Removed	Removed
-0381	BGM-0468	1415	Removed	Removed	Removed	Removed	Removed
-0382	BGM-0470	1605	Removed	Kept	Kept	Kept	Kept
-0383	BGM-0471	1374	Removed	Removed	Removed	Removed	Removed
-0384	BGM-0472	1218	Removed	Removed	Removed	Removed	Removed
-0385	BGM-0474	821	Removed	Removed	Removed	Removed	Removed
-0386	BGM-0475	859	Removed	Removed	Removed	Removed	Removed
-0387	BGM-0476	1579	Removed	Removed	Kept	Kept	Kept
-0388	BGM-0478	1473	Removed	Removed	Removed	Removed	Removed
-0389	BGM-0480	1663	Kept	Kept	Kept	Kept	Kept
-0390	BGM-0484	1649	Kept	Kept	Kept	Kept	Kept
-0391	BGM-0489	1522	Removed	Removed	Removed	Removed	Removed
-0392	BGM-0494	1465	Removed	Removed	Removed	Removed	Removed
-0393	BGM-0495	1114	Removed	Removed	Removed	Removed	Removed
-0394	BGM-0496	1067	Removed	Removed	Removed	Removed	Removed
-0395	BGM-0498	1099	Removed	Removed	Removed	Removed	Removed
-0396	BGM-0499	1515	Removed	Removed	Removed	Removed	Removed
-0397	BGM-0500	1093	Removed	Removed	Removed	Removed	Removed
-0398	BGM-0504	903	Removed	Removed	Removed	Removed	Removed
-0399	BGM-0505	1009	Removed	Removed	Removed	Removed	Removed
-0400	BGM-0507	624	Removed	Removed	Removed	Removed	Removed
-0401	BGM-0508	1509	Removed	Removed	Removed	Removed	Removed
-0402	BGM-0509	1463	Removed	Removed	Removed	Removed	Removed
-0403	BGM-0510	1639	Kept	Kept	Kept	Kept	Kept
-0404	BGM-0511	1011	Removed	Removed	Removed	Removed	Removed
-0405	BGM-0512	1305	Removed	Removed	Removed	Removed	Removed
-0406	BGM-0514	1703	Kept	Kept	Kept	Kept	Kept
-0407	BGM-0517	908	Removed	Removed	Removed	Removed	Removed
-0408	BGM-0520	547	Removed	Removed	Removed	Removed	Removed
-0409	BGM-0521	1569	Removed	Removed	Kept	Kept	Kept
-0410	BGM-0523	1000	Removed	Removed	Removed	Removed	Removed
-0411	BGM-0527	1454	Removed	Removed	Removed	Removed	Removed
-0412	BGM-0529	1191	Removed	Removed	Removed	Removed	Removed
-0413	BGM-0536	1371	Removed	Removed	Removed	Removed	Removed
-0414	BGM-0537	885	Removed	Removed	Removed	Removed	Removed
-0415	BGM-0540	1559	Removed	Removed	Removed	Removed	Kept
-0416	BGM-0541	1414	Removed	Removed	Removed	Removed	Removed
-0417	BGM-0542	1318	Removed	Removed	Removed	Removed	Removed
-0418	BGM-0543	965	Removed	Removed	Removed	Removed	Removed
-0419	BGM-0544	869	Removed	Removed	Removed	Removed	Removed
-0420	BGM-0545	1208	Removed	Removed	Removed	Removed	Removed
-0421	BGM-0546	782	Removed	Removed	Removed	Removed	Removed
-0422	BGM-0547	1532	Removed	Removed	Removed	Removed	Removed
-0423	BGM-0549	1214	Removed	Removed	Removed	Removed	Removed
-0424	BGM-0550	1068	Removed	Removed	Removed	Removed	Removed
-0425	BGM-0551	1338	Removed	Removed	Removed	Removed	Removed
-0426	BGM-0552	634	Removed	Removed	Removed	Removed	Removed
-0427	BGM-0555	1544	Removed	Removed	Removed	Removed	Removed
-0428	BGM-0556	1171	Removed	Removed	Removed	Removed	Removed
-0429	BGM-0557	1496	Removed	Removed	Removed	Removed	Removed
-0430	BGM-0558	1479	Removed	Removed	Removed	Removed	Removed
-0431	BGM-0560	1334	Removed	Removed	Removed	Removed	Removed
-0432	BGM-0561	742	Removed	Removed	Removed	Removed	Removed
-0433	BGM-0562	1590	Removed	Kept	Kept	Kept	Kept
-0434	BGM-0563	1146	Removed	Removed	Removed	Removed	Removed
-0435	BGM-0564	1607	Removed	Kept	Kept	Kept	Kept
-0436	BGM-0570	1574	Removed	Removed	Kept	Kept	Kept
-0437	BGM-0573	793	Removed	Removed	Removed	Removed	Removed
-0438	BGM-0574	1313	Removed	Removed	Removed	Removed	Removed
-0439	BGM-0575	333	Removed	Removed	Removed	Removed	Removed
-0440	BGM-0576	1609	Removed	Kept	Kept	Kept	Kept
-0441	BGM-0579	1527	Removed	Removed	Removed	Removed	Removed
-0442	BGM-0583	1707	Kept	Kept	Kept	Kept	Kept
-0443	BGM-0585	567	Removed	Removed	Removed	Removed	Removed
-0444	BGM-0587	1112	Removed	Removed	Removed	Removed	Removed
-0445	BGM-0589	548	Removed	Removed	Removed	Removed	Removed
-0446	BGM-0590	839	Removed	Removed	Removed	Removed	Removed
-0447	BGM-0591	726	Removed	Removed	Removed	Removed	Removed
-0448	BGM-0592	1676	Kept	Kept	Kept	Kept	Kept
-0449	BGM-0593	1053	Removed	Removed	Removed	Removed	Removed
-0450	BGM-0597	686	Removed	Removed	Removed	Removed	Removed
-0451	BGM-0598	1491	Removed	Removed	Removed	Removed	Removed
-0452	BGM-0600	1147	Removed	Removed	Removed	Removed	Removed
-0453	BGM-0601	1355	Removed	Removed	Removed	Removed	Removed
-0454	BGM-0603	1657	Kept	Kept	Kept	Kept	Kept
-0455	BGM-0604	336	Removed	Removed	Removed	Removed	Removed
-0456	BGM-0606	1364	Removed	Removed	Removed	Removed	Removed
-0457	BGM-0607	940	Removed	Removed	Removed	Removed	Removed
-0458	BGM-0608	703	Removed	Removed	Removed	Removed	Removed
-0459	BGM-0609	447	Removed	Removed	Removed	Removed	Removed
-0460	BGM-0610	882	Removed	Removed	Removed	Removed	Removed
-0461	BGM-0611	1568	Removed	Removed	Kept	Kept	Kept
-0462	BGM-0613	642	Removed	Removed	Removed	Removed	Removed
-0463	BGM-0614	1166	Removed	Removed	Removed	Removed	Removed
-0464	BGM-0615	1641	Kept	Kept	Kept	Kept	Kept
-0465	BGM-0618	1370	Removed	Removed	Removed	Removed	Removed
-0466	BGM-0620	1514	Removed	Removed	Removed	Removed	Removed
-0467	BGM-0623	1633	Kept	Kept	Kept	Kept	Kept
-0468	BGM-0624	1408	Removed	Removed	Removed	Removed	Removed
-0469	BGM-0625	1626	Kept	Kept	Kept	Kept	Kept
-0470	BGM-0626	766	Removed	Removed	Removed	Removed	Removed
-0471	BGM-0630	1266	Removed	Removed	Removed	Removed	Removed
-0472	BGM-0631	1673	Kept	Kept	Kept	Kept	Kept
-0473	BGM-0635	1666	Kept	Kept	Kept	Kept	Kept
-0474	BGM-0636	1336	Removed	Removed	Removed	Removed	Removed
-0475	BGM-0638	1107	Removed	Removed	Removed	Removed	Removed
-0476	BGM-0639	1335	Removed	Removed	Removed	Removed	Removed
-0477	BGM-0640	443	Removed	Removed	Removed	Removed	Removed
-0478	BGM-0641	1161	Removed	Removed	Removed	Removed	Removed
-0479	BGM-0642	1648	Kept	Kept	Kept	Kept	Kept
-0480	BGM-0645	444	Removed	Removed	Removed	Removed	Removed
-0481	BGM-0646	1015	Removed	Removed	Removed	Removed	Removed
-0482	BGM-0648	1186	Removed	Removed	Removed	Removed	Removed
-0483	BGM-0649	459	Removed	Removed	Removed	Removed	Removed
-0484	BGM-0650	576	Removed	Removed	Removed	Removed	Removed
-0485	BGM-0651	1225	Removed	Removed	Removed	Removed	Removed
-0486	BGM-0652	285	Removed	Removed	Removed	Removed	Removed
-0487	BGM-0654	1242	Removed	Removed	Removed	Removed	Removed
-0488	BGM-0655	1679	Kept	Kept	Kept	Kept	Kept
-0489	BGM-0657	825	Removed	Removed	Removed	Removed	Removed
-0490	BGM-0658	1257	Removed	Removed	Removed	Removed	Removed
-0491	BGM-0659	1377	Removed	Removed	Removed	Removed	Removed
-0492	BGM-0660	1606	Removed	Kept	Kept	Kept	Kept
-0493	BGM-0661	467	Removed	Removed	Removed	Removed	Removed
-0494	BGM-0662	709	Removed	Removed	Removed	Removed	Removed
-0495	BGM-0664	1687	Kept	Kept	Kept	Kept	Kept
-0496	BGM-0665	1549	Removed	Removed	Removed	Removed	Removed
-0497	BGM-0666	987	Removed	Removed	Removed	Removed	Removed
-0498	BGM-0668	265	Removed	Removed	Removed	Removed	Removed
-0499	BGM-0669	599	Removed	Removed	Removed	Removed	Removed
-0500	BGM-0670	1224	Removed	Removed	Removed	Removed	Removed
-0501	BGM-0671	864	Removed	Removed	Removed	Removed	Removed
-0502	BGM-0672	413	Removed	Removed	Removed	Removed	Removed
-0503	BGM-0673	1091	Removed	Removed	Removed	Removed	Removed
-0504	BGM-0675	559	Removed	Removed	Removed	Removed	Removed
-0505	BGM-0677	491	Removed	Removed	Removed	Removed	Removed
-0506	BGM-0678	1589	Removed	Kept	Kept	Kept	Kept
-0507	BGM-0679	1018	Removed	Removed	Removed	Removed	Removed
-0508	BGM-0680	724	Removed	Removed	Removed	Removed	Removed
-0509	BGM-0682	1178	Removed	Removed	Removed	Removed	Removed
-0510	BGM-0685	1443	Removed	Removed	Removed	Removed	Removed
-0511	BGM-0693	832	Removed	Removed	Removed	Removed	Removed
-0512	BGM-0694	1547	Removed	Removed	Removed	Removed	Removed
-0513	BGM-0695	1077	Removed	Removed	Removed	Removed	Removed
-0514	BGM-0697	1270	Removed	Removed	Removed	Removed	Removed
-0515	BGM-0699	829	Removed	Removed	Removed	Removed	Removed
-0516	BGM-0700	974	Removed	Removed	Removed	Removed	Removed
-0517	BGM-0702	1265	Removed	Removed	Removed	Removed	Removed
-0518	BGM-0703	1685	Kept	Kept	Kept	Kept	Kept
-0519	BGM-0706	217	Removed	Removed	Removed	Removed	Removed
-0520	BGM-0707	1433	Removed	Removed	Removed	Removed	Removed
-0521	BGM-0708	208	Removed	Removed	Removed	Removed	Removed
-0522	BGM-0711	1170	Removed	Removed	Removed	Removed	Removed
-0523	BGM-0713	1097	Removed	Removed	Removed	Removed	Removed
-0524	BGM-0714	802	Removed	Removed	Removed	Removed	Removed
-0525	BGM-0715	429	Removed	Removed	Removed	Removed	Removed
-0526	BGM-0717	1575	Removed	Removed	Kept	Kept	Kept
-0527	BGM-0718	1581	Removed	Removed	Kept	Kept	Kept
-0528	BGM-0726	643	Removed	Removed	Removed	Removed	Removed
-0529	BGM-0728	934	Removed	Removed	Removed	Removed	Removed
-0530	BGM-0729	1529	Removed	Removed	Removed	Removed	Removed
-0531	BGM-0733	488	Removed	Removed	Removed	Removed	Removed
-0532	BGM-0737	534	Removed	Removed	Removed	Removed	Removed
-0533	BGM-0741	574	Removed	Removed	Removed	Removed	Removed
-0534	BGM-0756	473	Removed	Removed	Removed	Removed	Removed
-0535	BGM-0760	890	Removed	Removed	Removed	Removed	Removed
-0536	BGM-0776	372	Removed	Removed	Removed	Removed	Removed
-0537	BGM-0779	897	Removed	Removed	Removed	Removed	Removed
-0538	BGM-0780	826	Removed	Removed	Removed	Removed	Removed
-0539	BGM-0780-B	866	Removed	Removed	Removed	Removed	Removed
-0540	BGM-0781	1254	Removed	Removed	Removed	Removed	Removed
-0541	BGM-0783	603	Removed	Removed	Removed	Removed	Removed
-0542	BGM-0785	1269	Removed	Removed	Removed	Removed	Removed
-0543	BGM-0788	718	Removed	Removed	Removed	Removed	Removed
-0544	BGM-0790	761	Removed	Removed	Removed	Removed	Removed
-0545	BGM-0793	480	Removed	Removed	Removed	Removed	Removed
-0546	BGM-0799	1253	Removed	Removed	Removed	Removed	Removed
-0547	BGM-0803	840	Removed	Removed	Removed	Removed	Removed
-0548	BGM-0805	1139	Removed	Removed	Removed	Removed	Removed
-0549	BGM-0806	1520	Removed	Removed	Removed	Removed	Removed
-0550	BGM-0807	464	Removed	Removed	Removed	Removed	Removed
-0551	BGM-0808	1646	Kept	Kept	Kept	Kept	Kept
-0552	BGM-0810	1404	Removed	Removed	Removed	Removed	Removed
-0553	BGM-0812	1523	Removed	Removed	Removed	Removed	Removed
-0554	BGM-0813	1564	Removed	Removed	Removed	Kept	Kept
-0555	BGM-0814	240	Removed	Removed	Removed	Removed	Removed
-0556	BGM-0815	596	Removed	Removed	Removed	Removed	Removed
-0557	BGM-0816	1033	Removed	Removed	Removed	Removed	Removed
-0558	BGM-0817	876	Removed	Removed	Removed	Removed	Removed
-0559	BGM-0818	646	Removed	Removed	Removed	Removed	Removed
-0560	BGM-0820	1420	Removed	Removed	Removed	Removed	Removed
-0561	BGM-0822	420	Removed	Removed	Removed	Removed	Removed
-0562	BGM-0823	1521	Removed	Removed	Removed	Removed	Removed
-0563	BGM-0830	523	Removed	Removed	Removed	Removed	Removed
-0564	BGM-0830-TB	209	Removed	Removed	Removed	Removed	Removed
-0565	BGM-0831	612	Removed	Removed	Removed	Removed	Removed
-0566	BGM-0841	486	Removed	Removed	Removed	Removed	Removed
-0567	BGM-0842	1163	Removed	Removed	Removed	Removed	Removed
-0568	BGM-0843	757	Removed	Removed	Removed	Removed	Removed
-0569	BGM-0845	207	Removed	Removed	Removed	Removed	Removed
-0570	BGM-0846	1122	Removed	Removed	Removed	Removed	Removed
-0571	BGM-0847	927	Removed	Removed	Removed	Removed	Removed
-0572	BGM-0848	1143	Removed	Removed	Removed	Removed	Removed
-0573	BGM-0849	658	Removed	Removed	Removed	Removed	Removed
-0574	BGM-0850	973	Removed	Removed	Removed	Removed	Removed
-0575	BGM-0851	960	Removed	Removed	Removed	Removed	Removed
-0576	BGM-0854	442	Removed	Removed	Removed	Removed	Removed
-0577	BGM-0856	1640	Kept	Kept	Kept	Kept	Kept
-0578	BGM-0856-CCr	271	Removed	Removed	Removed	Removed	Removed
-0579	BGM-0856-CRx	304	Removed	Removed	Removed	Removed	Removed
-0580	BGM-0857	1594	Removed	Kept	Kept	Kept	Kept
-0581	BGM-0858	1393	Removed	Removed	Removed	Removed	Removed
-0582	BGM-0859	1297	Removed	Removed	Removed	Removed	Removed
-0583	BGM-0863	1531	Removed	Removed	Removed	Removed	Removed
-0584	BGM-0866	1275	Removed	Removed	Removed	Removed	Removed
-0585	BGM-0867	1249	Removed	Removed	Removed	Removed	Removed
-0586	BGM-0868	621	Removed	Removed	Removed	Removed	Removed
-0587	BGM-0869	356	Removed	Removed	Removed	Removed	Removed
-0588	BGM-0870	503	Removed	Removed	Removed	Removed	Removed
-0589	BGM-0872	1308	Removed	Removed	Removed	Removed	Removed
-0590	BGM-0873	1202	Removed	Removed	Removed	Removed	Removed
-0591	BGM-0875	858	Removed	Removed	Removed	Removed	Removed
-0592	BGM-0876	533	Removed	Removed	Removed	Removed	Removed
-0593	BGM-0877	1518	Removed	Removed	Removed	Removed	Removed
-0594	BGM-0878	611	Removed	Removed	Removed	Removed	Removed
-0595	BGM-0879	528	Removed	Removed	Removed	Removed	Removed
-0596	BGM-0882	1287	Removed	Removed	Removed	Removed	Removed
-0597	BGM-0884	721	Removed	Removed	Removed	Removed	Removed
-0598	BGM-0885	958	Removed	Removed	Removed	Removed	Removed
-0599	BGM-0886	1525	Removed	Removed	Removed	Removed	Removed
-0600	BGM-0888	736	Removed	Removed	Removed	Removed	Removed
-0601	BGM-0889	778	Removed	Removed	Removed	Removed	Removed
-0602	BGM-0890	475	Removed	Removed	Removed	Removed	Removed
-0603	BGM-0892	423	Removed	Removed	Removed	Removed	Removed
-0604	BGM-0893	1332	Removed	Removed	Removed	Removed	Removed
-0605	BGM-0894	1065	Removed	Removed	Removed	Removed	Removed
-0606	BGM-0895	192	Removed	Removed	Removed	Removed	Removed
-0607	BGM-0898	1329	Removed	Removed	Removed	Removed	Removed
-0608	BGM-0900	496	Removed	Removed	Removed	Removed	Removed
-0609	BGM-0901	1349	Removed	Removed	Removed	Removed	Removed
-0610	BGM-0902	705	Removed	Removed	Removed	Removed	Removed
-0611	BGM-0903	1546	Removed	Removed	Removed	Removed	Removed
-0612	BGM-0905	577	Removed	Removed	Removed	Removed	Removed
-0613	BGM-0906	954	Removed	Removed	Removed	Removed	Removed
-0614	BGM-0909	1195	Removed	Removed	Removed	Removed	Removed
-0615	BGM-0912	1285	Removed	Removed	Removed	Removed	Removed
-0616	BGM-0914	1082	Removed	Removed	Removed	Removed	Removed
-0617	BGM-0915	1344	Removed	Removed	Removed	Removed	Removed
-0618	BGM-0917	1697	Kept	Kept	Kept	Kept	Kept
-0619	BGM-0918	1668	Kept	Kept	Kept	Kept	Kept
-0620	BGM-0919	1020	Removed	Removed	Removed	Removed	Removed
-0621	BGM-0920	923	Removed	Removed	Removed	Removed	Removed
-0622	BGM-0922	1007	Removed	Removed	Removed	Removed	Removed
-0623	BGM-0924	704	Removed	Removed	Removed	Removed	Removed
-0624	BGM-0925	819	Removed	Removed	Removed	Removed	Removed
-0625	BGM-0929	1548	Removed	Removed	Removed	Removed	Removed
-0626	BGM-0930	1375	Removed	Removed	Removed	Removed	Removed
-0627	BGM-0931	212	Removed	Removed	Removed	Removed	Removed
-0628	BGM-0931T	489	Removed	Removed	Removed	Removed	Removed
-0629	BGM-0934	230	Removed	Removed	Removed	Removed	Removed
-0630	BGM-0935	1593	Removed	Kept	Kept	Kept	Kept
-0631	BGM-0936	1417	Removed	Removed	Removed	Removed	Removed
-0632	BGM-0937	1353	Removed	Removed	Removed	Removed	Removed
-0633	BGM-0940	1196	Removed	Removed	Removed	Removed	Removed
-0634	BGM-0941	1319	Removed	Removed	Removed	Removed	Removed
-0635	BGM-0942	525	Removed	Removed	Removed	Removed	Removed
-0636	BGM-0943	1659	Kept	Kept	Kept	Kept	Kept
-0637	BGM-0944	1279	Removed	Removed	Removed	Removed	Removed
-0638	BGM-0945	1573	Removed	Removed	Kept	Kept	Kept
-0639	BGM-0946	1189	Removed	Removed	Removed	Removed	Removed
-0640	BGM-0947	694	Removed	Removed	Removed	Removed	Removed
-0641	BGM-0948	902	Removed	Removed	Removed	Removed	Removed
-0642	BGM-0949	1309	Removed	Removed	Removed	Removed	Removed
-0643	BGM-0951	428	Removed	Removed	Removed	Removed	Removed
-0644	BGM-0952	1054	Removed	Removed	Removed	Removed	Removed
-0645	BGM-0953	1088	Removed	Removed	Removed	Removed	Removed
-0646	BGM-0954	1545	Removed	Removed	Removed	Removed	Removed
-0647	BGM-0957	1373	Removed	Removed	Removed	Removed	Removed
-0648	BGM-0958	1595	Removed	Kept	Kept	Kept	Kept
-0649	BGM-0959	1403	Removed	Removed	Removed	Removed	Removed
-0650	BGM-0960	847	Removed	Removed	Removed	Removed	Removed
-0651	BGM-0961	835	Removed	Removed	Removed	Removed	Removed
-0652	BGM-0962	994	Removed	Removed	Removed	Removed	Removed
-0653	BGM-0963	990	Removed	Removed	Removed	Removed	Removed
-0654	BGM-0965	334	Removed	Removed	Removed	Removed	Removed
-0655	BGM-0966	808	Removed	Removed	Removed	Removed	Removed
-0656	BGM-0967	1342	Removed	Removed	Removed	Removed	Removed
-0657	BGM-0968	1206	Removed	Removed	Removed	Removed	Removed
-0658	BGM-0971	1026	Removed	Removed	Removed	Removed	Removed
-0659	BGM-0972	629	Removed	Removed	Removed	Removed	Removed
-0660	BGM-0973	871	Removed	Removed	Removed	Removed	Removed
-0661	BGM-0974	1104	Removed	Removed	Removed	Removed	Removed
-0662	BGM-0975	1621	Kept	Kept	Kept	Kept	Kept
-0663	BGM-0976	1437	Removed	Removed	Removed	Removed	Removed
-0664	BGM-0977	430	Removed	Removed	Removed	Removed	Removed
-0665	BGM-0978	797	Removed	Removed	Removed	Removed	Removed
-0666	BGM-0979	1050	Removed	Removed	Removed	Removed	Removed
-0667	BGM-0980	1541	Removed	Removed	Removed	Removed	Removed
-0668	BGM-0981	1262	Removed	Removed	Removed	Removed	Removed
-0669	BGM-0982	945	Removed	Removed	Removed	Removed	Removed
-0670	BGM-0983	470	Removed	Removed	Removed	Removed	Removed
-0671	BGM-0984	615	Removed	Removed	Removed	Removed	Removed
-0672	BGM-0985	1312	Removed	Removed	Removed	Removed	Removed
-0673	BGM-0986	986	Removed	Removed	Removed	Removed	Removed
-0674	BGM-0987	1105	Removed	Removed	Removed	Removed	Removed
-0675	BGM-0989	1303	Removed	Removed	Removed	Removed	Removed
-0676	BGM-0991	37	Removed	Removed	Removed	Removed	Removed
-0677	BGM-0992	1369	Removed	Removed	Removed	Removed	Removed
-0678	BGM-0993	1327	Removed	Removed	Removed	Removed	Removed
-0679	BGM-0994	1400	Removed	Removed	Removed	Removed	Removed
-0680	BGM-0995	651	Removed	Removed	Removed	Removed	Removed
-0681	BGM-0996	1489	Removed	Removed	Removed	Removed	Removed
-0682	BGM-0998	1328	Removed	Removed	Removed	Removed	Removed
-0683	BGM-1006	1203	Removed	Removed	Removed	Removed	Removed
-0684	BGM-1007	345	Removed	Removed	Removed	Removed	Removed
-0685	BGM-1010	449	Removed	Removed	Removed	Removed	Removed
-0686	BGM-1015	306	Removed	Removed	Removed	Removed	Removed
-0687	BGM-1023	1073	Removed	Removed	Removed	Removed	Removed
-0688	BGM-1024	1150	Removed	Removed	Removed	Removed	Removed
-0689	BGM-1025	1205	Removed	Removed	Removed	Removed	Removed
-0690	BGM-1026	564	Removed	Removed	Removed	Removed	Removed
-0691	BGM-1027	698	Removed	Removed	Removed	Removed	Removed
-0692	BGM-1028	433	Removed	Removed	Removed	Removed	Removed
-0693	BGM-1029	1462	Removed	Removed	Removed	Removed	Removed
-0694	BGM-1031	1145	Removed	Removed	Removed	Removed	Removed
-0695	BGM-1034	335	Removed	Removed	Removed	Removed	Removed
-0696	BGM-1037	591	Removed	Removed	Removed	Removed	Removed
-0697	BGM-1040	424	Removed	Removed	Removed	Removed	Removed
-0698	BGM-1041	626	Removed	Removed	Removed	Removed	Removed
-0699	BGM-1042	1435	Removed	Removed	Removed	Removed	Removed
-0700	BGM-1043	610	Removed	Removed	Removed	Removed	Removed
-0701	BGM-1044	874	Removed	Removed	Removed	Removed	Removed
-0702	BGM-1055	792	Removed	Removed	Removed	Removed	Removed
-0703	BGM-1060	807	Removed	Removed	Removed	Removed	Removed
-0704	BGM-1064	804	Removed	Removed	Removed	Removed	Removed
-0705	BGM-1067	1440	Removed	Removed	Removed	Removed	Removed
-0706	BGM-1068	944	Removed	Removed	Removed	Removed	Removed
-0707	BGM-1073	1012	Removed	Removed	Removed	Removed	Removed
-0708	BGM-1077	919	Removed	Removed	Removed	Removed	Removed
-0709	BGM-1078	1267	Removed	Removed	Removed	Removed	Removed
-0710	BGM-1079	636	Removed	Removed	Removed	Removed	Removed
-0711	BGM-1080	221	Removed	Removed	Removed	Removed	Removed
-0712	BGM-1081	943	Removed	Removed	Removed	Removed	Removed
-0713	BGM-1082	1213	Removed	Removed	Removed	Removed	Removed
-0714	BGM-1085	1125	Removed	Removed	Removed	Removed	Removed
-0715	BGM-1087	1686	Kept	Kept	Kept	Kept	Kept
-0716	BGM-1091	707	Removed	Removed	Removed	Removed	Removed
-0717	BGM-1097	454	Removed	Removed	Removed	Removed	Removed
-0718	BGM-1103	1452	Removed	Removed	Removed	Removed	Removed
-0719	BGM-1105	1598	Removed	Kept	Kept	Kept	Kept
-0720	BGM-1106	1365	Removed	Removed	Removed	Removed	Removed
-0721	BGM-1107	801	Removed	Removed	Removed	Removed	Removed
-0722	BGM-1108	1051	Removed	Removed	Removed	Removed	Removed
-0723	BGM-1110	1221	Removed	Removed	Removed	Removed	Removed
-0724	BGM-1111	741	Removed	Removed	Removed	Removed	Removed
-0725	BGM-1115	1289	Removed	Removed	Removed	Removed	Removed
-0726	BGM-1116	1539	Removed	Removed	Removed	Removed	Removed
-0727	BGM-1118	1179	Removed	Removed	Removed	Removed	Removed
-0728	BGM-1119	1378	Removed	Removed	Removed	Removed	Removed
-0729	BGM-1120	1700	Kept	Kept	Kept	Kept	Kept
-0730	BGM-1121	663	Removed	Removed	Removed	Removed	Removed
-0731	BGM-1122	484	Removed	Removed	Removed	Removed	Removed
-0732	BGM-1123	803	Removed	Removed	Removed	Removed	Removed
-0733	BGM-1124	1653	Kept	Kept	Kept	Kept	Kept
-0734	BGM-1126	1537	Removed	Removed	Removed	Removed	Removed
-0735	BGM-1127	1024	Removed	Removed	Removed	Removed	Removed
-0736	BGM-1128	1019	Removed	Removed	Removed	Removed	Removed
-0737	BGM-1130	133	Removed	Removed	Removed	Removed	Removed
-0738	BGM-1132	776	Removed	Removed	Removed	Removed	Removed
-0739	BGM-1133	1466	Removed	Removed	Removed	Removed	Removed
-0740	BGM-1134	1694	Kept	Kept	Kept	Kept	Kept
-0741	BGM-1136	738	Removed	Removed	Removed	Removed	Removed
-0742	BGM-1137	1535	Removed	Removed	Removed	Removed	Removed
-0743	BGM-1139	877	Removed	Removed	Removed	Removed	Removed
-0744	BGM-1140	720	Removed	Removed	Removed	Removed	Removed
-0745	BGM-1141	806	Removed	Removed	Removed	Removed	Removed
-0746	BGM-1142	751	Removed	Removed	Removed	Removed	Removed
-0747	BGM-1143	1476	Removed	Removed	Removed	Removed	Removed
-0748	BGM-1144	1321	Removed	Removed	Removed	Removed	Removed
-0749	BGM-1146	418	Removed	Removed	Removed	Removed	Removed
-0750	BGM-1147	666	Removed	Removed	Removed	Removed	Removed
-0751	BGM-1148	1436	Removed	Removed	Removed	Removed	Removed
-0752	BGM-1150	653	Removed	Removed	Removed	Removed	Removed
-0753	BGM-1152	1497	Removed	Removed	Removed	Removed	Removed
-0754	BGM-1153	886	Removed	Removed	Removed	Removed	Removed
-0755	BGM-1155	831	Removed	Removed	Removed	Removed	Removed
-0756	BGM-1156	770	Removed	Removed	Removed	Removed	Removed
-0757	BGM-1158	1311	Removed	Removed	Removed	Removed	Removed
-0758	BGM-1159	966	Removed	Removed	Removed	Removed	Removed
-0759	BGM-1160	157	Removed	Removed	Removed	Removed	Removed
-0760	BGM-1162	1204	Removed	Removed	Removed	Removed	Removed
-0761	BGM-1163	630	Removed	Removed	Removed	Removed	Removed
-0762	BGM-1164	1701	Kept	Kept	Kept	Kept	Kept
-0763	BGM-1165	502	Removed	Removed	Removed	Removed	Removed
-0764	BGM-1167	964	Removed	Removed	Removed	Removed	Removed
-0765	BGM-1168	1611	Removed	Kept	Kept	Kept	Kept
-0766	BGM-1171	305	Removed	Removed	Removed	Removed	Removed
-0767	BGM-1174	506	Removed	Removed	Removed	Removed	Removed
-0768	BGM-1175	1089	Removed	Removed	Removed	Removed	Removed
-0769	BGM-1176	144	Removed	Removed	Removed	Removed	Removed
-0770	BGM-1176-M	378	Removed	Removed	Removed	Removed	Removed
-0771	BGM-1177	341	Removed	Removed	Removed	Removed	Removed
-0772	BGM-1178	809	Removed	Removed	Removed	Removed	Removed
-0773	BGM-1180	812	Removed	Removed	Removed	Removed	Removed
-0774	BGM-1185	684	Removed	Removed	Removed	Removed	Removed
-0775	BGM-1188	1074	Removed	Removed	Removed	Removed	Removed
-0776	BGM-1189	352	Removed	Removed	Removed	Removed	Removed
-0777	BGM-1190	1079	Removed	Removed	Removed	Removed	Removed
-0778	BGM-1191	836	Removed	Removed	Removed	Removed	Removed
-0779	BGM-1193	815	Removed	Removed	Removed	Removed	Removed
-0780	BGM-1196	1190	Removed	Removed	Removed	Removed	Removed
-0781	BGM-1198	1555	Removed	Removed	Removed	Removed	Removed
-0782	BGM-1200	1710	Kept	Kept	Kept	Kept	Kept
-0783	BGM-1202	406	Removed	Removed	Removed	Removed	Removed
-0784	BGM-1203	753	Removed	Removed	Removed	Removed	Removed
-0785	BGM-1206	311	Removed	Removed	Removed	Removed	Removed
-0786	BGM-1210	408	Removed	Removed	Removed	Removed	Removed
-0787	BGM-1212	380	Removed	Removed	Removed	Removed	Removed
-0788	BGM-1213	1061	Removed	Removed	Removed	Removed	Removed
-0789	BGM-1214	1669	Kept	Kept	Kept	Kept	Kept
-0790	BGM-1217	351	Removed	Removed	Removed	Removed	Removed
-0791	BGM-1218	1176	Removed	Removed	Removed	Removed	Removed
-0792	BGM-1219	403	Removed	Removed	Removed	Removed	Removed
-0793	BGM-1220	544	Removed	Removed	Removed	Removed	Removed
-0794	BGM-1223	730	Removed	Removed	Removed	Removed	Removed
-0795	BGM-1224	556	Removed	Removed	Removed	Removed	Removed
-0796	BGM-1225	1401	Removed	Removed	Removed	Removed	Removed
-0797	BGM-1226	1039	Removed	Removed	Removed	Removed	Removed
-0798	BGM-1227	1080	Removed	Removed	Removed	Removed	Removed
-0799	BGM-1236	1180	Removed	Removed	Removed	Removed	Removed
-0800	BGM-1243	1458	Removed	Removed	Removed	Removed	Removed
-0801	BGM-1245	771	Removed	Removed	Removed	Removed	Removed
-0802	BGM-1248	289	Removed	Removed	Removed	Removed	Removed
-0803	BGM-1249	1135	Removed	Removed	Removed	Removed	Removed
-0804	BGM-1251	1085	Removed	Removed	Removed	Removed	Removed
-0805	BGM-1251-RM	554	Removed	Removed	Removed	Removed	Removed
-0806	BGM-1252	1572	Removed	Removed	Kept	Kept	Kept
-0807	BGM-1253	1397	Removed	Removed	Removed	Removed	Removed
-0808	BGM-1254	1385	Removed	Removed	Removed	Removed	Removed
-0809	BGM-1255	798	Removed	Removed	Removed	Removed	Removed
-0810	BGM-1259	1540	Removed	Removed	Removed	Removed	Removed
-0811	BGM-1261	258	Removed	Removed	Removed	Removed	Removed
-0812	BGM-1262	1348	Removed	Removed	Removed	Removed	Removed
-0813	BGM-1262-C	253	Removed	Removed	Removed	Removed	Removed
-0814	BGM-1262-E	462	Removed	Removed	Removed	Removed	Removed
-0815	BGM-1263	1222	Removed	Removed	Removed	Removed	Removed
-0816	BGM-1265	1126	Removed	Removed	Removed	Removed	Removed
-0817	BGM-1266	38	Removed	Removed	Removed	Removed	Removed
-0818	BGM-1267	696	Removed	Removed	Removed	Removed	Removed
-0819	BGM-1268	688	Removed	Removed	Removed	Removed	Removed
-0820	BGM-1269	1345	Removed	Removed	Removed	Removed	Removed
-0821	BGM-1270	970	Removed	Removed	Removed	Removed	Removed
-0822	BGM-1272	601	Removed	Removed	Removed	Removed	Removed
-0823	BGM-1274	962	Removed	Removed	Removed	Removed	Removed
-0824	BGM-1275	1233	Removed	Removed	Removed	Removed	Removed
-0825	BGM-1277	405	Removed	Removed	Removed	Removed	Removed
-0826	BGM-1278	711	Removed	Removed	Removed	Removed	Removed
-0827	BGM-1280	1412	Removed	Removed	Removed	Removed	Removed
-0828	BGM-1281	1411	Removed	Removed	Removed	Removed	Removed
-0829	BGM-1282	1121	Removed	Removed	Removed	Removed	Removed
-0830	BGM-1283	1616	Removed	Kept	Kept	Kept	Kept
-0831	BGM-1284	727	Removed	Removed	Removed	Removed	Removed
-0832	BGM-1285	1526	Removed	Removed	Removed	Removed	Removed
-0833	BGM-1286	1671	Kept	Kept	Kept	Kept	Kept
-0834	BGM-1287	1425	Removed	Removed	Removed	Removed	Removed
-0835	BGM-1288	1181	Removed	Removed	Removed	Removed	Removed
-0836	BGM-1290	39	Removed	Removed	Removed	Removed	Removed
-0837	BGM-1291	690	Removed	Removed	Removed	Removed	Removed
-0838	BGM-1292	880	Removed	Removed	Removed	Removed	Removed
-0839	BGM-1293	346	Removed	Removed	Removed	Removed	Removed
-0840	BGM-1294	677	Removed	Removed	Removed	Removed	Removed
-0841	BGM-1296	697	Removed	Removed	Removed	Removed	Removed
-0842	BGM-1298	715	Removed	Removed	Removed	Removed	Removed
-0843	BGM-1300	1692	Kept	Kept	Kept	Kept	Kept
-0844	BGM-1303	435	Removed	Removed	Removed	Removed	Removed
-0845	BGM-1304	328	Removed	Removed	Removed	Removed	Removed
-0846	BGM-1305	1277	Removed	Removed	Removed	Removed	Removed
-0847	BGM-1306	1306	Removed	Removed	Removed	Removed	Removed
-0848	BGM-1309	460	Removed	Removed	Removed	Removed	Removed
-0849	BGM-1310	1198	Removed	Removed	Removed	Removed	Removed
-0850	BGM-1313	1389	Removed	Removed	Removed	Removed	Removed
-0851	BGM-1314	1228	Removed	Removed	Removed	Removed	Removed
-0852	BGM-1315	1081	Removed	Removed	Removed	Removed	Removed
-0853	BGM-1317	329	Removed	Removed	Removed	Removed	Removed
-0854	BGM-1318	672	Removed	Removed	Removed	Removed	Removed
-0855	BGM-1321	1140	Removed	Removed	Removed	Removed	Removed
-0856	BGM-1323	1052	Removed	Removed	Removed	Removed	Removed
-0857	BGM-1324	1227	Removed	Removed	Removed	Removed	Removed
-0858	BGM-1325	1076	Removed	Removed	Removed	Removed	Removed
-0859	BGM-1326	246	Removed	Removed	Removed	Removed	Removed
-0860	BGM-1327	1174	Removed	Removed	Removed	Removed	Removed
-0861	BGM-1328	1561	Removed	Removed	Removed	Kept	Kept
-0862	BGM-1329	915	Removed	Removed	Removed	Removed	Removed
-0863	BGM-1331	933	Removed	Removed	Removed	Removed	Removed
-0864	BGM-1332	1498	Removed	Removed	Removed	Removed	Removed
-0865	BGM-1333	1467	Removed	Removed	Removed	Removed	Removed
-0866	BGM-1335	1343	Removed	Removed	Removed	Removed	Removed
-0867	BGM-1336	411	Removed	Removed	Removed	Removed	Removed
-0868	BGM-1338	1367	Removed	Removed	Removed	Removed	Removed
-0869	BGM-1339	1064	Removed	Removed	Removed	Removed	Removed
-0870	BGM-1344	725	Removed	Removed	Removed	Removed	Removed
-0871	BGM-1345	1380	Removed	Removed	Removed	Removed	Removed
-0872	BGM-1346	168	Removed	Removed	Removed	Removed	Removed
-0873	BGM-1347	1665	Kept	Kept	Kept	Kept	Kept
-0874	BGM-1348	967	Removed	Removed	Removed	Removed	Removed
-0875	BGM-1349	906	Removed	Removed	Removed	Removed	Removed
-0876	BGM-1354	856	Removed	Removed	Removed	Removed	Removed
-0877	BGM-1355	820	Removed	Removed	Removed	Removed	Removed
-0878	BGM-1356	1167	Removed	Removed	Removed	Removed	Removed
-0879	BGM-1358	843	Removed	Removed	Removed	Removed	Removed
-0880	BGM-1359	1566	Removed	Removed	Kept	Kept	Kept
-0881	BGM-1360	827	Removed	Removed	Removed	Removed	Removed
-0882	BGM-1361	558	Removed	Removed	Removed	Removed	Removed
-0883	BGM-1362	1268	Removed	Removed	Removed	Removed	Removed
-0884	BGM-1363	1063	Removed	Removed	Removed	Removed	Removed
-0885	BGM-1364	959	Removed	Removed	Removed	Removed	Removed
-0886	BGM-1365	549	Removed	Removed	Removed	Removed	Removed
-0887	BGM-1367	1049	Removed	Removed	Removed	Removed	Removed
-0888	BGM-1368	585	Removed	Removed	Removed	Removed	Removed
-0889	BGM-1369	1347	Removed	Removed	Removed	Removed	Removed
-0890	BGM-1370	1131	Removed	Removed	Removed	Removed	Removed
-0891	BGM-1371	1160	Removed	Removed	Removed	Removed	Removed
-0892	BGM-1373	764	Removed	Removed	Removed	Removed	Removed
-0893	BGM-1376	1586	Removed	Kept	Kept	Kept	Kept
-0894	BGM-1377	1492	Removed	Removed	Removed	Removed	Removed
-0895	BGM-1379	1283	Removed	Removed	Removed	Removed	Removed
-0896	BGM-1381	500	Removed	Removed	Removed	Removed	Removed
-0897	BGM-1383	884	Removed	Removed	Removed	Removed	Removed
-0898	BGM-1385	501	Removed	Removed	Removed	Removed	Removed
-0899	BGM-1386	667	Removed	Removed	Removed	Removed	Removed
-0900	BGM-1387	1041	Removed	Removed	Removed	Removed	Removed
-0901	BGM-1388	895	Removed	Removed	Removed	Removed	Removed
-0902	BGM-1389	1643	Kept	Kept	Kept	Kept	Kept
-0903	BGM-1390	772	Removed	Removed	Removed	Removed	Removed
-0904	BGM-1393	1022	Removed	Removed	Removed	Removed	Removed
-0905	BGM-1395	1603	Removed	Kept	Kept	Kept	Kept
-0906	BGM-1396	474	Removed	Removed	Removed	Removed	Removed
-0907	BGM-1397	1304	Removed	Removed	Removed	Removed	Removed
-0908	BGM-1398	1457	Removed	Removed	Removed	Removed	Removed
-0909	BGM-1400	1078	Removed	Removed	Removed	Removed	Removed
-0910	BGM-1401	233	Removed	Removed	Removed	Removed	Removed
-0911	BGM-1402	1341	Removed	Removed	Removed	Removed	Removed
-0912	BGM-1403	1010	Removed	Removed	Removed	Removed	Removed
-0913	BGM-1406	1333	Removed	Removed	Removed	Removed	Removed
-0914	BGM-1407	1680	Kept	Kept	Kept	Kept	Kept
-0915	BGM-1408	1387	Removed	Removed	Removed	Removed	Removed
-0916	BGM-1409	679	Removed	Removed	Removed	Removed	Removed
-0917	BGM-1410	872	Removed	Removed	Removed	Removed	Removed
-0918	BGM-1412	814	Removed	Removed	Removed	Removed	Removed
-0919	BGM-1413	822	Removed	Removed	Removed	Removed	Removed
-0920	BGM-1414	1602	Removed	Kept	Kept	Kept	Kept
-0921	BGM-1415	1276	Removed	Removed	Removed	Removed	Removed
-0922	BGM-1416	1060	Removed	Removed	Removed	Removed	Removed
-0923	BGM-1419	716	Removed	Removed	Removed	Removed	Removed
-0924	BGM-1420	1615	Removed	Kept	Kept	Kept	Kept
-0925	BGM-1422	846	Removed	Removed	Removed	Removed	Removed
-0926	BGM-1423	1110	Removed	Removed	Removed	Removed	Removed
-0927	BGM-1424	710	Removed	Removed	Removed	Removed	Removed
-0928	BGM-1426	928	Removed	Removed	Removed	Removed	Removed
-0929	BGM-1428	587	Removed	Removed	Removed	Removed	Removed
-0930	BGM-1429	1153	Removed	Removed	Removed	Removed	Removed
-0931	BGM-1432	1670	Kept	Kept	Kept	Kept	Kept
-0932	BGM-1433	344	Removed	Removed	Removed	Removed	Removed
-0933	BGM-1436	659	Removed	Removed	Removed	Removed	Removed
-0934	BGM-1437	1115	Removed	Removed	Removed	Removed	Removed
-0935	BGM-1440	314	Removed	Removed	Removed	Removed	Removed
-0936	BGM-1441	1134	Removed	Removed	Removed	Removed	Removed
-0937	BGM-1442	1138	Removed	Removed	Removed	Removed	Removed
-0938	BGM-1444	1185	Removed	Removed	Removed	Removed	Removed
-0939	BGM-1446	1534	Removed	Removed	Removed	Removed	Removed
-0940	BGM-1447	1696	Kept	Kept	Kept	Kept	Kept
-0941	BGM-1448	282	Removed	Removed	Removed	Removed	Removed
-0942	BGM-1451	1286	Removed	Removed	Removed	Removed	Removed
-0943	BGM-1452	416	Removed	Removed	Removed	Removed	Removed
-0944	BGM-1453	1474	Removed	Removed	Removed	Removed	Removed
-0945	BGM-1454	1490	Removed	Removed	Removed	Removed	Removed
-0946	BGM-1455	1551	Removed	Removed	Removed	Removed	Removed
-0947	BGM-1456	1446	Removed	Removed	Removed	Removed	Removed
-0948	BGM-1457	1693	Kept	Kept	Kept	Kept	Kept
-0949	BGM-1458	1386	Removed	Removed	Removed	Removed	Removed
-0950	BGM-1464	758	Removed	Removed	Removed	Removed	Removed
-0951	BGM-1465	1563	Removed	Removed	Removed	Kept	Kept
-0952	BGM-1466	1565	Removed	Removed	Kept	Kept	Kept
-0953	BGM-1468	1162	Removed	Removed	Removed	Removed	Removed
-0954	BGM-1472	1322	Removed	Removed	Removed	Removed	Removed
-0955	BGM-1474	1366	Removed	Removed	Removed	Removed	Removed
-0956	BGM-1475	1229	Removed	Removed	Removed	Removed	Removed
-0957	BGM-1477	1698	Kept	Kept	Kept	Kept	Kept
-0958	BGM-1479	1177	Removed	Removed	Removed	Removed	Removed
-0959	BGM-1480	1488	Removed	Removed	Removed	Removed	Removed
-0960	BGM-1481	1388	Removed	Removed	Removed	Removed	Removed
-0961	BGM-1482	347	Removed	Removed	Removed	Removed	Removed
-0962	BGM-1483	427	Removed	Removed	Removed	Removed	Removed
-0963	BGM-1484	1207	Removed	Removed	Removed	Removed	Removed
-0964	BGM-1485	922	Removed	Removed	Removed	Removed	Removed
-0965	BGM-1486	823	Removed	Removed	Removed	Removed	Removed
-0966	BGM-1487	1197	Removed	Removed	Removed	Removed	Removed
-0967	BGM-1488	1510	Removed	Removed	Removed	Removed	Removed
-0968	BGM-1489	785	Removed	Removed	Removed	Removed	Removed
-0969	BGM-1491	468	Removed	Removed	Removed	Removed	Removed
-0970	BGM-1495	529	Removed	Removed	Removed	Removed	Removed
-0971	BGM-1496	993	Removed	Removed	Removed	Removed	Removed
-0972	BGM-1497	1508	Removed	Removed	Removed	Removed	Removed
-0973	BGM-1498	1690	Kept	Kept	Kept	Kept	Kept
-0974	BGM-1499	913	Removed	Removed	Removed	Removed	Removed
-0975	BGM-1502	949	Removed	Removed	Removed	Removed	Removed
-0976	BGM-1502-M	1271	Removed	Removed	Removed	Removed	Removed
-0977	BGM-1503	1625	Kept	Kept	Kept	Kept	Kept
-0978	BGM-1507	1128	Removed	Removed	Removed	Removed	Removed
-0979	BGM-1508	1301	Removed	Removed	Removed	Removed	Removed
-0980	BGM-1511	1337	Removed	Removed	Removed	Removed	Removed
-0981	BGM-1513	1102	Removed	Removed	Removed	Removed	Removed
-0982	BGM-1515	1542	Removed	Removed	Removed	Removed	Removed
-0983	BGM-1516	458	Removed	Removed	Removed	Removed	Removed
-0984	BGM-1517	560	Removed	Removed	Removed	Removed	Removed
-0985	BGM-1518	1506	Removed	Removed	Removed	Removed	Removed
-0986	BGM-1519	1469	Removed	Removed	Removed	Removed	Removed
-0987	BGM-1520	898	Removed	Removed	Removed	Removed	Removed
-0988	BGM-1521	1688	Kept	Kept	Kept	Kept	Kept
-0989	BGM-1524	932	Removed	Removed	Removed	Removed	Removed
-0990	BGM-1525	1017	Removed	Removed	Removed	Removed	Removed
-0991	BGM-1527	1330	Removed	Removed	Removed	Removed	Removed
-0992	BGM-1530	552	Removed	Removed	Removed	Removed	Removed
-0993	BGM-1534	1182	Removed	Removed	Removed	Removed	Removed
-0994	BGM-1535	1654	Kept	Kept	Kept	Kept	Kept
-0995	BGM-1537	1674	Kept	Kept	Kept	Kept	Kept
-0996	BGM-1541	837	Removed	Removed	Removed	Removed	Removed
-0997	BGM-1542	1383	Removed	Removed	Removed	Removed	Removed
-0998	BGM-1544	605	Removed	Removed	Removed	Removed	Removed
-0999	BGM-1545	1014	Removed	Removed	Removed	Removed	Removed
-1000	BGM-1549	1495	Removed	Removed	Removed	Removed	Removed
-1001	BGM-1550	893	Removed	Removed	Removed	Removed	Removed
-1002	BGM-1551	911	Removed	Removed	Removed	Removed	Removed
-1003	BGM-1552	1263	Removed	Removed	Removed	Removed	Removed
-1004	BGM-1558	1296	Removed	Removed	Removed	Removed	Removed
-1005	BGM-1560	1478	Removed	Removed	Removed	Removed	Removed
-1006	BGM-1563	779	Removed	Removed	Removed	Removed	Removed
-1007	BGM-1566	206	Removed	Removed	Removed	Removed	Removed
-1008	BGM-1567	702	Removed	Removed	Removed	Removed	Removed
-1009	BGM-1569	1493	Removed	Removed	Removed	Removed	Removed
-1010	BGM-1573	1027	Removed	Removed	Removed	Removed	Removed
-1011	BGM-1574	695	Removed	Removed	Removed	Removed	Removed
-1012	BGM-1579	1141	Removed	Removed	Removed	Removed	Removed
-1013	BGM-1580	1152	Removed	Removed	Removed	Removed	Removed
-1014	BGM-1581	756	Removed	Removed	Removed	Removed	Removed
-1015	BGM-1582	1591	Removed	Kept	Kept	Kept	Kept
-1016	BGM-1583	419	Removed	Removed	Removed	Removed	Removed
-1017	BGM-1584	1003	Removed	Removed	Removed	Removed	Removed
-1018	BGM-1585	1090	Removed	Removed	Removed	Removed	Removed
-1019	BGM-1586	670	Removed	Removed	Removed	Removed	Removed
-1020	BGM-1588	511	Removed	Removed	Removed	Removed	Removed
-1021	BGM-1590	627	Removed	Removed	Removed	Removed	Removed
-1022	BGM-1594	1359	Removed	Removed	Removed	Removed	Removed
-1023	BGM-1596	1232	Removed	Removed	Removed	Removed	Removed
-1024	BGM-1598	892	Removed	Removed	Removed	Removed	Removed
-1025	BGM-1601	662	Removed	Removed	Removed	Removed	Removed
-1026	BGM-1603	699	Removed	Removed	Removed	Removed	Removed
-1027	BGM-1604	1291	Removed	Removed	Removed	Removed	Removed
-1028	BGM-1605	1298	Removed	Removed	Removed	Removed	Removed
-1029	BGM-1606	1704	Kept	Kept	Kept	Kept	Kept
-1030	BGM-1608	1486	Removed	Removed	Removed	Removed	Removed
-1031	BGM-1609	1655	Kept	Kept	Kept	Kept	Kept
-1032	BGM-1610	861	Removed	Removed	Removed	Removed	Removed
-1033	BGM-1613	1384	Removed	Removed	Removed	Removed	Removed
-1034	BGM-1614	972	Removed	Removed	Removed	Removed	Removed
-1035	BGM-1615	158	Removed	Removed	Removed	Removed	Removed
-1036	BGM-1616	1113	Removed	Removed	Removed	Removed	Removed
-1037	BGM-1618	1562	Removed	Removed	Removed	Kept	Kept
-1038	BGM-1619	1059	Removed	Removed	Removed	Removed	Removed
-1039	BGM-1621	1428	Removed	Removed	Removed	Removed	Removed
-1040	BGM-1622	1413	Removed	Removed	Removed	Removed	Removed
-1041	BGM-1623	1660	Kept	Kept	Kept	Kept	Kept
-1042	BGM-1624	894	Removed	Removed	Removed	Removed	Removed
-1043	BGM-1626	1300	Removed	Removed	Removed	Removed	Removed
-1044	BGM-1627	860	Removed	Removed	Removed	Removed	Removed
-1045	BGM-1628	1149	Removed	Removed	Removed	Removed	Removed
-1046	BGM-1629	817	Removed	Removed	Removed	Removed	Removed
-1047	BGM-1631	1604	Removed	Kept	Kept	Kept	Kept
-1048	BGM-1632	169	Removed	Removed	Removed	Removed	Removed
-1049	BGM-1633	845	Removed	Removed	Removed	Removed	Removed
-1050	BGM-1634	1062	Removed	Removed	Removed	Removed	Removed
-1051	BGM-1635	936	Removed	Removed	Removed	Removed	Removed
-1052	BGM-1636	1028	Removed	Removed	Removed	Removed	Removed
-1053	BGM-1637	1455	Removed	Removed	Removed	Removed	Removed
-1054	BGM-1638	1658	Kept	Kept	Kept	Kept	Kept
-1055	BGM-1639	929	Removed	Removed	Removed	Removed	Removed
-1056	BGM-1643	748	Removed	Removed	Removed	Removed	Removed
-1057	BGM-1645	1684	Kept	Kept	Kept	Kept	Kept
-1058	BGM-1646	1405	Removed	Removed	Removed	Removed	Removed
-1059	BGM-1648	453	Removed	Removed	Removed	Removed	Removed
-1060	BGM-1649	1584	Removed	Kept	Kept	Kept	Kept
-1061	BGM-1650	1390	Removed	Removed	Removed	Removed	Removed
-1062	BGM-1655	1439	Removed	Removed	Removed	Removed	Removed
-1063	BGM-1656	1424	Removed	Removed	Removed	Removed	Removed
-1064	BGM-1657	1248	Removed	Removed	Removed	Removed	Removed
-1065	BGM-1658	1096	Removed	Removed	Removed	Removed	Removed
-1066	BGM-1659	1201	Removed	Removed	Removed	Removed	Removed
-1067	BGM-1660	1423	Removed	Removed	Removed	Removed	Removed
-1068	BGM-1661	1351	Removed	Removed	Removed	Removed	Removed
-1069	BGM-1662	1280	Removed	Removed	Removed	Removed	Removed
-1070	BGM-1666	1002	Removed	Removed	Removed	Removed	Removed
-1071	BGM-1667	1502	Removed	Removed	Removed	Removed	Removed
-1072	BGM-1668	747	Removed	Removed	Removed	Removed	Removed
-1073	BGM-1669	1047	Removed	Removed	Removed	Removed	Removed
-1074	BGM-1670	1464	Removed	Removed	Removed	Removed	Removed
-1075	BGM-1671	607	Removed	Removed	Removed	Removed	Removed
-1076	BGM-1672	681	Removed	Removed	Removed	Removed	Removed
-1077	BGM-1674	649	Removed	Removed	Removed	Removed	Removed
-1078	BGM-1675	956	Removed	Removed	Removed	Removed	Removed
-1079	BGM-1677	578	Removed	Removed	Removed	Removed	Removed
-1080	BGM-1678	608	Removed	Removed	Removed	Removed	Removed
-1081	BGM-1679	912	Removed	Removed	Removed	Removed	Removed
-1082	BGM-1680	1029	Removed	Removed	Removed	Removed	Removed
-1083	BGM-1682	1272	Removed	Removed	Removed	Removed	Removed
-1084	BGM-1683	1036	Removed	Removed	Removed	Removed	Removed
-1085	BGM-1684	1165	Removed	Removed	Removed	Removed	Removed
-1086	BGM-1685	1044	Removed	Removed	Removed	Removed	Removed
-1087	BGM-1686	1187	Removed	Removed	Removed	Removed	Removed
-1088	BGM-1688	387	Removed	Removed	Removed	Removed	Removed
-1089	BGM-1689	343	Removed	Removed	Removed	Removed	Removed
-1090	BGM-1690	1188	Removed	Removed	Removed	Removed	Removed
-1091	BGM-1692	648	Removed	Removed	Removed	Removed	Removed
-1092	BGM-1693	1030	Removed	Removed	Removed	Removed	Removed
-1093	BGM-1695	196	Removed	Removed	Removed	Removed	Removed
-1094	BGM-1696	789	Removed	Removed	Removed	Removed	Removed
-1095	BGM-1697	1538	Removed	Removed	Removed	Removed	Removed
-1096	BGM-1698	1661	Kept	Kept	Kept	Kept	Kept
-1097	BGM-1699	327	Removed	Removed	Removed	Removed	Removed
-1098	BGM-1700	668	Removed	Removed	Removed	Removed	Removed
-1099	BGM-1701	1169	Removed	Removed	Removed	Removed	Removed
-1100	BGM-1702	674	Removed	Removed	Removed	Removed	Removed
-1101	BGM-1703	787	Removed	Removed	Removed	Removed	Removed
-1102	BGM-1704	505	Removed	Removed	Removed	Removed	Removed
-1103	BGM-1705	942	Removed	Removed	Removed	Removed	Removed
-1104	BGM-1706	582	Removed	Removed	Removed	Removed	Removed
-1105	BGM-1707	816	Removed	Removed	Removed	Removed	Removed
-1106	BGM-1708	319	Removed	Removed	Removed	Removed	Removed
-1107	BGM-1709	991	Removed	Removed	Removed	Removed	Removed
-1108	BGM-1710	1456	Removed	Removed	Removed	Removed	Removed
-1109	BGM-1712	1101	Removed	Removed	Removed	Removed	Removed
-1110	BGM-1713	148	Removed	Removed	Removed	Removed	Removed
-1111	BGM-1715	1284	Removed	Removed	Removed	Removed	Removed
-1112	BGM-1716	1111	Removed	Removed	Removed	Removed	Removed
-1113	BGM-1718	1362	Removed	Removed	Removed	Removed	Removed
-1114	BGM-1719	259	Removed	Removed	Removed	Removed	Removed
-1115	BGM-1721	1471	Removed	Removed	Removed	Removed	Removed
-1116	BGM-1722	645	Removed	Removed	Removed	Removed	Removed
-1117	BGM-1722-D	248	Removed	Removed	Removed	Removed	Removed
-1118	BGM-1723	1419	Removed	Removed	Removed	Removed	Removed
-1119	BGM-1725	759	Removed	Removed	Removed	Removed	Removed
-1120	BGM-1726	1705	Kept	Kept	Kept	Kept	Kept
-1121	BGM-1727	755	Removed	Removed	Removed	Removed	Removed
-1122	BGM-1728	614	Removed	Removed	Removed	Removed	Removed
-1123	BGM-1729	1583	Removed	Kept	Kept	Kept	Kept
-1124	BGM-1730	1127	Removed	Removed	Removed	Removed	Removed
-1125	BGM-1732	1402	Removed	Removed	Removed	Removed	Removed
-1126	BGM-1733	1580	Removed	Removed	Kept	Kept	Kept
-1127	BGM-1734	1240	Removed	Removed	Removed	Removed	Removed
-1128	BGM-1735	494	Removed	Removed	Removed	Removed	Removed
-1129	BGM-1737	1578	Removed	Removed	Kept	Kept	Kept
-1130	BGM-1738	392	Removed	Removed	Removed	Removed	Removed
-1131	BGM-1739	1368	Removed	Removed	Removed	Removed	Removed
-1132	BGM-1740	369	Removed	Removed	Removed	Removed	Removed
-1133	BGM-1741	1480	Removed	Removed	Removed	Removed	Removed
-1134	BGM-1742	1618	Removed	Kept	Kept	Kept	Kept
-1135	BGM-1743	1642	Kept	Kept	Kept	Kept	Kept
-1136	BGM-1744	828	Removed	Removed	Removed	Removed	Removed
-1137	BGM-1745	1644	Kept	Kept	Kept	Kept	Kept
-1138	BGM-1746	278	Removed	Removed	Removed	Removed	Removed
-1139	BGM-1747	1499	Removed	Removed	Removed	Removed	Removed
-1140	BGM-1748	602	Removed	Removed	Removed	Removed	Removed
-1141	BGM-1749	1194	Removed	Removed	Removed	Removed	Removed
-1142	BGM-1750	1324	Removed	Removed	Removed	Removed	Removed
-1143	BGM-1752	1109	Removed	Removed	Removed	Removed	Removed
-1144	BGM-1753	313	Removed	Removed	Removed	Removed	Removed
-1145	BGM-1754	1037	Removed	Removed	Removed	Removed	Removed
-1146	BGM-1755	375	Removed	Removed	Removed	Removed	Removed
-1147	BGM-1756	938	Removed	Removed	Removed	Removed	Removed
-1148	BGM-1757	1116	Removed	Removed	Removed	Removed	Removed
-1149	BGM-1759	553	Removed	Removed	Removed	Removed	Removed
-1150	BGM-1760	1376	Removed	Removed	Removed	Removed	Removed
-1151	BGM-1761	1662	Kept	Kept	Kept	Kept	Kept
-1152	BGM-1762	781	Removed	Removed	Removed	Removed	Removed
-1153	BGM-1763	768	Removed	Removed	Removed	Removed	Removed
-1154	BGM-1764	1159	Removed	Removed	Removed	Removed	Removed
-1155	BGM-1766	1709	Kept	Kept	Kept	Kept	Kept
-1156	BGM-1768	961	Removed	Removed	Removed	Removed	Removed
-1157	BGM-1769	1381	Removed	Removed	Removed	Removed	Removed
-1158	BGM-1770	1624	Kept	Kept	Kept	Kept	Kept
-1159	BGM-1771	1314	Removed	Removed	Removed	Removed	Removed
-1160	BGM-1772	1004	Removed	Removed	Removed	Removed	Removed
-1161	BGM-1773	1536	Removed	Removed	Removed	Removed	Removed
-1162	BGM-1777	891	Removed	Removed	Removed	Removed	Removed
-1163	BGM-1779	1645	Kept	Kept	Kept	Kept	Kept
-1164	BGM-1780	588	Removed	Removed	Removed	Removed	Removed
-1165	BGM-1782	1340	Removed	Removed	Removed	Removed	Removed
-1166	BGM-1783	948	Removed	Removed	Removed	Removed	Removed
-1167	BGM-1784	620	Removed	Removed	Removed	Removed	Removed
-1168	BGM-1794	1570	Removed	Removed	Kept	Kept	Kept
-1169	BGM-1810	850	Removed	Removed	Removed	Removed	Removed
-1170	BGM-1811	661	Removed	Removed	Removed	Removed	Removed
-1171	BGM-1814	1013	Removed	Removed	Removed	Removed	Removed
-1172	BGM-1816	1245	Removed	Removed	Removed	Removed	Removed
-1173	BGM-1817	1083	Removed	Removed	Removed	Removed	Removed
-1174	BGM-1818	1453	Removed	Removed	Removed	Removed	Removed
-1175	BGM-1819	656	Removed	Removed	Removed	Removed	Removed
-1176	BGM-1821	1449	Removed	Removed	Removed	Removed	Removed
-1177	BGM-1822	1040	Removed	Removed	Removed	Removed	Removed
-1178	BGM-1828	925	Removed	Removed	Removed	Removed	Removed
-1179	BGM-1832	647	Removed	Removed	Removed	Removed	Removed
-1180	BGM-1834	1468	Removed	Removed	Removed	Removed	Removed
-1181	BGM-1835	1622	Kept	Kept	Kept	Kept	Kept
-1182	BGM-1837	1235	Removed	Removed	Removed	Removed	Removed
-1183	BGM-1847	638	Removed	Removed	Removed	Removed	Removed
-1184	BGM-1850	566	Removed	Removed	Removed	Removed	Removed
-1185	BGM-1866	830	Removed	Removed	Removed	Removed	Removed
-1186	BGM-1873	231	Removed	Removed	Removed	Removed	Removed
-1187	BGM-1876	996	Removed	Removed	Removed	Removed	Removed
-1188	BGM-1878	367	Removed	Removed	Removed	Removed	Removed
-1189	BGM-1880	1517	Removed	Removed	Removed	Removed	Removed
-1190	BGM-1881	997	Removed	Removed	Removed	Removed	Removed
-1191	BGM-1884	1137	Removed	Removed	Removed	Removed	Removed
-1192	BGM-1942	644	Removed	Removed	Removed	Removed	Removed
-1193	BGM-1956	754	Removed	Removed	Removed	Removed	Removed
-1194	BGM-1957	714	Removed	Removed	Removed	Removed	Removed
-1195	BGM-1962	1418	Removed	Removed	Removed	Removed	Removed
-1196	BGM-1969	396	Removed	Removed	Removed	Removed	Removed
-1197	BGM-1980	1451	Removed	Removed	Removed	Removed	Removed
-1198	BGM-1985	693	Removed	Removed	Removed	Removed	Removed
-1199	BGM-1999	723	Removed	Removed	Removed	Removed	Removed
-1200	BGM-2017	565	Removed	Removed	Removed	Removed	Removed
-1201	BGM-2018	1043	Removed	Removed	Removed	Removed	Removed
-1202	BGM-2019	899	Removed	Removed	Removed	Removed	Removed
-1203	BGM-2020	422	Removed	Removed	Removed	Removed	Removed
-1204	BGM-2022	1230	Removed	Removed	Removed	Removed	Removed
-1205	BGM-2024	185	Removed	Removed	Removed	Removed	Removed
-1206	BGM-2025	769	Removed	Removed	Removed	Removed	Removed
-1207	BGM-2026	844	Removed	Removed	Removed	Removed	Removed
-1208	BGM-2028	706	Removed	Removed	Removed	Removed	Removed
-1209	BGM-2029	440	Removed	Removed	Removed	Removed	Removed
-1210	BGM-2030	941	Removed	Removed	Removed	Removed	Removed
-1211	BGM-2032	879	Removed	Removed	Removed	Removed	Removed
-1212	BGM-2034	774	Removed	Removed	Removed	Removed	Removed
-1213	BGM-2035	680	Removed	Removed	Removed	Removed	Removed
-1214	BGM-2038	363	Removed	Removed	Removed	Removed	Removed
-1215	BGM-2041	307	Removed	Removed	Removed	Removed	Removed
-1216	BGM-2042	1612	Removed	Kept	Kept	Kept	Kept
-1217	BGM-2043	590	Removed	Removed	Removed	Removed	Removed
-1218	BGM-2044	337	Removed	Removed	Removed	Removed	Removed
-1219	BGM-2047	777	Removed	Removed	Removed	Removed	Removed
-1220	BGM-2048	878	Removed	Removed	Removed	Removed	Removed
-1221	BGM-2050	1317	Removed	Removed	Removed	Removed	Removed
-1222	BGM-2053	1157	Removed	Removed	Removed	Removed	Removed
-1223	BGM-2054	75	Removed	Removed	Removed	Removed	Removed
-1224	BGM-2055	1132	Removed	Removed	Removed	Removed	Removed
-1225	BGM-2057	568	Removed	Removed	Removed	Removed	Removed
-1226	BGM-2058	767	Removed	Removed	Removed	Removed	Removed
-1227	BGM-2059	1331	Removed	Removed	Removed	Removed	Removed
-1228	BGM-2060	1210	Removed	Removed	Removed	Removed	Removed
-1229	BGM-2061	535	Removed	Removed	Removed	Removed	Removed
-1230	BGM-2062	219	Removed	Removed	Removed	Removed	Removed
-1231	BGM-2063	1098	Removed	Removed	Removed	Removed	Removed
-1232	BGM-2064	1501	Removed	Removed	Removed	Removed	Removed
-1233	BGM-2065	795	Removed	Removed	Removed	Removed	Removed
-1234	BGM-2066	1293	Removed	Removed	Removed	Removed	Removed
-1235	BGM-2069	791	Removed	Removed	Removed	Removed	Removed
-1236	BGM-2072	935	Removed	Removed	Removed	Removed	Removed
-1237	BGM-2073	905	Removed	Removed	Removed	Removed	Removed
-1238	BGM-2074	1524	Removed	Removed	Removed	Removed	Removed
-1239	BGM-2076	989	Removed	Removed	Removed	Removed	Removed
-1240	BGM-2078	361	Removed	Removed	Removed	Removed	Removed
-1241	BGM-2079	1250	Removed	Removed	Removed	Removed	Removed
-1242	BGM-2080	1075	Removed	Removed	Removed	Removed	Removed
-1243	BGM-2081	606	Removed	Removed	Removed	Removed	Removed
-1244	BGM-2082	1392	Removed	Removed	Removed	Removed	Removed
-1245	BGM-2083	1299	Removed	Removed	Removed	Removed	Removed
-1246	BGM-2085	481	Removed	Removed	Removed	Removed	Removed
-1247	BGM-2086	875	Removed	Removed	Removed	Removed	Removed
-1248	BGM-2090	955	Removed	Removed	Removed	Removed	Removed
-1249	BGM-2091	867	Removed	Removed	Removed	Removed	Removed
-1250	BGM-2092	130	Removed	Removed	Removed	Removed	Removed
-1251	BGM-2094	1582	Removed	Kept	Kept	Kept	Kept
-1252	BGM-2095	1382	Removed	Removed	Removed	Removed	Removed
-1253	BGM-2096	985	Removed	Removed	Removed	Removed	Removed
-1254	BGM-2097	1025	Removed	Removed	Removed	Removed	Removed
-1255	BGM-2100	675	Removed	Removed	Removed	Removed	Removed
-1256	BGM-2101	604	Removed	Removed	Removed	Removed	Removed
-1257	BGM-2102	1278	Removed	Removed	Removed	Removed	Removed
-1258	BGM-2103	40	Removed	Removed	Removed	Removed	Removed
-1259	BGM-2104	1008	Removed	Removed	Removed	Removed	Removed
-1260	BGM-2105	1361	Removed	Removed	Removed	Removed	Removed
-1261	BGM-2107	195	Removed	Removed	Removed	Removed	Removed
-1262	BGM-2110	41	Removed	Removed	Removed	Removed	Removed
-1263	BGM-2114	1601	Removed	Kept	Kept	Kept	Kept
-1264	BGM-2115	743	Removed	Removed	Removed	Removed	Removed
-1265	BGM-2116	342	Removed	Removed	Removed	Removed	Removed
-1266	BGM-2119	946	Removed	Removed	Removed	Removed	Removed
-1267	BGM-2120	1241	Removed	Removed	Removed	Removed	Removed
-1268	BGM-2121	805	Removed	Removed	Removed	Removed	Removed
-1269	BGM-2123	1631	Kept	Kept	Kept	Kept	Kept
-1270	BGM-2124	660	Removed	Removed	Removed	Removed	Removed
-1271	BGM-2127	639	Removed	Removed	Removed	Removed	Removed
-1272	BGM-2132	1260	Removed	Removed	Removed	Removed	Removed
-1273	BGM-2133	492	Removed	Removed	Removed	Removed	Removed
-1274	BGM-2135	463	Removed	Removed	Removed	Removed	Removed
-1275	BGM-2136	683	Removed	Removed	Removed	Removed	Removed
-1276	BGM-2140	398	Removed	Removed	Removed	Removed	Removed
-1277	BGM-2142	931	Removed	Removed	Removed	Removed	Removed
-1278	BGM-2143	1175	Removed	Removed	Removed	Removed	Removed
-1279	BGM-2145	689	Removed	Removed	Removed	Removed	Removed
-1280	BGM-2147	539	Removed	Removed	Removed	Removed	Removed
-1281	BGM-2148	1256	Removed	Removed	Removed	Removed	Removed
-1282	BGM-2149	374	Removed	Removed	Removed	Removed	Removed
-1283	BGM-2151	982	Removed	Removed	Removed	Removed	Removed
-1284	BGM-2154	1512	Removed	Removed	Removed	Removed	Removed
-1285	BGM-2155	220	Removed	Removed	Removed	Removed	Removed
-1286	BGM-2156	995	Removed	Removed	Removed	Removed	Removed
-1287	BGM-2157	1259	Removed	Removed	Removed	Removed	Removed
-1288	BGM-2158	784	Removed	Removed	Removed	Removed	Removed
-1289	BGM-2159	968	Removed	Removed	Removed	Removed	Removed
-1290	BGM-2160	266	Removed	Removed	Removed	Removed	Removed
-1291	BGM-2161	561	Removed	Removed	Removed	Removed	Removed
-1292	BGM-2162	570	Removed	Removed	Removed	Removed	Removed
-1293	BGM-2163	365	Removed	Removed	Removed	Removed	Removed
-1294	BGM-2164	737	Removed	Removed	Removed	Removed	Removed
-1295	BGM-2165	572	Removed	Removed	Removed	Removed	Removed
-1296	BGM-2166	452	Removed	Removed	Removed	Removed	Removed
-1297	BGM-2167	417	Removed	Removed	Removed	Removed	Removed
-1298	BGM-2168	635	Removed	Removed	Removed	Removed	Removed
-1299	BGM-2169	359	Removed	Removed	Removed	Removed	Removed
-1300	BGM-2170	340	Removed	Removed	Removed	Removed	Removed
-1301	BGM-2172	598	Removed	Removed	Removed	Removed	Removed
-1302	BGM-2174	348	Removed	Removed	Removed	Removed	Removed
-1303	BGM-2175	1399	Removed	Removed	Removed	Removed	Removed
-1304	BGM-2179	557	Removed	Removed	Removed	Removed	Removed
-1305	BGM-2182	393	Removed	Removed	Removed	Removed	Removed
-1306	BGM-2183	296	Removed	Removed	Removed	Removed	Removed
-1307	BGM-2184	900	Removed	Removed	Removed	Removed	Removed
-1308	BGM-2185	236	Removed	Removed	Removed	Removed	Removed
-1309	BGM-2186	326	Removed	Removed	Removed	Removed	Removed
-1310	BGM-2187	654	Removed	Removed	Removed	Removed	Removed
-1311	BGM-2188	631	Removed	Removed	Removed	Removed	Removed
-1312	BGM-2189	521	Removed	Removed	Removed	Removed	Removed
-1313	BGM-2191	287	Removed	Removed	Removed	Removed	Removed
-1314	BGM-2192	745	Removed	Removed	Removed	Removed	Removed
-1315	BGM-2196	302	Removed	Removed	Removed	Removed	Removed
-1316	BGM-2198	1045	Removed	Removed	Removed	Removed	Removed
-1317	BGM-2200	42	Removed	Removed	Removed	Removed	Removed
-1318	BGM-2202	729	Removed	Removed	Removed	Removed	Removed
-1319	BGM-2204	457	Removed	Removed	Removed	Removed	Removed
-1320	BGM-2205	43	Removed	Removed	Removed	Removed	Removed
-1321	BGM-2206	373	Removed	Removed	Removed	Removed	Removed
-1322	BGM-2207	455	Removed	Removed	Removed	Removed	Removed
-1323	BGM-2208	472	Removed	Removed	Removed	Removed	Removed
-1324	BGM-2209	722	Removed	Removed	Removed	Removed	Removed
-1325	BGM-2210	389	Removed	Removed	Removed	Removed	Removed
-1326	BGM-2211	573	Removed	Removed	Removed	Removed	Removed
-1327	BGM-2212	315	Removed	Removed	Removed	Removed	Removed
-1328	BGM-2216	441	Removed	Removed	Removed	Removed	Removed
-1329	BGM-2218	445	Removed	Removed	Removed	Removed	Removed
-1330	BGM-2220	924	Removed	Removed	Removed	Removed	Removed
-1331	BGM-2221	740	Removed	Removed	Removed	Removed	Removed
-1332	BGM-2224	904	Removed	Removed	Removed	Removed	Removed
-1333	BGM-2226	476	Removed	Removed	Removed	Removed	Removed
-1334	BGM-2228	1148	Removed	Removed	Removed	Removed	Removed
-1335	BGM-2229	300	Removed	Removed	Removed	Removed	Removed
-1336	BGM-2230	1086	Removed	Removed	Removed	Removed	Removed
-1337	BGM-2232	719	Removed	Removed	Removed	Removed	Removed
-1338	BGM-2233	852	Removed	Removed	Removed	Removed	Removed
-1339	BGM-2234	763	Removed	Removed	Removed	Removed	Removed
-1340	BGM-2236	530	Removed	Removed	Removed	Removed	Removed
-1341	BGM-2237	664	Removed	Removed	Removed	Removed	Removed
-1342	BGM-2238	569	Removed	Removed	Removed	Removed	Removed
-1343	BGM-2239	1554	Removed	Removed	Removed	Removed	Removed
-1344	BGM-2241	733	Removed	Removed	Removed	Removed	Removed
-1345	BGM-2244	1035	Removed	Removed	Removed	Removed	Removed
-1346	BGM-2245	848	Removed	Removed	Removed	Removed	Removed
-1347	BGM-2248	1046	Removed	Removed	Removed	Removed	Removed
-1348	BGM-2249	794	Removed	Removed	Removed	Removed	Removed
-1349	BGM-2251	377	Removed	Removed	Removed	Removed	Removed
-1350	BGM-2255	381	Removed	Removed	Removed	Removed	Removed
-1351	BGM-2257	1638	Kept	Kept	Kept	Kept	Kept
-1352	BGM-2260	883	Removed	Removed	Removed	Removed	Removed
-1353	BGM-2261	1406	Removed	Removed	Removed	Removed	Removed
-1354	BGM-2262	551	Removed	Removed	Removed	Removed	Removed
-1355	BGM-2263	613	Removed	Removed	Removed	Removed	Removed
-1356	BGM-2264	992	Removed	Removed	Removed	Removed	Removed
-1357	BGM-2265	713	Removed	Removed	Removed	Removed	Removed
-1358	BGM-2266	1592	Removed	Kept	Kept	Kept	Kept
-1359	BGM-2267	309	Removed	Removed	Removed	Removed	Removed
-1360	BGM-2268	1156	Removed	Removed	Removed	Removed	Removed
-1361	BGM-2270	432	Removed	Removed	Removed	Removed	Removed
-1362	BGM-2271	1264	Removed	Removed	Removed	Removed	Removed
-1363	BGM-2273	550	Removed	Removed	Removed	Removed	Removed
-1364	BGM-2275	1683	Kept	Kept	Kept	Kept	Kept
-1365	BGM-2276	438	Removed	Removed	Removed	Removed	Removed
-1366	BGM-2278	1058	Removed	Removed	Removed	Removed	Removed
-1367	BGM-2279	1005	Removed	Removed	Removed	Removed	Removed
-1368	BGM-2283	708	Removed	Removed	Removed	Removed	Removed
-1369	BGM-2290	318	Removed	Removed	Removed	Removed	Removed
-1370	BGM-2291	160	Removed	Removed	Removed	Removed	Removed
-1371	BGM-2292	1475	Removed	Removed	Removed	Removed	Removed
-1372	BGM-2293	370	Removed	Removed	Removed	Removed	Removed
-1373	BGM-2294	350	Removed	Removed	Removed	Removed	Removed
-1374	BGM-2325	379	Removed	Removed	Removed	Removed	Removed
-1375	BGM-2326	545	Removed	Removed	Removed	Removed	Removed
-1376	BGM-2328	161	Removed	Removed	Removed	Removed	Removed
-1377	BGM-2329	450	Removed	Removed	Removed	Removed	Removed
-1378	BGM-2330	321	Removed	Removed	Removed	Removed	Removed
-1379	BGM-2331	518	Removed	Removed	Removed	Removed	Removed
-1380	BGM-2333	386	Removed	Removed	Removed	Removed	Removed
-1381	BGM-2334	526	Removed	Removed	Removed	Removed	Removed
-1382	BGM-2335	421	Removed	Removed	Removed	Removed	Removed
-1383	BGM-2336	637	Removed	Removed	Removed	Removed	Removed
-1384	BGM-2337	263	Removed	Removed	Removed	Removed	Removed
-1385	BGM-2338	583	Removed	Removed	Removed	Removed	Removed
-1386	BGM-2339	1702	Kept	Kept	Kept	Kept	Kept
-1387	BGM-2340	685	Removed	Removed	Removed	Removed	Removed
-1388	BGM-2341	1247	Removed	Removed	Removed	Removed	Removed
-1389	BGM-2342	46	Removed	Removed	Removed	Removed	Removed
-1390	BGM-2343	143	Removed	Removed	Removed	Removed	Removed
-1391	BGM-2344	507	Removed	Removed	Removed	Removed	Removed
-1392	BGM-2345	746	Removed	Removed	Removed	Removed	Removed
-1393	BGM-2346	1597	Removed	Kept	Kept	Kept	Kept
-1394	BGM-2347	45	Removed	Removed	Removed	Removed	Removed
-1395	BGM-2348	44	Removed	Removed	Removed	Removed	Removed
-1396	BGM-2349	749	Removed	Removed	Removed	Removed	Removed
-1397	BGM-2351	863	Removed	Removed	Removed	Removed	Removed
-1398	BGM-2352	1710	Kept	Kept	Kept	Kept	Kept
-1399	BGM-2353	981	Removed	Removed	Removed	Removed	Removed
-1400	BGM-2354	498	Removed	Removed	Removed	Removed	Removed
-1401	BGM-2355	546	Removed	Removed	Removed	Removed	Removed
-1402	BGM-2356	323	Removed	Removed	Removed	Removed	Removed
-1403	BGM-2357	571	Removed	Removed	Removed	Removed	Removed
-1404	BGM-2358	735	Removed	Removed	Removed	Removed	Removed
-1405	BR-11-03-01	176	Removed	Removed	Removed	Removed	Removed
-1406	BR-11-24-156	910	Removed	Removed	Removed	Removed	Removed
-1407	BR-11-34-41	1699	Kept	Kept	Kept	Kept	Kept
-1408	BR-11-34-45	1407	Removed	Removed	Removed	Removed	Removed
-1409	BR-11-34-64	1664	Kept	Kept	Kept	Kept	Kept
-1410	BR-11-34-69	888	Removed	Removed	Removed	Removed	Removed
-1411	BR-11S1-52-10	520	Removed	Removed	Removed	Removed	Removed
-1412	BR-11S1-52-19	780	Removed	Removed	Removed	Removed	Removed
-1413	BR-11S1-52-23	487	Removed	Removed	Removed	Removed	Removed
-1414	BR-11S1-52-25	275	Removed	Removed	Removed	Removed	Removed
-1415	BR-11S1-53-01	425	Removed	Removed	Removed	Removed	Removed
-1416	BR-11S1-53-05	320	Removed	Removed	Removed	Removed	Removed
-1417	BR-11S1-53-10	316	Removed	Removed	Removed	Removed	Removed
-1418	BR-11S1-53-26	717	Removed	Removed	Removed	Removed	Removed
-1419	BR-12-107-002	1295	Removed	Removed	Removed	Removed	Removed
-1420	BRS-396	865	Removed	Removed	Removed	Removed	Removed
-1421	BRS-399	1472	Removed	Removed	Removed	Removed	Removed
-1422	BRS-AmansaBurro	1252	Removed	Removed	Removed	Removed	Removed
-1423	BRS-Caipira	1031	Removed	Removed	Removed	Removed	Removed
-1424	BRS-CS-01	1215	Removed	Removed	Removed	Removed	Removed
-1425	BRS-Dourada	1294	Removed	Removed	Removed	Removed	Removed
-1426	BRS-Formosa	1200	Removed	Removed	Removed	Removed	Removed
-1427	BRS-GemaOvo	1069	Removed	Removed	Removed	Removed	Removed
-1428	BRS-Jari	1689	Kept	Kept	Kept	Kept	Kept
-1429	BRS-Kiriris	1619	Removed	Kept	Kept	Kept	Kept
-1430	BRS-Mulatinha	1315	Removed	Removed	Removed	Removed	Removed
-1431	BRS-NovoHorizonte	799	Removed	Removed	Removed	Removed	Removed
-1432	BRS-PotiBranca	800	Removed	Removed	Removed	Removed	Removed
-1433	BRS-Rosada	499	Removed	Removed	Removed	Removed	Removed
-1434	BRS-Tapioqueira	1244	Removed	Removed	Removed	Removed	Removed
-1435	BRS-Verdinha	1363	Removed	Removed	Removed	Removed	Removed
-1436	Cacau	508	Removed	Removed	Removed	Removed	Removed
-1437	CanaVerde	513	Removed	Removed	Removed	Removed	Removed
-1438	CiganaPreta	509	Removed	Removed	Removed	Removed	Removed
-1439	CLAcre	48	Removed	Removed	Removed	Removed	Removed
-1440	CLRangel	49	Removed	Removed	Removed	Removed	Removed
-1441	Conquista-1	156	Removed	Removed	Removed	Removed	Removed
-1442	Conquista-2	151	Removed	Removed	Removed	Removed	Removed
-1443	CPAFRO-03	154	Removed	Removed	Removed	Removed	Removed
-1444	CPAFRO-04	194	Removed	Removed	Removed	Removed	Removed
-1445	CPAFRO-05	200	Removed	Removed	Removed	Removed	Removed
-1446	CPAFRO-06	155	Removed	Removed	Removed	Removed	Removed
-1447	CPAFRO-07	834	Removed	Removed	Removed	Removed	Removed
-1448	CPAFRO-08	47	Removed	Removed	Removed	Removed	Removed
-1449	CPAFRO-09	609	Removed	Removed	Removed	Removed	Removed
-1450	CPAFRO-12	358	Removed	Removed	Removed	Removed	Removed
-1451	CPAFRO-13	205	Removed	Removed	Removed	Removed	Removed
-1452	CPAFRO-15	260	Removed	Removed	Removed	Removed	Removed
-1453	CPAFRO-16	166	Removed	Removed	Removed	Removed	Removed
-1454	CPAFRO-18	198	Removed	Removed	Removed	Removed	Removed
-1455	CPAFRO-21	108	Removed	Removed	Removed	Removed	Removed
-1456	CPAFRO-27	50	Removed	Removed	Removed	Removed	Removed
-1457	CPAFRO-29	273	Removed	Removed	Removed	Removed	Removed
-1458	CPAFRO-30	310	Removed	Removed	Removed	Removed	Removed
-1459	CPAFRO-33	52	Removed	Removed	Removed	Removed	Removed
-1460	CPAFRO-35	51	Removed	Removed	Removed	Removed	Removed
-1461	CPAFRO-40	180	Removed	Removed	Removed	Removed	Removed
-1462	CPAFRO-42	294	Removed	Removed	Removed	Removed	Removed
-1463	CPAFRO-43	404	Removed	Removed	Removed	Removed	Removed
-1464	Folha-Fina	54	Removed	Removed	Removed	Removed	Removed
-1465	Gilmar-1	190	Removed	Removed	Removed	Removed	Removed
-1466	Guaira	301	Removed	Removed	Removed	Removed	Removed
-1467	Guaira-Falsa	264	Removed	Removed	Removed	Removed	Removed
-1468	Inajazinha	536	Removed	Removed	Removed	Removed	Removed
-1469	Ipira	276	Removed	Removed	Removed	Removed	Removed
-1470	Jacona	600	Removed	Removed	Removed	Removed	Removed
-1471	Joao-Florestal-1	188	Removed	Removed	Removed	Removed	Removed
-1472	Joao-Florestal-10	53	Removed	Removed	Removed	Removed	Removed
-1473	Joao-Florestal-2	56	Removed	Removed	Removed	Removed	Removed
-1474	Joao-Florestal-3	55	Removed	Removed	Removed	Removed	Removed
-1475	Joao-Florestal-4	57	Removed	Removed	Removed	Removed	Removed
-1476	Joao-Florestal-5	199	Removed	Removed	Removed	Removed	Removed
-1477	Joao-Florestal-6	593	Removed	Removed	Removed	Removed	Removed
-1478	Joao-Florestal-7	213	Removed	Removed	Removed	Removed	Removed
-1479	Joao-Florestal-8	222	Removed	Removed	Removed	Removed	Removed
-1480	Joao-Florestal-9	325	Removed	Removed	Removed	Removed	Removed
-1481	Maragojipe	504	Removed	Removed	Removed	Removed	Removed
-1482	Platina	517	Removed	Removed	Removed	Removed	Removed
-1483	Rangel-Fadel	284	Removed	Removed	Removed	Removed	Removed
-1484	Recife	1133	Removed	Removed	Removed	Removed	Removed
-1485	Roxinha	58	Removed	Removed	Removed	Removed	Removed
-1486	Roxona	469	Removed	Removed	Removed	Removed	Removed
-1487	RR0065	1503	Removed	Removed	Removed	Removed	Removed
-1488	Santa-Rita-Sapucaia	395	Removed	Removed	Removed	Removed	Removed
-1489	Sao-Francisco-de-Paula	59	Removed	Removed	Removed	Removed	Removed
-1490	SE-08	673	Removed	Removed	Removed	Removed	Removed
-1491	SE-09	215	Removed	Removed	Removed	Removed	Removed
-1492	Uberlandia-2	229	Removed	Removed	Removed	Removed	Removed
-1493	Uberlandia-3	597	Removed	Removed	Removed	Removed	Removed
-1494	2019g-01-02	618	Removed	Removed	Removed	Removed	Removed
-1495	2019g-01-03	579	Removed	Removed	Removed	Removed	Removed
-1496	2019g-04-02	1251	Removed	Removed	Removed	Removed	Removed
-1497	2019g-04-05	399	Removed	Removed	Removed	Removed	Removed
-1498	2019g-05-01	295	Removed	Removed	Removed	Removed	Removed
-1499	2019g-05-02	61	Removed	Removed	Removed	Removed	Removed
-1500	2019g-05-12	439	Removed	Removed	Removed	Removed	Removed
-1501	2019g-07-03	436	Removed	Removed	Removed	Removed	Removed
-1502	2019g-08-01	60	Removed	Removed	Removed	Removed	Removed
-1503	2019g-08-12	617	Removed	Removed	Removed	Removed	Removed
-1504	2019g-08-61	360	Removed	Removed	Removed	Removed	Removed
-1505	2019g-08-62	873	Removed	Removed	Removed	Removed	Removed
-1506	2020g-01-01	1231	Removed	Removed	Removed	Removed	Removed
-1507	7741-8	368	Removed	Removed	Removed	Removed	Removed
-1508	7909-04	657	Removed	Removed	Removed	Removed	Removed
-1509	Abacaxi	62	Removed	Removed	Removed	Removed	Removed
-1510	Aipim-Abacate2	165	Removed	Removed	Removed	Removed	Removed
-1511	Aipim-Brasil	532	Removed	Removed	Removed	Removed	Removed
-1512	AipimMS	497	Removed	Removed	Removed	Removed	Removed
-1513	Baianinha-PR	153	Removed	Removed	Removed	Removed	Removed
-1514	BGM-0007	179	Removed	Removed	Removed	Removed	Removed
-1515	BGM-0045	397	Removed	Removed	Removed	Removed	Removed
-1516	BGM-0053	293	Removed	Removed	Removed	Removed	Removed
-1517	BGM-0098	1372	Removed	Removed	Removed	Removed	Removed
-1518	BGM-0111	152	Removed	Removed	Removed	Removed	Removed
-1519	BGM-0113	162	Removed	Removed	Removed	Removed	Removed
-1520	BGM-0113-RcxRos	272	Removed	Removed	Removed	Removed	Removed
-1521	BGM-0149	855	Removed	Removed	Removed	Removed	Removed
-1522	BGM-0181	186	Removed	Removed	Removed	Removed	Removed
-1523	BGM-0316	854	Removed	Removed	Removed	Removed	Removed
-1524	BGM-0320	204	Removed	Removed	Removed	Removed	Removed
-1525	BGM-0326	1630	Kept	Kept	Kept	Kept	Kept
-1526	BGM-0332	434	Removed	Removed	Removed	Removed	Removed
-1527	BGM-0371	280	Removed	Removed	Removed	Removed	Removed
-1528	BGM-0419	63	Removed	Removed	Removed	Removed	Removed
-1529	BGM-0464	1429	Removed	Removed	Removed	Removed	Removed
-1530	BGM-0469	64	Removed	Removed	Removed	Removed	Removed
-1531	BGM-0473	283	Removed	Removed	Removed	Removed	Removed
-1532	BGM-0477	120	Removed	Removed	Removed	Removed	Removed
-1533	BGM-0492	189	Removed	Removed	Removed	Removed	Removed
-1534	BGM-0501	139	Removed	Removed	Removed	Removed	Removed
-1535	BGM-0532	122	Removed	Removed	Removed	Removed	Removed
-1536	BGM-0565	734	Removed	Removed	Removed	Removed	Removed
-1537	BGM-0567	376	Removed	Removed	Removed	Removed	Removed
-1538	BGM-0569	147	Removed	Removed	Removed	Removed	Removed
-1539	BGM-0619	1023	Removed	Removed	Removed	Removed	Removed
-1540	BGM-0745	150	Removed	Removed	Removed	Removed	Removed
-1541	BGM-0778	531	Removed	Removed	Removed	Removed	Removed
-1542	BGM-0780-E	201	Removed	Removed	Removed	Removed	Removed
-1543	BGM-0809	1192	Removed	Removed	Removed	Removed	Removed
-1544	BGM-0819	65	Removed	Removed	Removed	Removed	Removed
-1545	BGM-0829	235	Removed	Removed	Removed	Removed	Removed
-1546	BGM-0832	136	Removed	Removed	Removed	Removed	Removed
-1547	BGM-0891	249	Removed	Removed	Removed	Removed	Removed
-1548	BGM-0904	174	Removed	Removed	Removed	Removed	Removed
-1549	BGM-0907	824	Removed	Removed	Removed	Removed	Removed
-1550	BGM-0913	527	Removed	Removed	Removed	Removed	Removed
-1551	BGM-0927	402	Removed	Removed	Removed	Removed	Removed
-1552	BGM-0933	250	Removed	Removed	Removed	Removed	Removed
-1553	BGM-0955	1124	Removed	Removed	Removed	Removed	Removed
-1554	BGM-1050	257	Removed	Removed	Removed	Removed	Removed
-1555	BGM-1053	224	Removed	Removed	Removed	Removed	Removed
-1556	BGM-1057	171	Removed	Removed	Removed	Removed	Removed
-1557	BGM-1084	184	Removed	Removed	Removed	Removed	Removed
-1558	BGM-1088	640	Removed	Removed	Removed	Removed	Removed
-1559	BGM-1102	129	Removed	Removed	Removed	Removed	Removed
-1560	BGM-1125	692	Removed	Removed	Removed	Removed	Removed
-1561	BGM-1161	623	Removed	Removed	Removed	Removed	Removed
-1562	BGM-1184	223	Removed	Removed	Removed	Removed	Removed
-1563	BGM-1222	490	Removed	Removed	Removed	Removed	Removed
-1564	BGM-1257	137	Removed	Removed	Removed	Removed	Removed
-1565	BGM-1271	66	Removed	Removed	Removed	Removed	Removed
-1566	BGM-1273	465	Removed	Removed	Removed	Removed	Removed
-1567	BGM-1295	71	Removed	Removed	Removed	Removed	Removed
-1568	BGM-1297	712	Removed	Removed	Removed	Removed	Removed
-1569	BGM-1316	242	Removed	Removed	Removed	Removed	Removed
-1570	BGM-1319	89	Removed	Removed	Removed	Removed	Removed
-1571	BGM-1322	67	Removed	Removed	Removed	Removed	Removed
-1572	BGM-1337	140	Removed	Removed	Removed	Removed	Removed
-1573	BGM-1342	121	Removed	Removed	Removed	Removed	Removed
-1574	BGM-1351	68	Removed	Removed	Removed	Removed	Removed
-1575	BGM-1353	665	Removed	Removed	Removed	Removed	Removed
-1576	BGM-1357	232	Removed	Removed	Removed	Removed	Removed
-1577	BGM-1366	512	Removed	Removed	Removed	Removed	Removed
-1578	BGM-1374	69	Removed	Removed	Removed	Removed	Removed
-1579	BGM-1378	330	Removed	Removed	Removed	Removed	Removed
-1580	BGM-1417	1226	Removed	Removed	Removed	Removed	Removed
-1581	BGM-1425	70	Removed	Removed	Removed	Removed	Removed
-1582	BGM-1427	124	Removed	Removed	Removed	Removed	Removed
-1583	BGM-1430	76	Removed	Removed	Removed	Removed	Removed
-1584	BGM-1473	254	Removed	Removed	Removed	Removed	Removed
-1585	BGM-1490	270	Removed	Removed	Removed	Removed	Removed
-1586	BGM-1523	159	Removed	Removed	Removed	Removed	Removed
-1587	BGM-1526	74	Removed	Removed	Removed	Removed	Removed
-1588	BGM-1528	118	Removed	Removed	Removed	Removed	Removed
-1589	BGM-1532	364	Removed	Removed	Removed	Removed	Removed
-1590	BGM-1540	72	Removed	Removed	Removed	Removed	Removed
-1591	BGM-1543	73	Removed	Removed	Removed	Removed	Removed
-1592	BGM-1547	175	Removed	Removed	Removed	Removed	Removed
-1593	BGM-1576	193	Removed	Removed	Removed	Removed	Removed
-1594	BGM-1587	255	Removed	Removed	Removed	Removed	Removed
-1595	BGM-1599	170	Removed	Removed	Removed	Removed	Removed
-1596	BGM-1602	456	Removed	Removed	Removed	Removed	Removed
-1597	BGM-1607	115	Removed	Removed	Removed	Removed	Removed
-1598	BGM-1611	589	Removed	Removed	Removed	Removed	Removed
-1599	BGM-1620	252	Removed	Removed	Removed	Removed	Removed
-1600	BGM-1640	555	Removed	Removed	Removed	Removed	Removed
-1601	BGM-1681	471	Removed	Removed	Removed	Removed	Removed
-1602	BGM-1691	1261	Removed	Removed	Removed	Removed	Removed
-1603	BGM-1711	339	Removed	Removed	Removed	Removed	Removed
-1604	BGM-1714	303	Removed	Removed	Removed	Removed	Removed
-1605	BGM-1724	145	Removed	Removed	Removed	Removed	Removed
-1606	BGM-1731	288	Removed	Removed	Removed	Removed	Removed
-1607	BGM-1736	172	Removed	Removed	Removed	Removed	Removed
-1608	BGM-1751	81	Removed	Removed	Removed	Removed	Removed
-1609	BGM-1759-B	477	Removed	Removed	Removed	Removed	Removed
-1610	BGM-1765	1236	Removed	Removed	Removed	Removed	Removed
-1611	BGM-1767	762	Removed	Removed	Removed	Removed	Removed
-1612	BGM-1830	238	Removed	Removed	Removed	Removed	Removed
-1613	BGM-1867	485	Removed	Removed	Removed	Removed	Removed
-1614	BGM-1871	384	Removed	Removed	Removed	Removed	Removed
-1615	BGM-2003	78	Removed	Removed	Removed	Removed	Removed
-1616	BGM-2052	851	Removed	Removed	Removed	Removed	Removed
-1617	BGM-2071	181	Removed	Removed	Removed	Removed	Removed
-1618	BGM-2084	80	Removed	Removed	Removed	Removed	Removed
-1619	BGM-2093	77	Removed	Removed	Removed	Removed	Removed
-1620	BGM-2098	1652	Kept	Kept	Kept	Kept	Kept
-1621	BGM-2099	82	Removed	Removed	Removed	Removed	Removed
-1622	BGM-2108	79	Removed	Removed	Removed	Removed	Removed
-1623	BGM-2109	90	Removed	Removed	Removed	Removed	Removed
-1624	BGM-2111	1560	Removed	Removed	Removed	Kept	Kept
-1625	BGM-2113	87	Removed	Removed	Removed	Removed	Removed
-1626	BGM-2117	88	Removed	Removed	Removed	Removed	Removed
-1627	BGM-2122	116	Removed	Removed	Removed	Removed	Removed
-1628	BGM-2125	83	Removed	Removed	Removed	Removed	Removed
-1629	BGM-2126	84	Removed	Removed	Removed	Removed	Removed
-1630	BGM-2129	332	Removed	Removed	Removed	Removed	Removed
-1631	BGM-2130	85	Removed	Removed	Removed	Removed	Removed
-1632	BGM-2134	1151	Removed	Removed	Removed	Removed	Removed
-1633	BGM-2137	117	Removed	Removed	Removed	Removed	Removed
-1634	BGM-2138	86	Removed	Removed	Removed	Removed	Removed
-1635	BGM-2146	101	Removed	Removed	Removed	Removed	Removed
-1636	BGM-2152	682	Removed	Removed	Removed	Removed	Removed
-1637	BGM-2153	1441	Removed	Removed	Removed	Removed	Removed
-1638	BGM-2171	842	Removed	Removed	Removed	Removed	Removed
-1639	BGM-2173	371	Removed	Removed	Removed	Removed	Removed
-1640	BGM-2176	146	Removed	Removed	Removed	Removed	Removed
-1641	BGM-2177	191	Removed	Removed	Removed	Removed	Removed
-1642	BGM-2178	98	Removed	Removed	Removed	Removed	Removed
-1643	BGM-2180	202	Removed	Removed	Removed	Removed	Removed
-1644	BGM-2181	510	Removed	Removed	Removed	Removed	Removed
-1645	BGM-2193	91	Removed	Removed	Removed	Removed	Removed
-1646	BGM-2194	92	Removed	Removed	Removed	Removed	Removed
-1647	BGM-2195	575	Removed	Removed	Removed	Removed	Removed
-1648	BGM-2199	93	Removed	Removed	Removed	Removed	Removed
-1649	BGM-2201	519	Removed	Removed	Removed	Removed	Removed
-1650	BGM-2215	94	Removed	Removed	Removed	Removed	Removed
-1651	BGM-2217	95	Removed	Removed	Removed	Removed	Removed
-1652	BGM-2222	96	Removed	Removed	Removed	Removed	Removed
-1653	BGM-2223	167	Removed	Removed	Removed	Removed	Removed
-1654	BGM-2225	131	Removed	Removed	Removed	Removed	Removed
-1655	BGM-2227	97	Removed	Removed	Removed	Removed	Removed
-1656	BGM-2235	138	Removed	Removed	Removed	Removed	Removed
-1657	BGM-2242	299	Removed	Removed	Removed	Removed	Removed
-1658	BGM-2247	99	Removed	Removed	Removed	Removed	Removed
-1659	BGM-2252	114	Removed	Removed	Removed	Removed	Removed
-1660	BGM-2253	100	Removed	Removed	Removed	Removed	Removed
-1661	BGM-2254	102	Removed	Removed	Removed	Removed	Removed
-1662	BGM-2256	1596	Removed	Kept	Kept	Kept	Kept
-1663	BGM-2259	103	Removed	Removed	Removed	Removed	Removed
-1664	BGM-2269	104	Removed	Removed	Removed	Removed	Removed
-1665	BGM-2272	105	Removed	Removed	Removed	Removed	Removed
-1666	BGM-2274	106	Removed	Removed	Removed	Removed	Removed
-1667	BGM-2277	107	Removed	Removed	Removed	Removed	Removed
-1668	BGM-2280	676	Removed	Removed	Removed	Removed	Removed
-1669	BGM-2281	123	Removed	Removed	Removed	Removed	Removed
-1670	BGM-2284	243	Removed	Removed	Removed	Removed	Removed
-1671	BGM-2304	466	Removed	Removed	Removed	Removed	Removed
-1672	BGM-2666	281	Removed	Removed	Removed	Removed	Removed
-1673	BR18F1-wx-006-02	308	Removed	Removed	Removed	Removed	Removed
-1674	BR18F1-wx-006-39	109	Removed	Removed	Removed	Removed	Removed
-1675	BRS-Guaira	210	Removed	Removed	Removed	Removed	Removed
-1676	Capixaba	431	Removed	Removed	Removed	Removed	Removed
-1677	Cascuda	226	Removed	Removed	Removed	Removed	Removed
-1678	CPAFRO-28	247	Removed	Removed	Removed	Removed	Removed
-1679	DonaDiva	773	Removed	Removed	Removed	Removed	Removed
-1680	ManiBranca	410	Removed	Removed	Removed	Removed	Removed
-1681	Manzhitil	671	Removed	Removed	Removed	Removed	Removed
-1682	Secundina	426	Removed	Removed	Removed	Removed	Removed
-1683	VassouraPreta	495	Removed	Removed	Removed	Removed	Removed
-1684	VerdinhaSul	135	Removed	Removed	Removed	Removed	Removed
-1685	2017wx-02-14	274	Removed	Removed	Removed	Removed	Removed
-1686	367-09clara	111	Removed	Removed	Removed	Removed	Removed
-1687	367-09Escura	110	Removed	Removed	Removed	Removed	Removed
-1688	7909-02	239	Removed	Removed	Removed	Removed	Removed
-1689	7909-05	225	Removed	Removed	Removed	Removed	Removed
-1690	BGM-0533	1416	Removed	Removed	Removed	Removed	Removed
-1691	BGM-06111	515	Removed	Removed	Removed	Removed	Removed
-1692	BGM-0643	112	Removed	Removed	Removed	Removed	Removed
-1693	BGM-2250	113	Removed	Removed	Removed	Removed	Removed
-1694	BR-11-34-15	881	Removed	Removed	Removed	Removed	Removed
-1695	BRS-FormosaTetra	119	Removed	Removed	Removed	Removed	Removed
-1696	Conquista	132	Removed	Removed	Removed	Removed	Removed
-1697	CPAFRO-24	594	Removed	Removed	Removed	Removed	Removed
-1698	2019g-04-01	324	Removed	Removed	Removed	Removed	Removed
-1699	2019g-05-05	203	Removed	Removed	Removed	Removed	Removed
-1700	2020g-08-06	542	Removed	Removed	Removed	Removed	Removed
-1701	2019g-05-03	292	Removed	Removed	Removed	Removed	Removed
-1702	2019g-05-11	291	Removed	Removed	Removed	Removed	Removed
-1703	2020g-08-02	391	Removed	Removed	Removed	Removed	Removed
-1704	2017wx-02-05	650	Removed	Removed	Removed	Removed	Removed
-1705	2017wx-02-13	407	Removed	Removed	Removed	Removed	Removed
-1706	2017wx-02-31	633	Removed	Removed	Removed	Removed	Removed
-1707	2020g-08-03	244	Removed	Removed	Removed	Removed	Removed
-1708	BRS-Formosa-Tetra	971	Removed	Removed	Removed	Removed	Removed
-1709	BRS-Amansa Burro	975	Removed	Removed	Removed	Removed	Removed
-1710	BRS-Gema de Ovo	580	Removed	Removed	Removed	Removed	Removed
-1711	BRS-Novo Horizonte	482	Removed	Removed	Removed	Removed	Removed
-1712	BRS-Poti Branca	655	Removed	Removed	Removed	Removed	Removed
+1246	3
+Unit	Name	Tree Remove Order	Tree Sample_90
+0001	2018g-06-01	173	Removed
+0002	2018g-06-02	91	Removed
+0003	2018g-06-03	217	Removed
+0004	Aipim-Brasilia	916	Removed
+0005	Aipim-Manteiga	267	Removed
+0006	Baianinha	192	Removed
+0007	BGM-0004	917	Removed
+0008	BGM-0005	1206	Kept
+0009	BGM-0006	353	Removed
+0010	BGM-0011	88	Removed
+0011	BGM-0014	573	Removed
+0012	BGM-0018	991	Removed
+0013	BGM-0019	894	Removed
+0014	BGM-0020	623	Removed
+0015	BGM-0021	195	Removed
+0016	BGM-0022	615	Removed
+0017	BGM-0022-TB	97	Removed
+0018	BGM-0023	1141	Removed
+0019	BGM-0024	963	Removed
+0020	BGM-0025	628	Removed
+0021	BGM-0027	910	Removed
+0022	BGM-0028	513	Removed
+0023	BGM-0029	1107	Removed
+0024	BGM-0030	1187	Kept
+0025	BGM-0032	1221	Kept
+0026	BGM-0035	984	Removed
+0027	BGM-0036	636	Removed
+0028	BGM-0037	638	Removed
+0029	BGM-0039	966	Removed
+0030	BGM-0040	649	Removed
+0031	BGM-0042	369	Removed
+0032	BGM-0043	58	Removed
+0033	BGM-0044	761	Removed
+0034	BGM-0046	339	Removed
+0035	BGM-0047	822	Removed
+0036	BGM-0048	754	Removed
+0037	BGM-0049	161	Removed
+0038	BGM-0050	643	Removed
+0039	BGM-0052	292	Removed
+0040	BGM-0054	1110	Removed
+0041	BGM-0056	1150	Removed
+0042	BGM-0058	480	Removed
+0043	BGM-0060	589	Removed
+0044	BGM-0061	1213	Kept
+0045	BGM-0062	1062	Removed
+0046	BGM-0063	610	Removed
+0047	BGM-0065	1010	Removed
+0048	BGM-0066	521	Removed
+0049	BGM-0067	433	Removed
+0050	BGM-0069	563	Removed
+0051	BGM-0070	975	Removed
+0052	BGM-0073	546	Removed
+0053	BGM-0074	359	Removed
+0054	BGM-0076	831	Removed
+0055	BGM-0080	776	Removed
+0056	BGM-0082	65	Removed
+0057	BGM-0083	634	Removed
+0058	BGM-0084	1089	Removed
+0059	BGM-0085	1085	Removed
+0060	BGM-0087	1175	Kept
+0061	BGM-0088	177	Removed
+0062	BGM-0089	798	Removed
+0063	BGM-0090	941	Removed
+0064	BGM-0091	1166	Kept
+0065	BGM-0093	1098	Removed
+0066	BGM-0096	710	Removed
+0067	BGM-0097	897	Removed
+0068	BGM-0100	1130	Removed
+0069	BGM-0106	721	Removed
+0070	BGM-0113-RcxCr	261	Removed
+0071	BGM-0115	784	Removed
+0072	BGM-0115-TB	82	Removed
+0073	BGM-0115-TR	361	Removed
+0074	BGM-0116	633	Removed
+0075	BGM-0117	400	Removed
+0076	BGM-0119	866	Removed
+0077	BGM-0120	542	Removed
+0078	BGM-0121	114	Removed
+0079	BGM-0122	113	Removed
+0080	BGM-0123	678	Removed
+0081	BGM-0124	741	Removed
+0082	BGM-0126	688	Removed
+0083	BGM-0128	539	Removed
+0084	BGM-0130	1208	Kept
+0085	BGM-0131	302	Removed
+0086	BGM-0132	1115	Removed
+0087	BGM-0133	988	Removed
+0088	BGM-0134	979	Removed
+0089	BGM-0135	452	Removed
+0090	BGM-0136	934	Removed
+0091	BGM-0137	995	Removed
+0092	BGM-0138	1212	Kept
+0093	BGM-0140	834	Removed
+0094	BGM-0143	274	Removed
+0095	BGM-0144	832	Removed
+0096	BGM-0145	1228	Kept
+0097	BGM-0148	321	Removed
+0098	BGM-0150	1190	Kept
+0099	BGM-0151	1117	Removed
+0100	BGM-0152	502	Removed
+0101	BGM-0155	560	Removed
+0102	BGM-0156	510	Removed
+0103	BGM-0157	1164	Kept
+0104	BGM-0158	137	Removed
+0105	BGM-0160	425	Removed
+0106	BGM-0161	511	Removed
+0107	BGM-0162	644	Removed
+0108	BGM-0163	1230	Kept
+0109	BGM-0164	889	Removed
+0110	BGM-0165	117	Removed
+0111	BGM-0166	669	Removed
+0112	BGM-0167	749	Removed
+0113	BGM-0168	903	Removed
+0114	BGM-0169	792	Removed
+0115	BGM-0170	600	Removed
+0116	BGM-0171	420	Removed
+0117	BGM-0174	879	Removed
+0118	BGM-0177	141	Removed
+0119	BGM-0178	1066	Removed
+0120	BGM-0179	1093	Removed
+0121	BGM-0182	116	Removed
+0122	BGM-0183	49	Removed
+0123	BGM-0184	994	Removed
+0124	BGM-0185	1006	Removed
+0125	BGM-0186	210	Removed
+0126	BGM-0187	1051	Removed
+0127	BGM-0188	343	Removed
+0128	BGM-0189	802	Removed
+0129	BGM-0190	1073	Removed
+0130	BGM-0195	856	Removed
+0131	BGM-0199	1242	Kept
+0132	BGM-0201	1011	Removed
+0133	BGM-0202	861	Removed
+0134	BGM-0204	1049	Removed
+0135	BGM-0205	244	Removed
+0136	BGM-0207	625	Removed
+0137	BGM-0208	1214	Kept
+0138	BGM-0209	322	Removed
+0139	BGM-0210	1186	Kept
+0140	BGM-0211	642	Removed
+0141	BGM-0212	942	Removed
+0142	BGM-0213	514	Removed
+0143	BGM-0214	1014	Removed
+0144	BGM-0215	561	Removed
+0145	BGM-0216	1021	Removed
+0146	BGM-0220	738	Removed
+0147	BGM-0222	1185	Kept
+0148	BGM-0226	162	Removed
+0149	BGM-0235	484	Removed
+0150	BGM-0236	914	Removed
+0151	BGM-0237	374	Removed
+0152	BGM-0238	1065	Removed
+0153	BGM-0239	829	Removed
+0154	BGM-0240	1158	Kept
+0155	BGM-0246	262	Removed
+0156	BGM-0247	724	Removed
+0157	BGM-0248	1220	Kept
+0158	BGM-0249	940	Removed
+0159	BGM-0250	772	Removed
+0160	BGM-0252	461	Removed
+0161	BGM-0254	970	Removed
+0162	BGM-0257	1027	Removed
+0163	BGM-0260	351	Removed
+0164	BGM-0261	1054	Removed
+0165	BGM-0264	1244	Kept
+0166	BGM-0266	476	Removed
+0167	BGM-0268	1030	Removed
+0168	BGM-0269	1156	Removed
+0169	BGM-0270	474	Removed
+0170	BGM-0271	393	Removed
+0171	BGM-0276	416	Removed
+0172	BGM-0277	1123	Removed
+0173	BGM-0279	730	Removed
+0174	BGM-0281	781	Removed
+0175	BGM-0282	235	Removed
+0176	BGM-0283	383	Removed
+0177	BGM-0284	713	Removed
+0178	BGM-0285	692	Removed
+0179	BGM-0286	892	Removed
+0180	BGM-0287	1112	Removed
+0181	BGM-0288	1119	Removed
+0182	BGM-0289	906	Removed
+0183	BGM-0290	695	Removed
+0184	BGM-0294	877	Removed
+0185	BGM-0297	964	Removed
+0186	BGM-0298	1044	Removed
+0187	BGM-0303	1050	Removed
+0188	BGM-0304	757	Removed
+0189	BGM-0306	411	Removed
+0190	BGM-0307	779	Removed
+0191	BGM-0308	1114	Removed
+0192	BGM-0314	1170	Kept
+0193	BGM-0315	168	Removed
+0194	BGM-0318	767	Removed
+0195	BGM-0319	163	Removed
+0196	BGM-0323	967	Removed
+0197	BGM-0327	948	Removed
+0198	BGM-0336	617	Removed
+0199	BGM-0337	332	Removed
+0200	BGM-0338	18	Removed
+0201	BGM-0341	501	Removed
+0202	BGM-0342	707	Removed
+0203	BGM-0345	806	Removed
+0204	BGM-0349	605	Removed
+0205	BGM-0352	1092	Removed
+0206	BGM-0356	172	Removed
+0207	BGM-0357	949	Removed
+0208	BGM-0358	567	Removed
+0209	BGM-0359	937	Removed
+0210	BGM-0360	1121	Removed
+0211	BGM-0362	503	Removed
+0212	BGM-0364	951	Removed
+0213	BGM-0366	909	Removed
+0214	BGM-0368	547	Removed
+0215	BGM-0369	1069	Removed
+0216	BGM-0374	775	Removed
+0217	BGM-0380	516	Removed
+0218	BGM-0382	367	Removed
+0219	BGM-0384	123	Removed
+0220	BGM-0386	913	Removed
+0221	BGM-0388	570	Removed
+0222	BGM-0389	456	Removed
+0223	BGM-0390	874	Removed
+0224	BGM-0394	884	Removed
+0225	BGM-0395	888	Removed
+0226	BGM-0396	485	Removed
+0227	BGM-0398	1020	Removed
+0228	BGM-0399	702	Removed
+0229	BGM-0400	182	Removed
+0230	BGM-0406	269	Removed
+0231	BGM-0407	545	Removed
+0232	BGM-0408	592	Removed
+0233	BGM-0410	554	Removed
+0234	BGM-0411	673	Removed
+0235	BGM-0413	429	Removed
+0236	BGM-0414	652	Removed
+0237	BGM-0420	911	Removed
+0238	BGM-0421	129	Removed
+0239	BGM-0422	1007	Removed
+0240	BGM-0423	66	Removed
+0241	BGM-0424	413	Removed
+0242	BGM-0425	1147	Removed
+0243	BGM-0426	1012	Removed
+0244	BGM-0427	666	Removed
+0245	BGM-0428	1152	Removed
+0246	BGM-0432	997	Removed
+0247	BGM-0434	222	Removed
+0248	BGM-0435	1017	Removed
+0249	BGM-0436	1122	Removed
+0250	BGM-0437	543	Removed
+0251	BGM-0438	1159	Kept
+0252	BGM-0439	81	Removed
+0253	BGM-0440	837	Removed
+0254	BGM-0441	215	Removed
+0255	BGM-0442	1238	Kept
+0256	BGM-0443	885	Removed
+0257	BGM-0444	718	Removed
+0258	BGM-0447	1056	Removed
+0259	BGM-0448	279	Removed
+0260	BGM-0449	783	Removed
+0261	BGM-0451	466	Removed
+0262	BGM-0452	1088	Removed
+0263	BGM-0456	1204	Kept
+0264	BGM-0460	439	Removed
+0265	BGM-0461	1063	Removed
+0266	BGM-0462	435	Removed
+0267	BGM-0463	905	Removed
+0268	BGM-0465	467	Removed
+0269	BGM-0467	902	Removed
+0270	BGM-0468	953	Removed
+0271	BGM-0470	1203	Kept
+0272	BGM-0471	849	Removed
+0273	BGM-0472	770	Removed
+0274	BGM-0474	683	Removed
+0275	BGM-0475	382	Removed
+0276	BGM-0476	1120	Removed
+0277	BGM-0478	659	Removed
+0278	BGM-0480	1229	Kept
+0279	BGM-0484	1178	Kept
+0280	BGM-0489	1055	Removed
+0281	BGM-0494	1033	Removed
+0282	BGM-0495	674	Removed
+0283	BGM-0496	869	Removed
+0284	BGM-0498	703	Removed
+0285	BGM-0499	843	Removed
+0286	BGM-0500	541	Removed
+0287	BGM-0504	477	Removed
+0288	BGM-0505	470	Removed
+0289	BGM-0508	1176	Kept
+0290	BGM-0509	1086	Removed
+0291	BGM-0510	1200	Kept
+0292	BGM-0511	410	Removed
+0293	BGM-0514	1236	Kept
+0294	BGM-0517	990	Removed
+0295	BGM-0520	118	Removed
+0296	BGM-0521	1103	Removed
+0297	BGM-0523	579	Removed
+0298	BGM-0527	808	Removed
+0299	BGM-0529	1067	Removed
+0300	BGM-0536	1026	Removed
+0301	BGM-0537	482	Removed
+0302	BGM-0540	1097	Removed
+0303	BGM-0541	958	Removed
+0304	BGM-0542	870	Removed
+0305	BGM-0543	736	Removed
+0306	BGM-0545	371	Removed
+0307	BGM-0546	619	Removed
+0308	BGM-0547	1081	Removed
+0309	BGM-0549	773	Removed
+0310	BGM-0550	626	Removed
+0311	BGM-0551	891	Removed
+0312	BGM-0552	331	Removed
+0313	BGM-0555	1068	Removed
+0314	BGM-0556	725	Removed
+0315	BGM-0557	1074	Removed
+0316	BGM-0560	875	Removed
+0317	BGM-0561	352	Removed
+0318	BGM-0562	1135	Removed
+0319	BGM-0563	1046	Removed
+0320	BGM-0564	1132	Removed
+0321	BGM-0570	1134	Removed
+0322	BGM-0573	390	Removed
+0323	BGM-0574	881	Removed
+0324	BGM-0575	73	Removed
+0325	BGM-0576	972	Removed
+0326	BGM-0579	1041	Removed
+0327	BGM-0583	1239	Kept
+0328	BGM-0585	62	Removed
+0329	BGM-0587	887	Removed
+0330	BGM-0589	149	Removed
+0331	BGM-0590	544	Removed
+0332	BGM-0592	1072	Removed
+0333	BGM-0593	616	Removed
+0334	BGM-0598	985	Removed
+0335	BGM-0600	488	Removed
+0336	BGM-0601	918	Removed
+0337	BGM-0603	1118	Removed
+0338	BGM-0604	86	Removed
+0339	BGM-0606	928	Removed
+0340	BGM-0607	533	Removed
+0341	BGM-0608	291	Removed
+0342	BGM-0609	133	Removed
+0343	BGM-0613	253	Removed
+0344	BGM-0614	525	Removed
+0345	BGM-0615	1184	Kept
+0346	BGM-0618	920	Removed
+0347	BGM-0620	1108	Removed
+0348	BGM-0623	1217	Kept
+0349	BGM-0624	865	Removed
+0350	BGM-0625	1002	Removed
+0351	BGM-0626	296	Removed
+0352	BGM-0630	816	Removed
+0353	BGM-0631	1198	Kept
+0354	BGM-0635	1180	Kept
+0355	BGM-0636	1160	Kept
+0356	BGM-0638	447	Removed
+0357	BGM-0639	726	Removed
+0358	BGM-0641	708	Removed
+0359	BGM-0642	658	Removed
+0360	BGM-0645	122	Removed
+0361	BGM-0646	593	Removed
+0362	BGM-0648	789	Removed
+0363	BGM-0649	134	Removed
+0364	BGM-0650	200	Removed
+0365	BGM-0651	748	Removed
+0366	BGM-0652	23	Removed
+0367	BGM-0654	774	Removed
+0368	BGM-0655	929	Removed
+0369	BGM-0657	440	Removed
+0370	BGM-0658	469	Removed
+0371	BGM-0659	986	Removed
+0372	BGM-0660	1215	Kept
+0373	BGM-0661	184	Removed
+0374	BGM-0662	298	Removed
+0375	BGM-0664	1227	Kept
+0376	BGM-0665	1091	Removed
+0377	BGM-0666	670	Removed
+0378	BGM-0670	682	Removed
+0379	BGM-0671	457	Removed
+0380	BGM-0673	722	Removed
+0381	BGM-0677	835	Removed
+0382	BGM-0678	1128	Removed
+0383	BGM-0679	587	Removed
+0384	BGM-0680	694	Removed
+0385	BGM-0682	306	Removed
+0386	BGM-0685	648	Removed
+0387	BGM-0693	407	Removed
+0388	BGM-0694	1045	Removed
+0389	BGM-0695	743	Removed
+0390	BGM-0697	819	Removed
+0391	BGM-0699	535	Removed
+0392	BGM-0700	576	Removed
+0393	BGM-0702	756	Removed
+0394	BGM-0703	1165	Kept
+0395	BGM-0706	33	Removed
+0396	BGM-0707	980	Removed
+0397	BGM-0708	13	Removed
+0398	BGM-0711	680	Removed
+0399	BGM-0713	665	Removed
+0400	BGM-0714	409	Removed
+0401	BGM-0715	115	Removed
+0402	BGM-0717	1111	Removed
+0403	BGM-0718	1126	Removed
+0404	BGM-0726	250	Removed
+0405	BGM-0728	498	Removed
+0406	BGM-0729	1157	Kept
+0407	BGM-0733	426	Removed
+0408	BGM-0737	63	Removed
+0409	BGM-0760	423	Removed
+0410	BGM-0776	78	Removed
+0411	BGM-0780	438	Removed
+0412	BGM-0780-B	403	Removed
+0413	BGM-0781	790	Removed
+0414	BGM-0785	817	Removed
+0415	BGM-0788	329	Removed
+0416	BGM-0790	338	Removed
+0417	BGM-0793	112	Removed
+0418	BGM-0799	406	Removed
+0419	BGM-0803	465	Removed
+0420	BGM-0805	690	Removed
+0421	BGM-0806	1060	Removed
+0422	BGM-0808	1172	Kept
+0423	BGM-0810	890	Removed
+0424	BGM-0812	1032	Removed
+0425	BGM-0813	1100	Removed
+0426	BGM-0815	188	Removed
+0427	BGM-0816	365	Removed
+0428	BGM-0817	460	Removed
+0429	BGM-0818	689	Removed
+0430	BGM-0820	947	Removed
+0431	BGM-0822	107	Removed
+0432	BGM-0823	1015	Removed
+0433	BGM-0830-TB	14	Removed
+0434	BGM-0831	227	Removed
+0435	BGM-0841	143	Removed
+0436	BGM-0842	750	Removed
+0437	BGM-0843	350	Removed
+0438	BGM-0846	671	Removed
+0439	BGM-0847	553	Removed
+0440	BGM-0848	737	Removed
+0441	BGM-0849	246	Removed
+0442	BGM-0850	520	Removed
+0443	BGM-0851	529	Removed
+0444	BGM-0854	223	Removed
+0445	BGM-0856	1202	Kept
+0446	BGM-0856-CRx	36	Removed
+0447	BGM-0857	899	Removed
+0448	BGM-0858	944	Removed
+0449	BGM-0859	844	Removed
+0450	BGM-0863	960	Removed
+0451	BGM-0866	828	Removed
+0452	BGM-0867	528	Removed
+0453	BGM-0869	225	Removed
+0454	BGM-0870	96	Removed
+0455	BGM-0872	871	Removed
+0456	BGM-0873	759	Removed
+0457	BGM-0875	441	Removed
+0458	BGM-0876	201	Removed
+0459	BGM-0877	973	Removed
+0460	BGM-0878	224	Removed
+0461	BGM-0879	164	Removed
+0462	BGM-0882	840	Removed
+0463	BGM-0884	326	Removed
+0464	BGM-0885	500	Removed
+0465	BGM-0886	987	Removed
+0466	BGM-0888	287	Removed
+0467	BGM-0889	376	Removed
+0468	BGM-0890	175	Removed
+0469	BGM-0893	883	Removed
+0470	BGM-0894	468	Removed
+0471	BGM-0895	9	Removed
+0472	BGM-0898	880	Removed
+0473	BGM-0900	479	Removed
+0474	BGM-0901	859	Removed
+0475	BGM-0902	295	Removed
+0476	BGM-0903	620	Removed
+0477	BGM-0905	901	Removed
+0478	BGM-0906	463	Removed
+0479	BGM-0909	974	Removed
+0480	BGM-0912	838	Removed
+0481	BGM-0914	912	Removed
+0482	BGM-0915	851	Removed
+0483	BGM-0917	1237	Kept
+0484	BGM-0918	1197	Kept
+0485	BGM-0919	581	Removed
+0486	BGM-0920	534	Removed
+0487	BGM-0922	650	Removed
+0488	BGM-0925	499	Removed
+0489	BGM-0929	1079	Removed
+0490	BGM-0930	886	Removed
+0491	BGM-0931T	105	Removed
+0492	BGM-0935	675	Removed
+0493	BGM-0936	507	Removed
+0494	BGM-0937	415	Removed
+0495	BGM-0940	795	Removed
+0496	BGM-0941	872	Removed
+0497	BGM-0942	167	Removed
+0498	BGM-0943	1193	Kept
+0499	BGM-0944	830	Removed
+0500	BGM-0945	982	Removed
+0501	BGM-0946	729	Removed
+0502	BGM-0947	268	Removed
+0503	BGM-0948	146	Removed
+0504	BGM-0949	827	Removed
+0505	BGM-0951	87	Removed
+0506	BGM-0952	815	Removed
+0507	BGM-0953	677	Removed
+0508	BGM-0954	976	Removed
+0509	BGM-0957	1195	Kept
+0510	BGM-0958	1137	Removed
+0511	BGM-0959	613	Removed
+0512	BGM-0960	818	Removed
+0513	BGM-0961	325	Removed
+0514	BGM-0962	646	Removed
+0515	BGM-0963	693	Removed
+0516	BGM-0965	59	Removed
+0517	BGM-0966	354	Removed
+0518	BGM-0967	655	Removed
+0519	BGM-0968	763	Removed
+0520	BGM-0971	765	Removed
+0521	BGM-0973	780	Removed
+0522	BGM-0974	833	Removed
+0523	BGM-0975	1154	Removed
+0524	BGM-0976	946	Removed
+0525	BGM-0977	72	Removed
+0526	BGM-0978	395	Removed
+0527	BGM-0979	672	Removed
+0528	BGM-0980	1090	Removed
+0529	BGM-0981	807	Removed
+0530	BGM-0982	686	Removed
+0531	BGM-0983	130	Removed
+0532	BGM-0984	238	Removed
+0533	BGM-0985	1000	Removed
+0534	BGM-0986	437	Removed
+0535	BGM-0987	657	Removed
+0536	BGM-0989	853	Removed
+0537	BGM-0991	1	Removed
+0538	BGM-0992	786	Removed
+0539	BGM-0993	404	Removed
+0540	BGM-0994	978	Removed
+0541	BGM-0995	264	Removed
+0542	BGM-0996	1075	Removed
+0543	BGM-0998	878	Removed
+0544	BGM-1006	734	Removed
+0545	BGM-1010	16	Removed
+0546	BGM-1015	77	Removed
+0547	BGM-1023	862	Removed
+0548	BGM-1024	431	Removed
+0549	BGM-1025	1059	Removed
+0550	BGM-1026	106	Removed
+0551	BGM-1027	363	Removed
+0552	BGM-1028	126	Removed
+0553	BGM-1029	1003	Removed
+0554	BGM-1031	656	Removed
+0555	BGM-1034	43	Removed
+0556	BGM-1037	211	Removed
+0557	BGM-1040	207	Removed
+0558	BGM-1041	178	Removed
+0559	BGM-1042	983	Removed
+0560	BGM-1043	254	Removed
+0561	BGM-1044	486	Removed
+0562	BGM-1055	381	Removed
+0563	BGM-1060	398	Removed
+0564	BGM-1064	602	Removed
+0565	BGM-1067	663	Removed
+0566	BGM-1068	508	Removed
+0567	BGM-1073	527	Removed
+0568	BGM-1077	530	Removed
+0569	BGM-1078	860	Removed
+0570	BGM-1079	241	Removed
+0571	BGM-1080	12	Removed
+0572	BGM-1081	820	Removed
+0573	BGM-1082	712	Removed
+0574	BGM-1085	494	Removed
+0575	BGM-1087	1225	Kept
+0576	BGM-1091	667	Removed
+0577	BGM-1097	208	Removed
+0578	BGM-1103	1001	Removed
+0579	BGM-1105	1188	Kept
+0580	BGM-1106	846	Removed
+0581	BGM-1107	237	Removed
+0582	BGM-1108	810	Removed
+0583	BGM-1110	971	Removed
+0584	BGM-1111	401	Removed
+0585	BGM-1115	1082	Removed
+0586	BGM-1116	1077	Removed
+0587	BGM-1118	618	Removed
+0588	BGM-1119	797	Removed
+0589	BGM-1120	1235	Kept
+0590	BGM-1121	412	Removed
+0591	BGM-1122	102	Removed
+0592	BGM-1123	402	Removed
+0593	BGM-1126	1071	Removed
+0594	BGM-1127	555	Removed
+0595	BGM-1128	611	Removed
+0596	BGM-1130	6	Removed
+0597	BGM-1132	434	Removed
+0598	BGM-1133	1008	Removed
+0599	BGM-1134	1171	Kept
+0600	BGM-1136	310	Removed
+0601	BGM-1137	1070	Removed
+0602	BGM-1139	462	Removed
+0603	BGM-1141	427	Removed
+0604	BGM-1142	368	Removed
+0605	BGM-1143	1023	Removed
+0606	BGM-1144	699	Removed
+0607	BGM-1146	148	Removed
+0608	BGM-1147	275	Removed
+0609	BGM-1148	981	Removed
+0610	BGM-1150	265	Removed
+0611	BGM-1152	1022	Removed
+0612	BGM-1153	1142	Removed
+0613	BGM-1155	418	Removed
+0614	BGM-1156	364	Removed
+0615	BGM-1158	847	Removed
+0616	BGM-1159	532	Removed
+0617	BGM-1160	7	Removed
+0618	BGM-1162	809	Removed
+0619	BGM-1163	297	Removed
+0620	BGM-1164	1201	Kept
+0621	BGM-1165	101	Removed
+0622	BGM-1167	526	Removed
+0623	BGM-1168	1199	Kept
+0624	BGM-1171	44	Removed
+0625	BGM-1174	150	Removed
+0626	BGM-1175	496	Removed
+0627	BGM-1177	69	Removed
+0628	BGM-1178	421	Removed
+0629	BGM-1180	428	Removed
+0630	BGM-1185	124	Removed
+0631	BGM-1188	1005	Removed
+0632	BGM-1189	61	Removed
+0633	BGM-1190	751	Removed
+0634	BGM-1191	813	Removed
+0635	BGM-1196	731	Removed
+0636	BGM-1198	1124	Removed
+0637	BGM-1200	1244	Kept
+0638	BGM-1202	70	Removed
+0639	BGM-1203	337	Removed
+0640	BGM-1206	140	Removed
+0641	BGM-1210	155	Removed
+0642	BGM-1212	76	Removed
+0643	BGM-1213	701	Removed
+0644	BGM-1214	1163	Kept
+0645	BGM-1218	720	Removed
+0646	BGM-1219	144	Removed
+0647	BGM-1220	281	Removed
+0648	BGM-1223	580	Removed
+0649	BGM-1225	1025	Removed
+0650	BGM-1226	599	Removed
+0651	BGM-1227	630	Removed
+0652	BGM-1236	723	Removed
+0653	BGM-1243	1194	Kept
+0654	BGM-1245	372	Removed
+0655	BGM-1248	28	Removed
+0656	BGM-1249	709	Removed
+0657	BGM-1251	1173	Kept
+0658	BGM-1252	954	Removed
+0659	BGM-1253	1038	Removed
+0660	BGM-1254	799	Removed
+0661	BGM-1255	388	Removed
+0662	BGM-1259	1064	Removed
+0663	BGM-1262	900	Removed
+0664	BGM-1263	562	Removed
+0665	BGM-1265	531	Removed
+0666	BGM-1266	2	Removed
+0667	BGM-1267	290	Removed
+0668	BGM-1268	252	Removed
+0669	BGM-1269	876	Removed
+0670	BGM-1270	538	Removed
+0671	BGM-1272	216	Removed
+0672	BGM-1274	585	Removed
+0673	BGM-1275	777	Removed
+0674	BGM-1277	99	Removed
+0675	BGM-1278	305	Removed
+0676	BGM-1280	1083	Removed
+0677	BGM-1281	956	Removed
+0678	BGM-1282	1099	Removed
+0679	BGM-1283	1151	Removed
+0680	BGM-1284	317	Removed
+0681	BGM-1285	1095	Removed
+0682	BGM-1286	1231	Kept
+0683	BGM-1288	414	Removed
+0684	BGM-1290	20	Removed
+0685	BGM-1291	288	Removed
+0686	BGM-1292	355	Removed
+0687	BGM-1293	71	Removed
+0688	BGM-1296	193	Removed
+0689	BGM-1300	1211	Kept
+0690	BGM-1304	138	Removed
+0691	BGM-1305	826	Removed
+0692	BGM-1306	927	Removed
+0693	BGM-1309	132	Removed
+0694	BGM-1313	711	Removed
+0695	BGM-1315	1167	Kept
+0696	BGM-1318	278	Removed
+0697	BGM-1321	324	Removed
+0698	BGM-1323	704	Removed
+0699	BGM-1324	812	Removed
+0700	BGM-1326	3	Removed
+0701	BGM-1327	854	Removed
+0702	BGM-1328	1078	Removed
+0703	BGM-1329	495	Removed
+0704	BGM-1331	551	Removed
+0705	BGM-1332	1043	Removed
+0706	BGM-1333	926	Removed
+0707	BGM-1335	908	Removed
+0708	BGM-1336	104	Removed
+0709	BGM-1338	637	Removed
+0710	BGM-1344	506	Removed
+0711	BGM-1345	931	Removed
+0712	BGM-1347	1145	Removed
+0713	BGM-1348	824	Removed
+0714	BGM-1349	622	Removed
+0715	BGM-1354	293	Removed
+0716	BGM-1355	422	Removed
+0717	BGM-1356	727	Removed
+0718	BGM-1358	346	Removed
+0719	BGM-1359	1106	Removed
+0720	BGM-1360	432	Removed
+0721	BGM-1361	197	Removed
+0722	BGM-1362	664	Removed
+0723	BGM-1363	612	Removed
+0724	BGM-1364	523	Removed
+0725	BGM-1365	242	Removed
+0726	BGM-1367	629	Removed
+0727	BGM-1369	935	Removed
+0728	BGM-1370	627	Removed
+0729	BGM-1371	791	Removed
+0730	BGM-1373	340	Removed
+0731	BGM-1376	1116	Removed
+0732	BGM-1377	803	Removed
+0733	BGM-1379	199	Removed
+0734	BGM-1381	152	Removed
+0735	BGM-1385	156	Removed
+0736	BGM-1386	286	Removed
+0737	BGM-1387	389	Removed
+0738	BGM-1388	582	Removed
+0739	BGM-1389	1177	Kept
+0740	BGM-1390	280	Removed
+0741	BGM-1393	597	Removed
+0742	BGM-1395	1149	Removed
+0743	BGM-1397	850	Removed
+0744	BGM-1398	1018	Removed
+0745	BGM-1400	601	Removed
+0746	BGM-1402	882	Removed
+0747	BGM-1403	596	Removed
+0748	BGM-1406	836	Removed
+0749	BGM-1407	1210	Kept
+0750	BGM-1408	647	Removed
+0751	BGM-1409	282	Removed
+0752	BGM-1410	497	Removed
+0753	BGM-1412	309	Removed
+0754	BGM-1413	645	Removed
+0755	BGM-1414	977	Removed
+0756	BGM-1415	668	Removed
+0757	BGM-1416	577	Removed
+0758	BGM-1419	316	Removed
+0759	BGM-1420	1153	Removed
+0760	BGM-1422	424	Removed
+0761	BGM-1423	746	Removed
+0762	BGM-1424	300	Removed
+0763	BGM-1426	504	Removed
+0764	BGM-1428	214	Removed
+0765	BGM-1429	732	Removed
+0766	BGM-1432	1216	Kept
+0767	BGM-1433	25	Removed
+0768	BGM-1436	308	Removed
+0769	BGM-1437	594	Removed
+0770	BGM-1441	595	Removed
+0771	BGM-1442	839	Removed
+0772	BGM-1444	1102	Removed
+0773	BGM-1446	739	Removed
+0774	BGM-1447	1233	Kept
+0775	BGM-1448	27	Removed
+0776	BGM-1451	606	Removed
+0777	BGM-1453	1019	Removed
+0778	BGM-1454	1129	Removed
+0779	BGM-1455	1131	Removed
+0780	BGM-1456	1036	Removed
+0781	BGM-1457	1218	Kept
+0782	BGM-1458	1080	Removed
+0783	BGM-1464	342	Removed
+0784	BGM-1465	661	Removed
+0785	BGM-1466	1105	Removed
+0786	BGM-1468	999	Removed
+0787	BGM-1472	989	Removed
+0788	BGM-1474	932	Removed
+0789	BGM-1475	805	Removed
+0790	BGM-1479	733	Removed
+0791	BGM-1480	475	Removed
+0792	BGM-1481	930	Removed
+0793	BGM-1482	127	Removed
+0794	BGM-1483	109	Removed
+0795	BGM-1484	992	Removed
+0796	BGM-1485	716	Removed
+0797	BGM-1486	823	Removed
+0798	BGM-1487	753	Removed
+0799	BGM-1488	996	Removed
+0800	BGM-1489	357	Removed
+0801	BGM-1495	174	Removed
+0802	BGM-1496	313	Removed
+0803	BGM-1497	1127	Removed
+0804	BGM-1498	1226	Kept
+0805	BGM-1499	491	Removed
+0806	BGM-1502	522	Removed
+0807	BGM-1503	1162	Kept
+0808	BGM-1507	933	Removed
+0809	BGM-1508	852	Removed
+0810	BGM-1511	904	Removed
+0811	BGM-1513	787	Removed
+0812	BGM-1515	855	Removed
+0813	BGM-1517	204	Removed
+0814	BGM-1518	1053	Removed
+0815	BGM-1519	969	Removed
+0816	BGM-1520	588	Removed
+0817	BGM-1521	1223	Kept
+0818	BGM-1524	556	Removed
+0819	BGM-1525	614	Removed
+0820	BGM-1527	867	Removed
+0821	BGM-1534	943	Removed
+0822	BGM-1535	1148	Removed
+0823	BGM-1537	1209	Kept
+0824	BGM-1542	922	Removed
+0825	BGM-1545	998	Removed
+0826	BGM-1549	1037	Removed
+0827	BGM-1550	464	Removed
+0828	BGM-1552	814	Removed
+0829	BGM-1558	842	Removed
+0830	BGM-1560	1052	Removed
+0831	BGM-1567	366	Removed
+0832	BGM-1569	1058	Removed
+0833	BGM-1573	936	Removed
+0834	BGM-1574	303	Removed
+0835	BGM-1579	681	Removed
+0836	BGM-1580	687	Removed
+0837	BGM-1581	370	Removed
+0838	BGM-1582	1139	Removed
+0839	BGM-1583	93	Removed
+0840	BGM-1584	578	Removed
+0841	BGM-1585	654	Removed
+0842	BGM-1586	271	Removed
+0843	BGM-1588	209	Removed
+0844	BGM-1590	270	Removed
+0845	BGM-1594	1031	Removed
+0846	BGM-1596	778	Removed
+0847	BGM-1598	449	Removed
+0848	BGM-1603	301	Removed
+0849	BGM-1604	898	Removed
+0850	BGM-1605	863	Removed
+0851	BGM-1606	1240	Kept
+0852	BGM-1608	1113	Removed
+0853	BGM-1609	1196	Kept
+0854	BGM-1610	752	Removed
+0855	BGM-1613	895	Removed
+0856	BGM-1614	537	Removed
+0857	BGM-1616	640	Removed
+0858	BGM-1618	719	Removed
+0859	BGM-1619	632	Removed
+0860	BGM-1621	893	Removed
+0861	BGM-1622	796	Removed
+0862	BGM-1623	1189	Kept
+0863	BGM-1624	384	Removed
+0864	BGM-1626	473	Removed
+0865	BGM-1627	379	Removed
+0866	BGM-1628	700	Removed
+0867	BGM-1629	417	Removed
+0868	BGM-1631	1144	Removed
+0869	BGM-1633	446	Removed
+0870	BGM-1634	696	Removed
+0871	BGM-1635	653	Removed
+0872	BGM-1636	559	Removed
+0873	BGM-1637	651	Removed
+0874	BGM-1638	1174	Kept
+0875	BGM-1639	489	Removed
+0876	BGM-1643	334	Removed
+0877	BGM-1645	1039	Removed
+0878	BGM-1646	952	Removed
+0879	BGM-1649	1168	Kept
+0880	BGM-1650	939	Removed
+0881	BGM-1655	442	Removed
+0882	BGM-1656	1024	Removed
+0883	BGM-1657	800	Removed
+0884	BGM-1658	557	Removed
+0885	BGM-1659	450	Removed
+0886	BGM-1660	717	Removed
+0887	BGM-1661	1048	Removed
+0888	BGM-1662	896	Removed
+0889	BGM-1666	568	Removed
+0890	BGM-1667	1169	Kept
+0891	BGM-1668	283	Removed
+0892	BGM-1669	608	Removed
+0893	BGM-1670	1035	Removed
+0894	BGM-1671	236	Removed
+0895	BGM-1672	481	Removed
+0896	BGM-1674	240	Removed
+0897	BGM-1675	635	Removed
+0898	BGM-1677	202	Removed
+0899	BGM-1678	183	Removed
+0900	BGM-1679	399	Removed
+0901	BGM-1680	598	Removed
+0902	BGM-1682	698	Removed
+0903	BGM-1683	478	Removed
+0904	BGM-1684	728	Removed
+0905	BGM-1685	336	Removed
+0906	BGM-1686	740	Removed
+0907	BGM-1690	641	Removed
+0908	BGM-1692	255	Removed
+0909	BGM-1693	744	Removed
+0910	BGM-1695	11	Removed
+0911	BGM-1696	391	Removed
+0912	BGM-1697	1087	Removed
+0913	BGM-1698	1109	Removed
+0914	BGM-1699	48	Removed
+0915	BGM-1700	272	Removed
+0916	BGM-1701	782	Removed
+0917	BGM-1702	453	Removed
+0918	BGM-1703	604	Removed
+0919	BGM-1704	153	Removed
+0920	BGM-1705	509	Removed
+0921	BGM-1706	203	Removed
+0922	BGM-1707	408	Removed
+0923	BGM-1708	56	Removed
+0924	BGM-1709	550	Removed
+0925	BGM-1710	549	Removed
+0926	BGM-1712	769	Removed
+0927	BGM-1715	1061	Removed
+0928	BGM-1716	676	Removed
+0929	BGM-1718	492	Removed
+0930	BGM-1721	1013	Removed
+0931	BGM-1722	248	Removed
+0932	BGM-1723	962	Removed
+0933	BGM-1725	356	Removed
+0934	BGM-1726	1243	Kept
+0935	BGM-1727	349	Removed
+0936	BGM-1728	233	Removed
+0937	BGM-1729	950	Removed
+0938	BGM-1730	515	Removed
+0939	BGM-1732	685	Removed
+0940	BGM-1733	1125	Removed
+0941	BGM-1734	788	Removed
+0942	BGM-1735	158	Removed
+0943	BGM-1737	1042	Removed
+0944	BGM-1739	907	Removed
+0945	BGM-1740	74	Removed
+0946	BGM-1741	735	Removed
+0947	BGM-1742	1143	Removed
+0948	BGM-1743	1155	Removed
+0949	BGM-1744	451	Removed
+0950	BGM-1745	1179	Kept
+0951	BGM-1746	380	Removed
+0952	BGM-1747	1040	Removed
+0953	BGM-1748	159	Removed
+0954	BGM-1749	845	Removed
+0955	BGM-1750	858	Removed
+0956	BGM-1752	583	Removed
+0957	BGM-1754	590	Removed
+0958	BGM-1755	245	Removed
+0959	BGM-1756	505	Removed
+0960	BGM-1757	454	Removed
+0961	BGM-1759	378	Removed
+0962	BGM-1760	706	Removed
+0963	BGM-1761	1183	Kept
+0964	BGM-1762	419	Removed
+0965	BGM-1763	377	Removed
+0966	BGM-1764	691	Removed
+0967	BGM-1766	1241	Kept
+0968	BGM-1768	311	Removed
+0969	BGM-1769	552	Removed
+0970	BGM-1770	1146	Removed
+0971	BGM-1771	848	Removed
+0972	BGM-1772	574	Removed
+0973	BGM-1773	1076	Removed
+0974	BGM-1779	1101	Removed
+0975	BGM-1780	320	Removed
+0976	BGM-1782	794	Removed
+0977	BGM-1783	519	Removed
+0978	BGM-1784	228	Removed
+0979	BGM-1794	1104	Removed
+0980	BGM-1810	436	Removed
+0981	BGM-1811	231	Removed
+0982	BGM-1814	565	Removed
+0983	BGM-1816	603	Removed
+0984	BGM-1817	1004	Removed
+0985	BGM-1818	1028	Removed
+0986	BGM-1819	259	Removed
+0987	BGM-1821	873	Removed
+0988	BGM-1822	347	Removed
+0989	BGM-1828	679	Removed
+0990	BGM-1832	249	Removed
+0991	BGM-1834	925	Removed
+0992	BGM-1835	1205	Kept
+0993	BGM-1837	793	Removed
+0994	BGM-1847	257	Removed
+0995	BGM-1850	220	Removed
+0996	BGM-1866	430	Removed
+0997	BGM-1873	64	Removed
+0998	BGM-1876	558	Removed
+0999	BGM-1878	263	Removed
+1000	BGM-1880	1084	Removed
+1001	BGM-1881	564	Removed
+1002	BGM-1884	1057	Removed
+1003	BGM-1942	258	Removed
+1004	BGM-1956	341	Removed
+1005	BGM-1957	569	Removed
+1006	BGM-1962	714	Removed
+1007	BGM-1969	90	Removed
+1008	BGM-1980	312	Removed
+1009	BGM-1985	285	Removed
+1010	BGM-1999	315	Removed
+1011	BGM-2017	251	Removed
+1012	BGM-2018	660	Removed
+1013	BGM-2019	755	Removed
+1014	BGM-2020	98	Removed
+1015	BGM-2022	747	Removed
+1016	BGM-2025	323	Removed
+1017	BGM-2026	344	Removed
+1018	BGM-2028	327	Removed
+1019	BGM-2029	100	Removed
+1020	BGM-2030	517	Removed
+1021	BGM-2032	397	Removed
+1022	BGM-2034	299	Removed
+1023	BGM-2035	289	Removed
+1024	BGM-2038	40	Removed
+1025	BGM-2041	92	Removed
+1026	BGM-2042	1029	Removed
+1027	BGM-2043	154	Removed
+1028	BGM-2044	41	Removed
+1029	BGM-2047	472	Removed
+1030	BGM-2048	239	Removed
+1031	BGM-2050	1096	Removed
+1032	BGM-2053	586	Removed
+1033	BGM-2055	768	Removed
+1034	BGM-2057	151	Removed
+1035	BGM-2058	181	Removed
+1036	BGM-2059	1138	Removed
+1037	BGM-2060	857	Removed
+1038	BGM-2061	176	Removed
+1039	BGM-2063	566	Removed
+1040	BGM-2064	1192	Kept
+1041	BGM-2065	394	Removed
+1042	BGM-2066	1016	Removed
+1043	BGM-2069	385	Removed
+1044	BGM-2072	358	Removed
+1045	BGM-2073	386	Removed
+1046	BGM-2074	959	Removed
+1047	BGM-2076	548	Removed
+1048	BGM-2078	32	Removed
+1049	BGM-2079	993	Removed
+1050	BGM-2080	624	Removed
+1051	BGM-2081	218	Removed
+1052	BGM-2082	945	Removed
+1053	BGM-2083	864	Removed
+1054	BGM-2085	139	Removed
+1055	BGM-2086	955	Removed
+1056	BGM-2090	448	Removed
+1057	BGM-2091	662	Removed
+1058	BGM-2095	924	Removed
+1059	BGM-2097	458	Removed
+1060	BGM-2100	319	Removed
+1061	BGM-2101	294	Removed
+1062	BGM-2102	919	Removed
+1063	BGM-2103	4	Removed
+1064	BGM-2104	524	Removed
+1065	BGM-2105	915	Removed
+1066	BGM-2114	1136	Removed
+1067	BGM-2115	360	Removed
+1068	BGM-2116	230	Removed
+1069	BGM-2119	512	Removed
+1070	BGM-2120	745	Removed
+1071	BGM-2123	1222	Kept
+1072	BGM-2127	243	Removed
+1073	BGM-2132	205	Removed
+1074	BGM-2133	166	Removed
+1075	BGM-2135	443	Removed
+1076	BGM-2136	142	Removed
+1077	BGM-2140	103	Removed
+1078	BGM-2142	493	Removed
+1079	BGM-2143	764	Removed
+1080	BGM-2145	229	Removed
+1081	BGM-2147	171	Removed
+1082	BGM-2148	923	Removed
+1083	BGM-2149	79	Removed
+1084	BGM-2154	1207	Kept
+1085	BGM-2155	17	Removed
+1086	BGM-2156	575	Removed
+1087	BGM-2157	811	Removed
+1088	BGM-2158	266	Removed
+1089	BGM-2159	536	Removed
+1090	BGM-2160	24	Removed
+1091	BGM-2161	190	Removed
+1092	BGM-2162	212	Removed
+1093	BGM-2163	67	Removed
+1094	BGM-2164	348	Removed
+1095	BGM-2165	226	Removed
+1096	BGM-2166	234	Removed
+1097	BGM-2167	38	Removed
+1098	BGM-2168	471	Removed
+1099	BGM-2169	68	Removed
+1100	BGM-2170	53	Removed
+1101	BGM-2172	219	Removed
+1102	BGM-2174	165	Removed
+1103	BGM-2175	961	Removed
+1104	BGM-2179	256	Removed
+1105	BGM-2182	95	Removed
+1106	BGM-2183	34	Removed
+1107	BGM-2184	445	Removed
+1108	BGM-2185	19	Removed
+1109	BGM-2186	45	Removed
+1110	BGM-2187	136	Removed
+1111	BGM-2188	273	Removed
+1112	BGM-2189	213	Removed
+1113	BGM-2191	30	Removed
+1114	BGM-2192	314	Removed
+1115	BGM-2196	35	Removed
+1116	BGM-2198	639	Removed
+1117	BGM-2200	5	Removed
+1118	BGM-2202	396	Removed
+1119	BGM-2204	125	Removed
+1120	BGM-2206	29	Removed
+1121	BGM-2207	135	Removed
+1122	BGM-2208	180	Removed
+1123	BGM-2209	131	Removed
+1124	BGM-2210	89	Removed
+1125	BGM-2211	169	Removed
+1126	BGM-2212	60	Removed
+1127	BGM-2216	57	Removed
+1128	BGM-2218	120	Removed
+1129	BGM-2220	518	Removed
+1130	BGM-2221	584	Removed
+1131	BGM-2224	328	Removed
+1132	BGM-2226	198	Removed
+1133	BGM-2228	333	Removed
+1134	BGM-2230	607	Removed
+1135	BGM-2232	483	Removed
+1136	BGM-2233	572	Removed
+1137	BGM-2234	1034	Removed
+1138	BGM-2236	111	Removed
+1139	BGM-2237	284	Removed
+1140	BGM-2238	206	Removed
+1141	BGM-2239	1094	Removed
+1142	BGM-2241	330	Removed
+1143	BGM-2244	684	Removed
+1144	BGM-2245	455	Removed
+1145	BGM-2248	804	Removed
+1146	BGM-2249	392	Removed
+1147	BGM-2255	85	Removed
+1148	BGM-2257	1182	Kept
+1149	BGM-2260	609	Removed
+1150	BGM-2262	189	Removed
+1151	BGM-2264	277	Removed
+1152	BGM-2265	318	Removed
+1153	BGM-2266	1140	Removed
+1154	BGM-2267	39	Removed
+1155	BGM-2268	758	Removed
+1156	BGM-2270	50	Removed
+1157	BGM-2271	459	Removed
+1158	BGM-2273	84	Removed
+1159	BGM-2275	1224	Kept
+1160	BGM-2276	185	Removed
+1161	BGM-2278	760	Removed
+1162	BGM-2279	571	Removed
+1163	BGM-2283	276	Removed
+1164	BGM-2290	22	Removed
+1165	BGM-2292	487	Removed
+1166	BGM-2293	108	Removed
+1167	BGM-2294	42	Removed
+1168	BGM-2325	52	Removed
+1169	BGM-2326	170	Removed
+1170	BGM-2328	8	Removed
+1171	BGM-2329	128	Removed
+1172	BGM-2330	47	Removed
+1173	BGM-2331	145	Removed
+1174	BGM-2333	83	Removed
+1175	BGM-2334	54	Removed
+1176	BGM-2335	75	Removed
+1177	BGM-2336	373	Removed
+1178	BGM-2337	55	Removed
+1179	BGM-2338	51	Removed
+1180	BGM-2339	1234	Kept
+1181	BGM-2341	921	Removed
+1182	BGM-2351	387	Removed
+1183	BGM-2352	1244	Kept
+1184	BGM-2353	304	Removed
+1185	BGM-2354	194	Removed
+1186	BGM-2355	232	Removed
+1187	BGM-2357	247	Removed
+1188	BGM-2358	621	Removed
+1189	BR-11-24-156	540	Removed
+1190	BR-11-34-41	1232	Kept
+1191	BR-11-34-45	968	Removed
+1192	BR-11-34-64	1181	Kept
+1193	BR-11-34-69	490	Removed
+1194	BR-11S1-52-10	186	Removed
+1195	BR-11S1-52-19	771	Removed
+1196	BR-11S1-52-25	37	Removed
+1197	BR-11S1-53-01	80	Removed
+1198	BR-11S1-53-05	46	Removed
+1199	BR-11S1-53-10	15	Removed
+1200	BR-11S1-53-26	94	Removed
+1201	BR-12-107-002	868	Removed
+1202	BRS-396	335	Removed
+1203	BRS-399	938	Removed
+1204	BRS-AmansaBurro	825	Removed
+1205	BRS-Caipira	591	Removed
+1206	BRS-CS-01	801	Removed
+1207	BRS-Dourada	957	Removed
+1208	BRS-Formosa	705	Removed
+1209	BRS-GemaOvo	375	Removed
+1210	BRS-Jari	1219	Kept
+1211	BRS-Kiriris	1047	Removed
+1212	BRS-Mulatinha	785	Removed
+1213	BRS-NovoHorizonte	444	Removed
+1214	BRS-PotiBranca	405	Removed
+1215	BRS-Tapioqueira	766	Removed
+1216	BRS-Verdinha	841	Removed
+1217	Cacau	362	Removed
+1218	Platina	157	Removed
+1219	Recife	742	Removed
+1220	7741-8	31	Removed
+1221	7909-04	221	Removed
+1222	Aipim-Brasil	179	Removed
+1223	BGM-0149	631	Removed
+1224	BGM-0320	10	Removed
+1225	BGM-0326	1161	Kept
+1226	BGM-0332	119	Removed
+1227	BGM-0371	26	Removed
+1228	BGM-0778	260	Removed
+1229	BGM-0809	715	Removed
+1230	BGM-0913	147	Removed
+1231	BGM-0955	965	Removed
+1232	BGM-1222	191	Removed
+1233	BGM-1366	160	Removed
+1234	BGM-1640	196	Removed
+1235	BGM-1691	821	Removed
+1236	BGM-1767	345	Removed
+1237	BGM-1867	110	Removed
+1238	BGM-2098	1191	Kept
+1239	BGM-2111	1009	Removed
+1240	BGM-2134	762	Removed
+1241	BGM-2153	697	Removed
+1242	BGM-2195	307	Removed
+1243	BGM-2201	187	Removed
+1244	BGM-2256	1133	Removed
+1245	BGM-2284	21	Removed
+1246	Secundina	121	Removed
 External identifiers for file: MatrizGowerCarolineTC2.dis
 Imported dissimilarity...
 from file (in Phylip format): MatrizGowerCarolineTC2.phy
