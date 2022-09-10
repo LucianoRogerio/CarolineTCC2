@@ -118,9 +118,9 @@ KappaCC3 <- KappaIndex(CC3AllData) %>% as.data.frame %>%
   mutate(Method = rownames(.),
          TCC = "QualityRoot") %>% select(TCC, Method, everything())
 
-KappaIndex <- rbind(KappaCC1, KappaCC2, KappaCC3) %>% as_tibble
+KappaCCAll <- rbind(KappaCC1, KappaCC2, KappaCC3) %>% as_tibble
 
-write.table(KappaIndex, file = here::here("output", "KappaIndex.csv"), sep = ",",
+write.table(KappaCCAll, file = here::here("output", "KappaIndex.csv"), sep = ",",
             quote = F)
 ```
 
@@ -129,7 +129,7 @@ write.table(KappaIndex, file = here::here("output", "KappaIndex.csv"), sep = ","
 ```{r Table 1, echo = F}
 library(reactable)
 
-reactable::reactable(KappaIndex, columns = list(
+reactable::reactable(KappaCCAll, columns = list(
   `GW/CH` = colDef(format = colFormat(digits = 3, locales = "en-US")),
   `CH` =  colDef(format = colFormat(digits = 3, locales = "en-US")),
   `GW/MLST` = colDef(format = colFormat(digits = 3, locales = "en-US"))),
@@ -137,7 +137,7 @@ reactable::reactable(KappaIndex, columns = list(
 ```
 
 
-```{r Fig 1, echo = F}
+```{r Fig 1, echo = F, eval = F}
 library(corrplot); library(magick)
 
 tiff(filename = here::here("output", "CorPlotYield.tiff"), res = 400, units = "cm",
@@ -496,10 +496,10 @@ CC2Graph
 dev.off()
 
 CC3Graph <- CC3AllData3 %>% ggplot(aes(y = Value, x = Method)) + theme_bw() +
-  geom_boxplot(fill = "red", outlier.shape = NA) + facet_wrap(~Trait, scales = "free_y", nrow = 3)
+  geom_boxplot(fill = "red", outlier.shape = NA) + facet_wrap(~Trait, scales = "free_y", nrow = 2)
 
 tiff(filename = here::here("output", "BoxPlotCC3.tiff"), compression = "lzw", units = "cm",
-     height = 12, width = 7, res = 400)
+     height = 10, width = 12, res = 400)
 CC3Graph
 dev.off()
 
@@ -577,5 +577,73 @@ VD1 <- ggvenn(VennTCC, fill_color = c("blue", "green", "red"),
 
 ```{r Fig 7, echo = F}
 VD1
+```
+
+### Kappa index between
+
+```{r}
+CC1AllData <- readRDS(file = here::here("output", "AllDataCC1.rds"))
+CC2AllData <- readRDS(file = here::here("output", "AllDataCC2.rds"))
+CC3AllData <- readRDS(file = here::here("output", "AllDataCC3.rds"))
+
+Selid <- CC1AllData2[CC1AllData2$Method %in% c("BAG", "CC"),] %>%
+  dplyr::mutate(Method = ifelse(Method == "BAG", "BAG", "RootYield")) %>%
+  select(id, Method) %>% 
+  bind_rows(CC2AllData2[CC2AllData2$Method %in% c("BAG", "CC"),] %>% 
+              dplyr::mutate(Method = ifelse(Method == "BAG", "BAG", "Diseases"))) %>% 
+  select(id, Method) %>% 
+  bind_rows(CC3AllData2[CC3AllData2$Method %in% c("BAG", "CC"),] %>% 
+              dplyr::mutate(Method = ifelse(Method == "BAG", "BAG", "QualityRoot"))) %>%
+  select(id, Method) %>% 
+  unique
+
+KappaIndexCCF <- KappaIndex(Selid)
+write.table(KappaIndexCCF, file = here::here("output", "KappaIndexFinalNC.csv"), sep = ",",
+            quote = F)
+```
+
+#### **Table 3.** Kappa index between the Methods for the three Final Thematic Core Collections
+
+```{r Table 3, echo = F}
+library(reactable)
+
+reactable::reactable(KappaIndexCCF, columns = list(
+  `RootYield` = colDef(format = colFormat(digits = 3, locales = "en-US")),
+  `Diseases` =  colDef(format = colFormat(digits = 3, locales = "en-US")),
+  `QualityRoot` = colDef(format = colFormat(digits = 3, locales = "en-US"))))
+```
+
+#### **Fig 8.** Kappa index plot of the coincidence of selected clones by the three Final Thematic nuclear collection.
+
+```{r}
+#tiff(filename = here::here("output", "CorPlotFinalNC.tiff"), res = 400, units = "cm",
+#     width = 10, height = 10, compression = "lzw")
+corrplot::corrplot(KappaIndexCCF %>% as.matrix, cl.pos = "n",
+                   tl.col = "black")
+#dev.off()
+```
+
+### Correlation between all traits
+
+```{r Correlation estimate}
+library(corrplot)
+DataTCCAll <- CC1AllData[CC1AllData$Method == "BAG",] %>%
+  full_join(CC2AllData[CC2AllData$Method == "BAG",], by = "id") %>% 
+  full_join(CC3AllData[CC3AllData$Method == "BAG",], by = "id") %>% 
+  mutate(CorPol = as.numeric(CorPol),
+         DMCsg = DMCsg.x, .keep = "unused") %>% 
+  select(IC, PTR, NRz, DRY, DMCsg, everything()) %>% 
+  select(-DMCsg.y, -Method.y, -Method.x)
+```
+
+#### **Fig 9.** Correlogram between all the traits applyed in to estimate the three Final Thematic nuclear collection.
+
+
+```{r Fig 9, echo = F}
+#tiff(filename = here::here("output", "CorrelogramAllTraits.tiff"), res = 300, units = "cm",
+#     compression = "lzw", width = 11, height = 11)
+DataTCCAll %>% select(-id, -Method) %>% cor(., use = "pairwise.complete.obs") %>%
+  corrplot(tl.col = "black") %>% corrRect(name = c('IC', 'Anth', 'HCN', 'CorPol'))
+#dev.off()
 ```
 

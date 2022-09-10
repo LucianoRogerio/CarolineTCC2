@@ -1,0 +1,4 @@
+RootYield,Diseases,QualityRoot
+RootYield,1,0.0074,0.101
+Diseases,0.0074,1,0.0448
+QualityRoot,0.101,0.0448,1
