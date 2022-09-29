@@ -10,6 +10,8 @@ editor_options:
 
 ## Ajuste dos dados fenotípicos para rodar a análise de modelos mistos
 
+
+
 Traits
 
 | Trait | Abbreviation |
