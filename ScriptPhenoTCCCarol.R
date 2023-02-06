@@ -1,53 +1,20 @@
----
-title: "PhenoData"
-author: "LucianoRogerio; Caroline Cardoso"
-date: "2021-10-25"
-output: workflowr::wflow_html
-editor_options:
-  chunk_output_type: console
----
+###
+## Separar os arquivos de dados em uma pasta chamada data e criar uma pasta output no seu diretório de trabalho
+###
 
-
-## Ajuste dos dados fenotípicos para rodar a análise de modelos mistos
-
-
-
-Traits
-
-| Trait | Abbreviation |
-| :---: | :----------: |
-| Produtividade de Raizes Comerciais | PCR |
-| Produtividade Total de Raizes | PTR |
-| Produtividade de parte Aerea | PPA |
-| Indice de Colheita | IC |
-| Altura de Planta | AP |
-| Numero de manivas por haste | NMa |
-| Teor de Materia Seca Balanca Hidrostatica | DMCsg |
-| HCN Laboratorio | HCNLab |
-| Produtividade de Materia seca | DRY |
-| Porte de Planta | PA |
-| Produtividade de Raizes nao Comerciais | PNCR |
-| Vigor | Vigor |
-| Retencao Foliar | RF |
-| Numero de Raizes por planta | NR |
-| Peso de Raizes | PR |
-|     |     |
-
-
-```{r Ajuste dos dados fenotipicos}
 suppressWarnings(suppressMessages(library(tidyverse)))
 library(reshape2); library(here)
 DadosPhen <- read.table(here::here("data", "DadosBAG2022.csv"),
                         header = T, sep = ",", na.strings = "")
 
 colnames(DadosPhen)[c(10:46, 52:61)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
-                                         "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
-                                         "Vigor12M", "RF", "PRz", "NRz", "PPD", "Pod",
-                                         "PodRCas", "PodRPol", "FrogSkin", "CorPol",
-                                         "Friab", "MoscBc", "MoscBr", "MurPA", "MosCm",
-                                         "MosNv", "AcSev", "MFT", "MPs", "MBs", "QFs",
-                                         "Anth", "BacSev", "FerSev", "SupASev",
-                                         paste0("HCN-",1:9), "TCC")
+                                          "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
+                                          "Vigor12M", "RF", "PRz", "NRz", "PPD", "Pod",
+                                          "PodRCas", "PodRPol", "FrogSkin", "CorPol",
+                                          "Friab", "MoscBc", "MoscBr", "MurPA", "MosCm",
+                                          "MosNv", "AcSev", "MFT", "MPs", "MBs", "QFs",
+                                          "Anth", "BacSev", "FerSev", "SupASev",
+                                          paste0("HCN-",1:9), "TCC")
 
 DadosPhen <- DadosPhen %>% mutate(Cook = ifelse(Cook15 == 1,
                                                 yes = "15",
@@ -71,7 +38,7 @@ DadosParQuant <- DadosPhen[,c(1:30,33:45,56)]
 DadosParQual <- DadosPhen[,c(1:9,31:32,57)]
 
 DadosParQuantFin <- DadosParQuant %>% reshape2::melt(data = ., id.vars = c(1:10),
-                                           variable.name = "Trait", value.name = "y") %>%
+                                                     variable.name = "Trait", value.name = "y") %>%
   filter(!is.na(y)) %>%
   dplyr::mutate(Ano = Ano,
                 Campo = Campo,
@@ -108,18 +75,15 @@ DataCar <- tibble(Traits = unique(DadosParQuantFin$Trait),
                   PhenData = NA)
 
 for(i in DataCar$Traits){
-DataCar$PhenData[DataCar$Traits == i] <- list(DadosParQuantFin %>% filter(Trait == i))
+  DataCar$PhenData[DataCar$Traits == i] <- list(DadosParQuantFin %>% filter(Trait == i))
 }
 
 DataCar <- DataCar %>% rbind(tibble(Traits = "HCN",
                                     PhenData = list(DadosHCNFin)))
 
 saveRDS(object = DataCar, file = here::here("data", "DadosPhenCar.rds"))
-```
 
-### Selecionar os ensaios utilizando Herdabilidade e R2 estimados funções de Modelos mistos
 
-```{r Modelos mistos Selecao de dados fenotipicos, warning = FALSE, message = FALSE}
 suppressWarnings(suppressMessages(library(tidyverse)))
 library(MuMIn)
 library(reshape2); library(here)
@@ -134,28 +98,25 @@ DataCar <- DataCar %>% dplyr::mutate(TrialSel = future_map2(Traits, PhenData, fu
   Trials <- unique(PhenData$trial)
   PhenData
   results <- tibble()
-    for(i in Trials) {
-  try(MixedModels <- analyzeTrial.lme4(PhenData %>% filter(trial %in% i)))
-  try(result <- tibble(Trial = i,
-                       Trait = Traits,
-                       NClones = nrow(unique(PhenData %>%
+  for(i in Trials) {
+    try(MixedModels <- analyzeTrial.lme4(PhenData %>% filter(trial %in% i)))
+    try(result <- tibble(Trial = i,
+                         Trait = Traits,
+                         NClones = nrow(unique(PhenData %>%
                                                  filter(trial %in% i) %>% 
                                                  dplyr::select(clone))),
-                       VarG = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[1,2],
-                       VarE = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[2,2],
-                       H2 = VarG/(VarG + VarE),
-                       Real = suppressWarnings(MuMIn::r.squaredGLMM(MixedModels)[2])))
-  try(results <- rbind(results, result))
-    }
+                         VarG = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[1,2],
+                         VarE = as.data.frame(VarCorr(MixedModels))[,c("grp","vcov")] %>% .[2,2],
+                         H2 = VarG/(VarG + VarE),
+                         Real = suppressWarnings(MuMIn::r.squaredGLMM(MixedModels)[2])))
+    try(results <- rbind(results, result))
+  }
   return(results = results)
-  }))
+}))
 
 Results <- DataCar %>% dplyr::select(TrialSel) %>% unnest_longer(TrialSel) %>% .[[1]]
-```
 
-### Seleção ensaios Dados Fenotipicos
 
-```{r Obtencao da Herdabilidade e Confiabilidade do modelo para cada ensaio, echo = FALSE}
 library(reactable)
 TrialsList <- unique(DadosParQuantFin[,c("Ano", "Campo", "Local", "trial")])
 
@@ -167,26 +128,25 @@ Results2 %>% reactable(groupBy = c("Trait"), columns = list(
   VarE = colDef(format = colFormat(digits = 2, locales = "en-US")),
   H2 = colDef(format = colFormat(digits = 3, locales = "en-US")),
   Real = colDef(format = colFormat(digits = 3, locales = "en-US"))))
-```
 
-```{r Filtrando dados fenotipicos}
+
+
 DataSelPar <- DadosParQuantFin %>% mutate(Trait.Trial = paste(Trait, trial, sep = ".")) %>%
   .[.$Trait.Trial %in% (Results2 %>% mutate(Trait.Trial = paste(Trait, Trial, sep = ".")) %>%
-                        filter(Selecionado == "Sim") %>% .$Trait.Trial),]
+                          filter(Selecionado == "Sim") %>% .$Trait.Trial),]
 
 
 DataCar <- tibble(Traits = unique(DataSelPar$Trait),
                   PhenData = NA)
 
 for(i in DataCar$Traits){
-DataCar$PhenData[DataCar$Traits == i] <- list(DataSelPar %>% filter(Trait == i))
+  DataCar$PhenData[DataCar$Traits == i] <- list(DataSelPar %>% filter(Trait == i))
 }
-```
 
 
-## Selecao de ensaios de avaliacao de HCN
 
-```{r Filtrando dados HCN}
+
+
 DataSelHCN <- DadosHCNFin %>% mutate(Trait.Trial = paste("HCN", trial, sep = ".")) %>% 
   .[.$Trait.Trial %in% (Results2 %>% mutate(Trait.Trial = paste(Trait, Trial, sep = "."))
                         %>% filter(Selecionado == "Sim", NClones >= 20) %>% .$Trait.Trial),]
@@ -195,11 +155,10 @@ DataCar <- DataCar %>% rbind(tibble(Traits = "HCN",
                                     PhenData = list(DataSelHCN)))
 
 saveRDS(object = DataCar, file = here::here("data", "DadosPhenSelCar.rds"))
-```
 
-### Estimação BLUPS e obtenção de médias corrigidas
 
-```{r Obtendo BLUPs e médias corrigidas dos acessos, warning = FALSE, eval = F}
+
+
 library(here)
 library(furrr)
 library(tidyverse)
@@ -246,11 +205,9 @@ for(i in traits2){
 
 saveRDS(object = BlupsTraits,
         file = here::here("output", "BlupsFenCar.rds"))
-```
 
-### Juntar as estimativas de caracteristicas quantitativos e qualitativos
 
-```{r Agrupar as caracteristicas}
+
 library(tidyverse); library(data.table)
 Blups <- readRDS(here::here("output", "BlupsFenCar.rds"))
 
@@ -264,12 +221,10 @@ write.table(DataTCC, file = here::here("output", "BlupsModaTCC.csv"),
 # Conferindo o número de dados perdidos por característica
 
 TraitsSel <- names(colSums(is.na(DataTCC)))[colSums(is.na(DataTCC))/nrow(DataTCC) < 0.80]
-```
 
 
-```{r Joint all data per Thematic collection}
 
-## Temática 1 - Produtividade de Raízes
+
 TC1Traits <- c("id", "IC", "PTR", "NRz", "DRY", "DMCsg", "PPA", "PA", "PRz")
 
 TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
@@ -284,11 +239,9 @@ TC2Data <- DataTCC[, TC2Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/
 # Fazer uma coleção para Coloração Branca e uma para coloração amarela
 TC3Traits <- c("id", "HCN", "DMCsg", "TCC", "CorPol")
 TC3Data <- DataTCC[, TC3Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
-```
 
-### Table 1. Missing data per DataSet for each Thematic Nuclear Collection
 
-```{r Table 1, echo = F}
+
 library(reactable)
 
 NaData1 <- tibble(NuclearCol = "RootYield",
@@ -303,15 +256,8 @@ NaData3 <- tibble(NuclearCol = "QualityRoot",
 
 reactable::reactable(rbind(NaData1, NaData2, NaData3), columns = list(
   MissingData = colDef(format = colFormat(digits = 2, locales = "en-US", percent = T))))
-```
 
 
-
-
-```{r Imputing Missing data}
-# Imputando dados perdidos
-
-# inputation Function
 InpDataFunc <- function(data){
   traits <- colnames(data)[-1]
   data <- as.data.frame(data)
@@ -321,13 +267,13 @@ InpDataFunc <- function(data){
       # Imputando a moda para dados qualitativos
       data[,i][is.na(data[,i])] <- table(data[,i]) %>%
         .[order(., decreasing = T)] %>% .[1] %>% names %>% as.character
-      } else {
-        # Imputando a media para dados quantitativos
-        data[,i][is.na(data[,i])] <- mean(data[,i], na.rm = TRUE)
-      }
+    } else {
+      # Imputando a media para dados quantitativos
+      data[,i][is.na(data[,i])] <- mean(data[,i], na.rm = TRUE)
+    }
   }
   return(tibble(data))
-  }
+}
 
 ## TC1Data
 
@@ -372,11 +318,3 @@ saveRDS(TC3DataImp, file = here::here("output", "TCC3Data.rds"))
 TCCDataImp <- TC1DataImp %>% full_join(TC2DataImp, by = "id") %>% full_join(TC3DataImp, by = "id")
 write.table(TCCDataImp, file = here::here("output", "BlupsModaTCCImp.csv"), 
             quote = F, row.names = F, sep = ",")
-
-```
-
-
-
-Next - [Coleções Nucleares Temáticas](TCC.html)
-
-[Home](index.html)
