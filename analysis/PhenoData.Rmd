@@ -40,35 +40,36 @@ library(reshape2); library(here)
 DadosPhen <- read.table(here::here("data", "DadosBAG2022.csv"),
                         header = T, sep = ",", na.strings = "")
 
-colnames(DadosPhen)[c(10:46, 52:61)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
+colnames(DadosPhen)[c(10:46, 52:62)] <- c("Stand", "PRC", "PRNC", "PTR", "PPA", "DMCsg",
                                          "DRY", "IC", "AP", "NMa", "PA", "Vigor45D",
                                          "Vigor12M", "RF", "PRz", "NRz", "PPD", "Pod",
                                          "PodRCas", "PodRPol", "FrogSkin", "CorPol",
                                          "Friab", "MoscBc", "MoscBr", "MurPA", "MosCm",
                                          "MosNv", "AcSev", "MFT", "MPs", "MBs", "QFs",
                                          "Anth", "BacSev", "FerSev", "SupASev",
-                                         paste0("HCN-",1:9), "TCC")
+                                         paste0("HCN-",1:9), "TCC", "StC")
 
-DadosPhen <- DadosPhen %>% mutate(Cook = ifelse(Cook15 == 1,
-                                                yes = "15",
-                                                no = ifelse(Cook20 == 1,
-                                                            yes = "20",
-                                                            no = ifelse(Cook25,
-                                                                        yes = "25",
-                                                                        no = ifelse(Cook30 == 1,
-                                                                                    yes = "30",
-                                                                                    no = ifelse(Cook40 == 1,
-                                                                                                yes = "40",
-                                                                                                no = ifelse(Cook40 == 0,
-                                                                                                            yes = ">40",
-                                                                                                            no = NA))))))) %>% 
+DadosPhen <- DadosPhen %>%
+  mutate(Cook = ifelse(Cook15 == 1,
+                       yes = "15",
+                       no = ifelse(Cook20 == 1,
+                                   yes = "20",
+                                   no = ifelse(Cook25,
+                                               yes = "25",
+                                               no = ifelse(Cook30 == 1,
+                                                           yes = "30",
+                                                           no = ifelse(Cook40 == 1,
+                                                                       yes = "40",
+                                                                       no = ifelse(Cook40 == 0,
+                                                                                   yes = ">40",
+                                                                                   no = NA))))))) %>% 
   mutate(Cook = factor(Cook, levels = c("15", "20", "25", "30", "40", ">40"), ordered = T)) %>%
   dplyr::select(-Cook15, -Cook20, -Cook25, -Cook30, -Cook40)
 
 colnames(DadosPhen)[c(1:41,51:52)]
 
-DadosParQuant <- DadosPhen[,c(1:30,33:45,56)]
-DadosParQual <- DadosPhen[,c(1:9,31:32,57)]
+DadosParQuant <- DadosPhen[,c(1:30,33:45,56:57)]
+DadosParQual <- DadosPhen[,c(1:9,31:32,58)]
 
 DadosParQuantFin <- DadosParQuant %>% reshape2::melt(data = ., id.vars = c(1:10),
                                            variable.name = "Trait", value.name = "y") %>%
@@ -234,7 +235,7 @@ DataCar <- DataCar %>% mutate(Blups = future_map2(Traits, PhenData, function(Tra
 
 
 BlupsTraits <- readRDS(here::here("output", "MixedModels", "Blups_HCN.rds")) %>% 
-  rename(HCN = `35`)
+  rename(HCN = `36`)
 traits2 <- DataCar$Traits %>% as.character() %>% .[. != "HCN"]
 
 for(i in traits2){
@@ -270,7 +271,7 @@ TraitsSel <- names(colSums(is.na(DataTCC)))[colSums(is.na(DataTCC))/nrow(DataTCC
 ```{r Joint all data per Thematic collection}
 
 ## Temática 1 - Produtividade de Raízes
-TC1Traits <- c("id", "IC", "PTR", "NRz", "DRY", "DMCsg", "PPA", "PA", "PRz")
+TC1Traits <- c("id", "IC", "PTR", "NRz", "DRY", "DMCsg", "StC", "PPA", "PA", "PRz")
 
 TC1Data <- DataTCC[, TC1Traits] %>% .[!(rowSums(is.na(.)) >= floor(ncol(.) - 1)/2),]
 
